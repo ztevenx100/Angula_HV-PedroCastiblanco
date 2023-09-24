@@ -1,0 +1,61 @@
+/* 
+    Created on : 21/09/2023, 12:29:36 PM
+    Author     : Steven
+*/
+/* Services */
+.services.section{
+    background-color: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+
+.sevices-item .card{
+    background-color: var(--bg-black-100);
+    transition: box-shadow 0.3s ease;
+}
+
+.sevices-item .card:hover{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.sevices-item .card-body .icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.sevices-item .card .card-body .icon .fa{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+.sevices-item .card:hover .card-body .icon{
+    transition: background 0.3s ease;
+}
+.sevices-item .card:hover .card-body .icon{
+    background: var(--skin-color);
+}
+
+.sevices-item .card:hover .card-body .icon .fa{
+    font-size: 25px;
+    color: #fff;
+}
+
+.sevices-item .card-header{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.sevices-item .card-text{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+}
