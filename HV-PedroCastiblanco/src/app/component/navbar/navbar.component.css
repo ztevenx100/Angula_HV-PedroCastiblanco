@@ -1,0 +1,196 @@
+/* 
+    Created on : 16/09/2023, 12:29:36 PM
+    Author     : Steven
+*/
+/* === | Imports ===*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Sans:wght@200&family=Raleway:wght@300;400;500;600;700&family=Space+Grotesk:wght@300&display=swap');
+@import '../../../assets/css/style-base.css';
+@import '../../../assets/css/color-1.css';
+
+/*html {
+    overflow-x: hidden;
+  }*/
+  
+  /*-------------------------------------------------------------------------------
+          Barra de navegación
+  -------------------------------------------------------------------------------*/
+  
+  /*.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    height: 50px;
+  }*/
+  
+  /*.navbar .nav-item a {
+    transition: 0.5s;
+    color: #fff;
+  }*/
+  
+  /*#nav-content {
+    padding: 10px 0;
+    height: 40px;
+  }*/
+
+/* ------------------------------ */
+
+.bg-base{
+  background: var(--bg-black-900);
+}
+
+ul{
+  list-style: none;
+}
+
+/* aside */
+.aside{
+    width: 300px; /*Ancho Navbar*/
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid var(--bg-black-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: left 0.3s ease;
+}
+
+.aside .logo{
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.aside .logo a{
+  color: var(--text-black-900);
+  font-weight: 700;
+  padding: 15px 20px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  position: relative;
+}
+.aside .logo a span{
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+}
+.aside .logo a::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--skin-color);
+  border-left: 5px solid var(--skin-color);
+  bottom: 0;
+  left: 0;
+}
+.aside .logo a::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid var(--skin-color);
+  border-right: 5px solid var(--skin-color);
+  top: 0;
+  right: 15px;
+  /* right: 0; */
+}
+
+.aside .nav-toggler{
+  height: 40px;
+  width: 45px;
+  border: 1px solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 10px;
+  border-radius: 5px;
+  background: var(--bg-black-100);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+}
+.aside .nav-toggler span{
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  display: inline-block;
+  position: relative;
+}
+.aside .nav-toggler span::before{
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+.aside .nav-toggler span::after{
+  content: '';
+  height: 2px;
+  width: 18px;
+  background: var(--skin-color);
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.aside .nav-toggler.open span{
+  background-color: transparent;
+}
+.aside .nav-toggler.open span::before{
+  transform: rotate(45deg);
+  top: 0;
+}
+.aside .nav-toggler.open span::after{
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.aside .nav-page-links{
+  margin-top: 50px;
+  
+}
+.aside .nav-page-links li{
+  margin-bottom: 20px;
+  display: block;
+}
+.aside .nav-page-links li a{
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  /*border-bottom: 1px solid var(--bg-black-50);*/
+  border-bottom: 1px solid var(--bg-black-50);
+  color: var(--text-black-900);
+  padding: 5px 15px;
+}
+.aside .nav-page-links li a.active{
+  color: var(--skin-color);
+  
+}
+.aside .nav-page-links li a i{
+  margin-right: 15px;
+}
+
+@media (max-width:992px){
+  .aside{
+    left: -300px;
+  }
+  .aside .nav-toggler{
+    display: flex;
+    left: 10px;
+  }
+  .aside.open{
+    left:0;
+  }
+  .aside .nav-toggler.open{
+    left: 310px;
+  }
+  
+  /* .base-navbar{
+    width: 0;
+  } */
+}

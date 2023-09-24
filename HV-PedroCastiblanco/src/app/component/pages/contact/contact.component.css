@@ -1,0 +1,59 @@
+/* 
+    Created on : 21/09/2023, 12:29:36 PM
+    Author     : Steven
+*/
+/* Contact */
+.contact.section{
+    background-color: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+
+.contact-title{
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-sub-title{
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.contact .contact-info-item .icon .fa{
+    font-size: 25px;
+    color: var(--skin-color);
+}
+
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 5 px;
+}
+
+.contact .contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+}
+
+.contact .contact-form .form-item .form-control:focus{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.contact .contact-form .form-item textarea.form-control{
+    height: 38px; 
+}
+
+.contact .contact-form .form-item .btn{
+    height: 38px; 
+    padding: 6px 20px;
+}

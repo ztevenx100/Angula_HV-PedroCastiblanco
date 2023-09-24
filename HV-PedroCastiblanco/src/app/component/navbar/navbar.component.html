@@ -1,0 +1,55 @@
+<div class="container-fluid" style="margin: 0; padding: 0;">
+    <div class="row bg-base" style="margin: 0; padding: 0;">
+
+        <div class="col-lg-3 base-navbar" >
+            <nav class="navbar" >
+                <!-- Links -->
+                <div class="aside">
+                    <div class="nav-item logo">
+                        <!-- Brand/logo routerLink="/"  -->
+                        <a class="navbar-brand" routerLink="/"> 
+                            <span>Dev</span> PSCP
+                        </a>
+                    </div>
+                    <div class="nav-toggler">
+                        <span></span>
+                    </div>
+                    <ul class="navbar-nav nav-page-links">
+                        <li class="nav-item">
+                            <a class="nav-link active" routerLink="/home" >
+                                <i class="fa fa-home"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/about" >
+                                <i class="fa fa-user"></i>About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/services" >
+                                <i class="fa fa-list"></i>Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/portfolio" >
+                                <i class="fa fa-briefcase"></i>Portfolio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/contact" >
+                                <i class="fa fa-comments"></i>Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col-lg-9">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+    <!-- == | Style switcher Start ===== -->
+    <app-style-swicher></app-style-swicher>
+</div>
