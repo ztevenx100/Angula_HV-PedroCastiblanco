@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+.tooltipFooter .tooltip-inner {
+    background: var(--bg-black-900);
+    color: var(--text-black-900);
+}
+
+.tooltipFooter .tooltip-arrow.arrow::before {
+    border-top-color: var(--bg-black-900);
+}

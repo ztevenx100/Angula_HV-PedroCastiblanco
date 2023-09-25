@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { ServicesComponent } from './component/pages/services/services.component';
 import { ContactComponent } from './component/pages/contact/contact.component';
 import { StyleSwicherComponent } from './component/style-swicher/style-swicher.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { StyleSwicherComponent } from './component/style-swicher/style-swicher.c
     , {path: 'contact', component: ContactComponent}
     ])
     ,NgxTypedJsModule
+    ,BrowserAnimationsModule
+    ,TooltipModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
