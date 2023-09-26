@@ -68,19 +68,20 @@ body{
 
 /*Botones*/
 
-.btn{
+.bttn{
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
     color: #FFF;
     border-radius: 10px;
+    text-decoration: none;
     display: inline-block;
     white-space: nowrap;
     border: none;
     background: var(--skin-color);
     transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
 }
-.btn:hover{
+.bttn:hover{
     transform: scale(1.05);
 }
 

@@ -195,7 +195,6 @@ ul{
 
 .aside .user-content .user-img{
   position: relative;
-  
 }
 
 .aside .user-img img{
@@ -203,6 +202,7 @@ ul{
   border-radius: 50%;
   border: 5px solid var(--text-black-900);
   height: 150px;
+  transform: scale(1);
 }
 
 .aside .user-content .user-social-media{
