@@ -7,29 +7,26 @@
 @import '../../../assets/css/style-base.css';
 @import '../../../assets/css/color-1.css';
 
-/*html {
-    overflow-x: hidden;
-  }*/
   
-  /*-------------------------------------------------------------------------------
-          Barra de navegación
-  -------------------------------------------------------------------------------*/
-  
-  /*.navbar {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 1);
-    height: 50px;
-  }*/
-  
-  /*.navbar .nav-item a {
-    transition: 0.5s;
-    color: #fff;
-  }*/
-  
-  /*#nav-content {
-    padding: 10px 0;
-    height: 40px;
-  }*/
+/*-------------------------------------------------------------------------------
+        Barra de navegación
+-------------------------------------------------------------------------------*/
+
+/*.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  height: 50px;
+}*/
+
+/*.navbar .nav-item a {
+  transition: 0.5s;
+  color: #fff;
+}*/
+
+/*#nav-content {
+  padding: 10px 0;
+  height: 40px;
+}*/
 
 /* ------------------------------ */
 
@@ -48,7 +45,7 @@ ul{
     position: fixed;
     left: 0;
     top: 0;
-    padding: 30px;
+    padding: 20px 30px;
     height: 100%;
     border-right: 1px solid var(--bg-black-50);
     display: flex;
@@ -59,15 +56,15 @@ ul{
 }
 
 .aside .logo{
-  position: absolute;
-  top: 50px;
+  /* position: absolute; */
+  /* top: 50px; */
   font-size: 30px;
   text-transform: capitalize;
 }
 .aside .logo a{
   color: var(--text-black-900);
   font-weight: 700;
-  padding: 15px 20px;
+  padding: 10px 20px;
   font-size: 30px;
   letter-spacing: 5px;
   position: relative;
@@ -94,7 +91,7 @@ ul{
   border-top: 5px solid var(--skin-color);
   border-right: 5px solid var(--skin-color);
   top: 0;
-  right: 15px;
+  right: 0;
   /* right: 0; */
 }
 
@@ -151,11 +148,11 @@ ul{
 }
 
 .aside .nav-page-links{
-  margin-top: 50px;
-  
+  width: 100%;
+  margin-top: 0;
 }
 .aside .nav-page-links li{
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: block;
 }
 .aside .nav-page-links li a{
@@ -175,6 +172,10 @@ ul{
   margin-right: 15px;
 }
 
+.aside .nav-page-links .nav-link{
+  width: 100%;
+}
+
 .aside .footer{
   position: absolute;
   left: 0;
@@ -190,7 +191,7 @@ ul{
 
 .aside .user-content{
   position: relative;
-  top: -50px;
+  top: 0px;
 }
 
 .aside .user-content .user-img{
@@ -201,7 +202,7 @@ ul{
   margin: auto;
   border-radius: 50%;
   border: 5px solid var(--text-black-900);
-  height: 150px;
+  height: 120px;
   transform: scale(1);
 }
 
@@ -258,6 +259,14 @@ ul{
   .aside .user-content{
     position: relative;
     top: -10px;
+  }
+
+  .aside .user-img img{
+    height: 50px;
+    transform: scale(0.9);
+  }
+  .aside .user-content .user-social-media{
+    font-size: 15px;
   }
   
   /* .base-navbar{
