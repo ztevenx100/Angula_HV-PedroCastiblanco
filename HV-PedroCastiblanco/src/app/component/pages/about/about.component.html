@@ -2,154 +2,355 @@
 <section class="about section" id="about">
     <div class="container">
         <!-- == | About Section Start ===== -->
-        <div class="row">
-            <div class="col d-flex align-items-center">
-                <div class="section-title">
+        <div class="row my-2 animation-time">
+            <div class="col-md px-1 d-flex align-items-center timeline-box">
+                <div class="section-title my-0 timeline">
                     <h2>About me</h2>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col d-flex align-items-center">
-                <div class="about-content">
-                    <div class="row">
-                        <div class="about-text px-3">
-                            <h3>I'm Pedro Castiblanco <span>Junior developer</span></h3>
-                            <p>Systems engineer, junior software engineer with a strong background in web development, including experience with 
-                                front-end, back-end and database technologies, highly motivated, dedicated and passionate about software 
-                                development and solving challenging technology problems, with experience in providing technical support and developing 
-                                software solutions. Skilled in solving complex problems, delivering high quality code, in addition to working in a dynamic 
-                                and demanding environment. Able to work independently or as part of a team, with communication and project management skills.</p>
-                            <p>Currently holding position as a junior programmer and support engineer, with over 4 years of experience in developing project 
-                                requirements and supporting enterprise web applications. My focus is on delivering results with discipline, honesty and 
-                                accountability. I possess an outstanding learning ability and my ability to work both independently and as part of a team, in 
-                                addition, I am analytical, organized and punctual. My work experience includes programming in several languages, such as 
-                                Java, JavaScript, HTML5, CSS3 and JSP, as well as relational database management such as Oracle, SQLServer and Postgres.</p>
+        
+        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.6s;">
+            <div class="col-md-6 px-1 timeline-box">
+                <div class="timeline d-flex align-items-center py-2 ">
+                    <div class="about-text px-3">
+                        <h3>I'm Pedro Steven Castiblanco</h3>
+                        <h3><span>Junior Full Stack Developer</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 px-1 timeline-box">
+                <div class="timeline button-cv">
+                    <!-- Descargar documento en PDF -->
+                    <a href="../../../../assets/docs/pdf/HV - Pedro Castiblanco (23-09-08) - EN.pdf" download="CV - Pedro Castiblanco.pdf" title="Download CV" class="bttn" tooltip="Download CV" containerClass="tooltipFooter">
+                        <i class="fa-solid fa-file-arrow-down" ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 col-md-2 px-1 timeline-box">
+                <div class="timeline d-flex justify-content-center align-items-center">
+                    <img src="../../../../assets/img/icon/png/6656067.png" alt="Colombia" style="height: 50px;margin: 0 10px;" tooltip="Colombia, Bogotá D.C." containerClass="tooltipFooter">
+                </div>
+            </div>
+            <div class="col-6 col-md-2 px-1 timeline-box">
+                <div class="timeline especial py-1 px-4 ">
+                    <div class="time-exp text-center">
+                        <h2 class="mb-0 d-flex align-items-center"><span>+</span><span class="">{{counterYears.count}}</span><i class="fa-regular fa-star"></i></h2>
+                        <p class="mb-0">Years</p>
+                        <p class="mb-0">Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.7s;">
+            <div class="col-md-6 px-1 timeline-box">
+                <div class="timeline">
+                    <div class="about-text px-3">
+                        <p> <span class="important">Junior software developer</span> with a strong background in web development, including experience with 
+                            <span class="important">front-end</span>, <span class="important">back-end</span> and <span class="important">database technologies</span>, passionate about software 
+                            development and solving challenging technology problems, with experience in <span class="important">providing technical support</span> and 
+                            <span class="important">developing software solutions</span>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 px-1 d-flex flex-column">
+                <div class="row mb-2 flex-fill">
+                    <div class="col timeline-box">
+                        <div class="timeline especial d-flex align-items-center">
+                            <p class="mb-0"><i class="fa-solid fa-graduation-cap" tooltip="Degree" containerClass="tooltipFooter"></i> <span>Systems engineer</span></p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-7 personal-info">
-                            <div class="row">
-                                <div class="col-6 info-item">
-                                    <p>Birth day: <span>14 Aug 1997</span></p>
-                                </div>
-                                <div class="col-4 info-item">
-                                    <p>Age: <span>26</span></p>
-                                </div>
-                                <div class="col info-item">
-                                    <p>City: <span>Bogota D.C.</span></p>
-                                </div>
-                                <div class="col info-item">
-                                    <p>Website: <span>www.domain.com</span></p>
-                                </div>
-                                <div class="col-8 info-item">
-                                    <p>Email: <span>pscastiblanco@gmail.com</span></p>
-                                </div>
-                                <div class="col info-item">
-                                    <p>Degree: <span>DC</span></p>
-                                </div>
-                                <div class="col info-item">
-                                    <p>Phone: <span>3014708589</span></p>
-                                </div>
-                                <div class="col info-item">
-                                    <p>Freelance: <span>Available</span></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="buttons">
-                                    <a href="#" class="bttn">Download CV</a>
-                                    <a routerLink="/contact" class="bttn hire-me">Hire Me</a>
-                                </div>
+                </div>
+                <div class="row mb-0 flex-fill">
+                    <div class="col timeline-box">
+                        <div class="timeline d-flex justify-content-right align-items-center">
+                            <p class="mb-0">Email: <span class="important" >pscastiblanco@gmail.com</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 px-1 timeline-box">
+                <div class="timeline especial d-flex align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h3 class="mb-3"><span class="important">Lenguages</span></h3>
+                        <p class="mb-0">Spanish<img src="../../../../assets/img/icon/png/6656067.png" alt="Colombia" style="height: 22px;margin: 0 10px;"></p>
+                        <p class="mb-0">English<img src="../../../../assets/img/icon/png/892858.png" alt="English" style="height: 22px;margin: 0 10px;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.8s;">
+            <div class="col-md-6 px-1 d-flex flex-column">
+                <div class="row mb-2 flex-fill">
+                    <div class="col timeline-box">
+                        <div class="timeline ">
+                            <div class="about-text px-3">
+                                <p> Skilled in solving complex problems, delivering high quality code, in addition to working in a dynamic 
+                                    and demanding environment. Able to work independently or as part of a team, with communication and project management skills.</p>
                             </div>
                         </div>
-                        <div class="col-sm-5 skills">
-                            <div class="row">
-                                <div class="skill-item">
-                                    <h5>Java</h5>
-                                    <div class="progress">
-                                        <!-- <div class="progress-in" style="width: 76%;"></div>
-                                        <div class="skill-percent">76%</div> -->
-                                        <div class="progress-bar progress-in" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>JS</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-in" role="progressbar" style="width: 86%;" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">86%</div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>CSS</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-in" role="progressbar" style="width: 76%;" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">76%</div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h5>HTML</h5>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-in" role="progressbar" style="width: 96%;" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">96%</div>
-                                    </div>
+                    </div>
+                </div>
+                <div class="row mb-2 flex-fill">
+                    <div class="col timeline-box">
+                        <div class="timeline ">
+                            <div class="about-text px-3">
+                                <p>Currently holding position as a junior programmer and support engineer, with <span class="important">over 4 years of experience </span>
+                                    in developing project requirements and supporting enterprise web applications. </p>
+                                <p> Focus is on delivering results with discipline, honesty and accountability. </p>
+                                <p> Possess an outstanding learning ability and my ability to work both independently and as part of a team, in 
+                                    addition, I am analytical, organized and punctual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col timeline-box">
+                        <div class="timeline d-flex justify-content-right align-items-center ">
+                            <div class="about-title px-3">
+                                <p> My work experience includes programming in several languages, such as 
+                                <span class="important">Java</span>, <span class="important">JavaScript</span>, <span class="important">HTML5</span>, <span class="important">CSS3</span> and <span class="important">JSP</span>
+                                , as well as relational database management such as <span class="important">Oracle</span>, <span class="important">SQLServer</span> and <span class="important">Postgres</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 px-1 d-flex flex-column">
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline title">
+                            <div class="about-title px-3">
+                                <h2>Experience</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2 flex-fill">
+                    <div class="col timeline-box">
+                        <div class="timeline ">
+                            <div class="timeline-item">
+                                <div class="circle-dot"></div>
+                                <h3 class="timeline-date">
+                                    <i class="fa fa-calendar"></i> January 2019 – Currently
+                                </h3>
+                                <h4 class="timeline-title mb-0">Support engineer and programmer</h4>
+                                <h4 class="timeline-title"><span class="important">MEGASOFT S.A.S.</span></h4>
+                                <div class="timeline-text">
+                                    <ul>
+                                        <li> Debugging and troubleshooting of web applications and interfaces.</li>
+                                        <li> Developed new functionalities and maintained existing ones.</li>
+                                        <li> Provided technical support to customers, resolving company software issues in a timely and efficient manner.</li>
+                                        <li> Collaborated with cross-functional teams to identify and prioritize software and system requirements, ensuring successful completion of projects within tight deadlines.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 experience mb-5">
-                            <h3 class="title">Experience</h3>
-                            <div class="row">
-                                <div class="timeline-box">
-                                    <div class="timeline shadow-dark">
-                                        <!-- == | Timeline item ===== -->
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> January 2019 – Currently
-                                            </h3>
-                                            <h4 class="timeline-title">Support engineer and programmer at MEGASOFT S.A.S</h4>
-                                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eaque cupiditate. Nulla molestiae dolorem nobis laudantium omnis voluptatem eveniet saepe?</p>
-                                        </div>
-                                    </div>
-                                </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col pe-1 timeline-box">
+                        <div class="timeline especial">
+                            <div class="text-center">
+                                <p class="mb-0"><span class="important h3">+{{counterSolutions.count}}</span> Support solution</p>
                             </div>
                         </div>
-                        <div class="col-md-6 education mb-5">
-                            <h3 class="title">Education</h3>
-                            <div class="row">
-                                <div class="timeline-box">
-                                    <div class="timeline shadow-dark">
-                                        <!-- == | Timeline item ===== -->
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2018 - April 2023
-                                            </h3>
-                                            <h4 class="timeline-title">Systems engineer</h4>
-                                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eaque cupiditate. Nulla molestiae dolorem nobis laudantium omnis voluptatem eveniet saepe?</p>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2017 - 2018
-                                            </h3>
-                                            <h4 class="timeline-title">Software Development Technologist</h4>
-                                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eaque cupiditate. Nulla molestiae dolorem nobis laudantium omnis voluptatem eveniet saepe?</p>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2015 - 2018
-                                            </h3>
-                                            <h4 class="timeline-title">Professional Computer Technician</h4>
-                                            <p class="timeline-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eaque cupiditate. Nulla molestiae dolorem nobis laudantium omnis voluptatem eveniet saepe?</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col ps-1 timeline-box">
+                        <div class="timeline especial">
+                            <div class="text-center">
+                                <p class="mb-0"><span class="important h3">+{{counterRequest.count}}</span> Development requests</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.9s;">
+            <div class="col px-1 timeline-box">
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline title-2">
+                            <div class="about-title px-3">
+                                <h2>Skills</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline title">
+                            <div class="about-title px-3">
+                                <h2>Front-end</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline d-flex flex-wrap justify-content-center gap-3">
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="HTML5" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-html5 icon-object"></i>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="CSS3" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-css3-alt icon-object"></i>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="Bootstrap" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-bootstrap icon-object"></i>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="JavaScript" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-square-js icon-object"></i>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="Angular" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-angular icon-object"></i>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="React" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-react icon-object"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline title">
+                            <div class="about-title px-3">
+                                <h2>Back-end</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline d-flex flex-wrap justify-content-center gap-3">
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="Java" containerClass="tooltipFooter">
+                                <i class="fa-brands fa-java icon-object"></i>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="C#" containerClass="tooltipFooter">
+                                <div style="height: 25px;">
+                                    <svg class="objectSvg icon-object" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" ></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                            <g id="5151e0c8492e5103c096af88a51e54a6"> 
+                                            <path display="inline" d="M233.274,286.089l89.802,27.145c-6.035,25.188-15.535,46.223-28.5,63.107 c-12.975,16.894-29.071,29.638-48.297,38.233c-19.229,8.596-43.697,12.894-73.412,12.894c-36.038,0-65.482-5.238-88.33-15.711 c-22.852-10.477-42.563-28.896-59.155-55.271C8.794,330.114,0.5,296.354,0.5,255.208c0-54.855,14.594-97.016,43.769-126.479 c29.18-29.461,70.464-44.197,123.855-44.197c41.776,0,74.614,8.451,98.51,25.336c23.91,16.892,41.659,42.834,53.273,77.816 l-90.481,20.131c-3.164-10.098-6.485-17.492-9.95-22.168c-5.733-7.839-12.745-13.871-21.043-18.095 c-8.294-4.22-17.564-6.337-27.82-6.337c-23.23,0-41.024,9.343-53.391,28.021c-9.342,13.861-14.018,35.626-14.018,65.294 c0,36.756,5.576,61.948,16.732,75.584c11.16,13.627,26.848,20.439,47.059,20.439c19.599,0,34.413-5.503,44.449-16.516 C221.474,323.04,228.751,307.046,233.274,286.089z M485.345,239.259l-6.854,34.292H511.5v37.262h-40.452l-9.5,47.522h-38.41 l9.527-47.522h-29.769l-9.595,47.522h-38.14l9.527-47.522h-18.572v-37.262h26.047l6.876-34.292h-32.923v-37.262h40.398 l9.688-48.332h38.409l-9.752,48.332h29.625l9.694-48.332h38.273l-9.657,48.332H511.5v37.262H485.345z M447.017,239.259h-29.68 l-6.921,34.292h29.724L447.017,239.259z"> </path> 
+                                        </g> 
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline title">
+                            <div class="about-title px-3">
+                                <h2>Database</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col timeline-box">
+                        <div class="timeline d-flex flex-wrap justify-content-center gap-3">
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="MySQL" containerClass="tooltipFooter">
+                                <div style="height: 25px;">
+                                    <svg class="objectSvg icon-object" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                            <title>mysql</title> 
+                                            <path d="M30.026 15.139c-0.082-0.006-0.177-0.010-0.273-0.010-0.484 0-0.947 0.090-1.373 0.254l0.026-0.009c-0.125 0.050-0.325 0.050-0.342 0.209 0.069 0.066 0.079 0.175 0.137 0.267 0.117 0.198 0.261 0.366 0.429 0.506l0.003 0.003c0.175 0.137 0.35 0.27 0.534 0.387 0.325 0.2 0.694 0.319 1.012 0.52 0.181 0.117 0.366 0.266 0.55 0.391 0.091 0.062 0.15 0.175 0.267 0.215v-0.025c-0.057-0.075-0.075-0.184-0.131-0.267-0.084-0.084-0.167-0.159-0.25-0.241-0.248-0.325-0.535-0.603-0.857-0.835l-0.012-0.008c-0.267-0.182-0.852-0.437-0.962-0.744l-0.016-0.018c0.218-0.031 0.412-0.077 0.599-0.139l-0.024 0.007c0.284-0.075 0.544-0.059 0.837-0.132 0.132-0.034 0.266-0.075 0.4-0.117v-0.075c-0.15-0.15-0.262-0.354-0.417-0.494-0.409-0.36-0.86-0.698-1.335-1.002l-0.045-0.027c-0.262-0.167-0.595-0.275-0.871-0.417-0.1-0.050-0.267-0.075-0.325-0.159-0.13-0.185-0.245-0.397-0.336-0.621l-0.008-0.022q-0.368-0.714-0.684-1.453c-0.144-0.383-0.287-0.697-0.448-1.001l0.023 0.047c-0.786-1.319-1.881-2.379-3.188-3.102l-0.043-0.022c-0.309-0.153-0.668-0.272-1.045-0.339l-0.025-0.004c-0.209-0.010-0.417-0.025-0.625-0.034-0.146-0.094-0.272-0.19-0.39-0.296l0.003 0.003c-0.475-0.3-1.704-0.95-2.054-0.090-0.225 0.542 0.334 1.077 0.527 1.352 0.154 0.183 0.294 0.388 0.415 0.605l0.010 0.020c0.059 0.145 0.075 0.294 0.134 0.445 0.145 0.452 0.292 0.823 0.459 1.182l-0.026-0.062c0.099 0.199 0.202 0.368 0.317 0.528l-0.008-0.012c0.067 0.091 0.182 0.134 0.209 0.284-0.086 0.181-0.153 0.391-0.19 0.61l-0.002 0.014c-0.108 0.332-0.171 0.715-0.171 1.112 0 0.621 0.153 1.206 0.423 1.72l-0.010-0.020c0.134 0.207 0.452 0.667 0.878 0.491 0.375-0.15 0.292-0.625 0.4-1.043 0.025-0.1 0.009-0.166 0.060-0.234v0.019c0.117 0.235 0.235 0.459 0.342 0.694 0.302 0.435 0.661 0.805 1.071 1.11l0.013 0.009c0.2 0.15 0.359 0.41 0.609 0.502v-0.025h-0.019c-0.057-0.062-0.12-0.117-0.189-0.164l-0.004-0.002c-0.155-0.152-0.299-0.316-0.429-0.489l-0.008-0.011c-0.326-0.44-0.636-0.938-0.905-1.461l-0.029-0.061c-0.137-0.262-0.252-0.545-0.362-0.804-0.050-0.1-0.050-0.25-0.134-0.3-0.148 0.166-0.281 0.351-0.392 0.55l-0.008 0.016c-0.128 0.373-0.212 0.804-0.234 1.251l-0 0.011c-0.034 0.009-0.017 0-0.034 0.018-0.267-0.065-0.359-0.342-0.459-0.575-0.136-0.366-0.215-0.79-0.215-1.231 0-0.356 0.051-0.7 0.147-1.025l-0.006 0.026c0.059-0.175 0.309-0.727 0.209-0.895-0.052-0.159-0.217-0.25-0.309-0.379-0.109-0.154-0.209-0.329-0.292-0.514l-0.008-0.020c-0.2-0.467-0.3-0.985-0.517-1.452-0.131-0.244-0.269-0.454-0.424-0.65l0.007 0.009c-0.165-0.191-0.317-0.404-0.449-0.63l-0.011-0.020c-0.041-0.091-0.1-0.242-0.034-0.342 0.012-0.058 0.058-0.103 0.117-0.112l0.001-0c0.11-0.090 0.419 0.027 0.527 0.077 0.317 0.12 0.59 0.261 0.843 0.427l-0.016-0.010c0.117 0.082 0.244 0.241 0.394 0.282h0.175c0.267 0.059 0.569 0.018 0.819 0.091 0.459 0.155 0.856 0.349 1.223 0.587l-0.021-0.013c1.104 0.713 1.988 1.677 2.586 2.816l0.020 0.041c0.1 0.192 0.144 0.369 0.235 0.569 0.175 0.412 0.391 0.829 0.569 1.227 0.169 0.428 0.369 0.798 0.607 1.139l-0.012-0.018c0.125 0.175 0.627 0.266 0.852 0.357 0.237 0.083 0.427 0.162 0.611 0.251l-0.037-0.016c0.287 0.175 0.567 0.375 0.837 0.567 0.137 0.095 0.554 0.304 0.579 0.472zM18.302 22.452c0 0.015 0.001 0.032 0.001 0.049 0 0.558-0.249 1.057-0.643 1.393l-0.003 0.002c-0.432 0.352-0.989 0.566-1.596 0.566-0.047 0-0.094-0.001-0.14-0.004l0.006 0c-0.739-0.010-1.419-0.25-1.976-0.651l0.010 0.007 0.296-0.595c0.429 0.24 0.939 0.389 1.481 0.41l0.006 0c0.027 0.002 0.058 0.003 0.090 0.003 0.332 0 0.641-0.104 0.894-0.281l-0.005 0.003c0.229-0.174 0.375-0.446 0.375-0.752 0-0.006-0-0.011-0-0.017v0.001c0-0.412-0.287-0.762-0.81-1.056-0.485-0.266-1.453-0.821-1.453-0.821-0.478-0.296-0.791-0.817-0.791-1.411 0-0.021 0-0.042 0.001-0.063l-0 0.003c-0.001-0.019-0.001-0.041-0.001-0.063 0-0.515 0.227-0.977 0.586-1.291l0.002-0.002c0.382-0.324 0.881-0.521 1.426-0.521 0.035 0 0.069 0.001 0.103 0.002l-0.005-0c0.009-0 0.020-0 0.031-0 0.639 0 1.234 0.191 1.73 0.52l-0.012-0.007-0.266 0.595c-0.391-0.176-0.847-0.282-1.327-0.287l-0.002-0c-0.024-0.002-0.051-0.003-0.079-0.003-0.28 0-0.538 0.098-0.74 0.262l0.002-0.002c-0.189 0.157-0.309 0.392-0.31 0.655v0c0 0.41 0.292 0.762 0.832 1.062 0.491 0.269 1.483 0.837 1.483 0.837 0.488 0.287 0.811 0.809 0.811 1.407 0 0.018-0 0.037-0.001 0.055l0-0.003zM20.374 22.983c-0.273-0.545-0.432-1.187-0.432-1.866 0-0.107 0.004-0.213 0.012-0.317l-0.001 0.014q0-2.611 1.587-2.612c0.026-0.002 0.057-0.003 0.089-0.003 0.475 0 0.892 0.248 1.129 0.622l0.003 0.005c0.271 0.542 0.43 1.182 0.43 1.858 0 0.104-0.004 0.207-0.011 0.309l0.001-0.014q0 2.632-1.587 2.634c-0.027 0.002-0.058 0.003-0.089 0.003-0.475 0-0.893-0.248-1.13-0.622l-0.003-0.005zM24.488 24.535l-1.27-0.625c0.116-0.097 0.22-0.199 0.316-0.309l0.003-0.003c0.513-0.692 0.821-1.563 0.821-2.505 0-0.109-0.004-0.217-0.012-0.324l0.001 0.014q0-3.43-2.693-3.432c-0.040-0.002-0.087-0.003-0.134-0.003-0.767 0-1.456 0.337-1.925 0.872l-0.002 0.003c-0.511 0.692-0.818 1.562-0.818 2.504 0 0.106 0.004 0.211 0.012 0.315l-0.001-0.014c-0.009 0.101-0.014 0.219-0.014 0.338 0 0.874 0.274 1.684 0.74 2.349l-0.009-0.013c0.449 0.478 1.086 0.776 1.791 0.776 0.066 0 0.131-0.003 0.195-0.008l-0.009 0.001c0.009 0 0.021 0 0.032 0 0.311 0 0.612-0.045 0.897-0.128l-0.022 0.006 1.656 0.965 0.45-0.777zM28.636 24.366h-3.287v-6.91h1.106v6.061h2.181zM13.235 19.268c-0.287 2.084-0.944 3.965-1.905 5.65l0.040-0.077c-0.385 0.741-1.113 1.257-1.968 1.34l-0.010 0.001c-0.259-0.014-0.5-0.076-0.719-0.177l0.012 0.005v-0.617c0.137 0.021 0.295 0.033 0.456 0.033 0.009 0 0.018-0 0.028-0h-0.001c0.016 0.001 0.034 0.001 0.052 0.001 0.289 0 0.554-0.105 0.758-0.28l-0.002 0.001c0.22-0.181 0.361-0.451 0.369-0.755l0-0.001c-0.053-0.438-0.154-0.837-0.299-1.214l0.012 0.034-1.267-3.944h1.137l0.909 2.949c0.162 0.416 0.256 0.898 0.256 1.401 0 0.001 0 0.002 0 0.002v-0c0.482-1.262 0.848-2.734 1.034-4.261l0.009-0.092zM8.215 24.366h-1.158q-0.049-2.761-0.337-5.511h-0.010l-1.762 5.511h-0.881l-1.75-5.511h-0.012q-0.205 2.751-0.244 5.511h-1.056q0.103-3.685 0.512-6.911h1.437l1.668 5.079h0.010l1.683-5.079h1.368q0.454 3.777 0.535 6.911zM21.505 7.879c-0.002 0-0.005-0-0.008-0-0.119 0-0.234 0.015-0.344 0.043l0.010-0.002v0.016h0.017c0.086 0.128 0.174 0.239 0.269 0.343l-0.002-0.002c0.067 0.134 0.125 0.267 0.192 0.4l0.017-0.019c0.109-0.086 0.178-0.218 0.178-0.366 0-0.018-0.001-0.035-0.003-0.053l0 0.002c-0.050-0.059-0.057-0.117-0.1-0.175-0.050-0.084-0.157-0.125-0.225-0.191z"></path> 
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="Oracle" containerClass="tooltipFooter">
+                                <div style="height: 25px;">
+                                    <svg class="objectSvg icon-object" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" >
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                            <path fill-rule="evenodd" d="M7.957359,18.9123664 C4.11670252,18.9123664 1,15.803458 1,11.9617373 C1,8.12000773 4.11670252,5 7.957359,5 L16.0437948,5 C19.8855156,5 23,8.12000773 23,11.9617373 C23,15.803458 19.8855156,18.9123664 16.0437948,18.9123664 L7.957359,18.9123664 L7.957359,18.9123664 Z M15.8639176,16.4585488 C18.352201,16.4585488 20.3674397,14.448858 20.3674397,11.9617373 C20.3674397,9.47460595 18.352201,7.45381934 15.8639176,7.45381934 L8.1360824,7.45381934 C5.64895285,7.45381934 3.63255855,9.47460595 3.63255855,11.9617373 C3.63255855,14.448858 5.64895285,16.4585488 8.1360824,16.4585488 L15.8639176,16.4585488 L15.8639176,16.4585488 Z"></path> 
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="SQLServer" containerClass="tooltipFooter">
+                                <div style="height: 25px;">
+                                    <svg class="objectSvg icon-object" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" >
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="3e91140ac1bfb9903b91c1b0ca091114"> <path display="inline" d="M489.447,206.978l-1.087-1.701c-6.193-9.628-10.418-15.563-15.51-21.855 c-14.856-18.375-32.844-33.366-54.882-45.704c-30.282-16.956-69.563-30.133-119.224-40.006c-9.354-1.86-29.812-5.367-46.512-7.972 l-1.676-2.946c-9.125-16.103-19.209-36.026-25.062-49.509c-4.533-10.441-8.885-22.471-11.3-31.182 c-1.434-5.173-1.584-5.509-2.38-5.602c-1.711-0.2-29.185,9.698-46.837,16.87c-23.917,9.717-42.487,19.028-53.943,27.068 c-3.728,2.618-8.292,7.06-9.907,9.516c-0.012-0.04-0.029-0.076-0.038-0.118c0,0-0.202,0.325-0.399,0.908 c-0.021,0.044-0.05,0.095-0.067,0.137c-0.292,0.773-0.431,1.678-0.435,2.606l0.133,0.127c0.049,0.862,0.237,1.843,0.67,2.924 c0.992,2.479,3.969,5.458,7.251,8.614c0,0,34.383,33.539,38.597,38.402c19.051,21.986,27.327,43.633,28.09,73.517 c0.49,19.176-3.209,36.035-12.191,55.628c-16.101,35.12-50.024,73.846-102.417,116.906l0.65-0.217 c-0.325,0.263-0.665,0.54-0.979,0.787c-6.252,4.984-15.55,14.21-20.301,20.126c-7.071,8.8-12.599,18.185-14.976,25.4 c-4.276,12.983-2.192,26.134,6.055,38.273c10.536,15.502,31.51,31.256,55.903,41.978c12.442,5.472,33.44,12.523,49.184,16.498 c26.238,6.627,76.949,13.823,104.876,14.895c5.665,0.217,13.205,0.197,13.551-0.03c0.613-0.406,4.96-8.641,10.004-18.945 c17.166-35.063,29.583-67.929,36.263-96c4.051-17,7.204-39.668,9.249-66.546c0.569-7.523,0.778-32.631,0.338-41.165 c-0.719-13.892-1.941-25.207-3.902-36.317c-0.141-0.798-0.235-1.548-0.281-2.122c62.154-18.47,130.885-35.185,176.431-42.161 L489.447,206.978z M319.507,114.389c0.714,0,14.807,3.843,22.098,6.022c18.151,5.43,39.095,13.08,52.678,19.249l5.654,2.559 l-3.986,0.922c-33.242,7.637-61.731,16.45-89.173,27.587c-2.279,0.927-4.263,1.685-4.403,1.685s0.589-1.763,1.604-3.917 c8.249-17.527,13.576-35.917,14.959-51.532C319.062,115.542,319.316,114.389,319.507,114.389z M311.926,123.681 c-2.812,11.522-10.262,28.625-19.457,44.7c-1.623,2.833-3.07,5.194-3.237,5.246c-0.171,0.051-2.265-1.051-4.65-2.445 c-8.99-5.258-19.173-10.234-30.354-14.845c-3.12-1.286-5.773-2.432-5.91-2.559c-0.511-0.479,24.34-16.929,37.51-24.834 c10.54-6.323,27.501-15.774,27.798-15.478C313.875,113.711,312.831,119.979,311.926,123.681z M204.39,347.51 c-14.626,5.548-30.556,11.103-48.846,17.015c-6.968,2.253-12.867,4.157-13.097,4.24c-0.695,0.259-0.482-0.167,1.556-3.351 c9.086-14.188,22.853-41.94,30.548-61.569c1.336-3.404,2.605-6.816,2.834-7.576c0.076-0.258,0.154-0.471,0.242-0.661 c1.062-0.444,2.137-0.889,3.208-1.333c0.236,0.459,0.652,1.463,1.051,2.545c2.464,6.695,8.005,16.643,12.822,23.007 c5.255,6.945,12.107,14.348,17.841,19.264c1.839,1.581,3.558,3.056,3.803,3.271C216.843,342.799,217.011,342.723,204.39,347.51z M214.945,354.277c0.053,0.053-0.551,1.676-1.343,3.591c-6.745,16.308-15.579,34.094-26.842,54.075 c-2.867,5.084-5.284,9.237-5.376,9.226c-0.091-0.008-2.422-1.383-5.181-3.074c-16.409-10.042-30.925-22.409-40.457-34.436 l-1.36-1.698l7.075-1.941c25.235-6.915,46.636-14.31,67.914-23.474C212.388,355.246,214.892,354.224,214.945,354.277z M179.818,150.655c-0.31-2.155-0.5-3.988-0.42-4.064c0.224-0.224,10.952,2.29,16.806,3.933c8.792,2.47,27.509,8.733,27.521,9.212 c0,0.093-2.063,1.892-4.581,3.999c-10.118,8.465-19.877,17.316-31.571,28.607c-3.465,3.348-6.412,6.072-6.556,6.072 c-0.145,0-0.211-0.488-0.129-1.085C182.647,184.331,182.271,167.643,179.818,150.655z M182.7,133.266 c0-0.479,9.567-10.044,13.681-13.68c7.855-6.944,28.991-23.385,29.741-23.134c0.44,0.146,1.273,2.747,2.751,8.596 c2.829,11.198,4.147,23.772,3.708,35.407c-0.122,3.237-0.327,6.245-0.454,6.686l-0.244,0.809l-3.997-1.295 c-8.243-2.633-21.712-6.6-33.256-9.793C188.075,135.046,182.7,133.425,182.7,133.266z M206.094,186.076 c7.292-6.167,22.642-18.447,22.828-18.261c0.209,0.209-2.397,9.782-4.048,14.895c-3.166,9.805-8.519,22.13-13.664,31.407 c-1.208,2.179-3.063,5.369-4.113,7.092l-1.909,3.124l-4.339-4.193c-5.041-4.888-9.149-7.924-14.393-10.62 c-2.061-1.061-3.737-2.042-3.739-2.187C182.706,206.697,195.908,194.692,206.094,186.076z M202.42,241.575 c0.05-0.031,0.095-0.044,0.145-0.049c0.354-0.044,0.855,0.613,2.949,3.74c4.409,6.591,7.787,15.381,8.661,22.536l0.176,1.539 l-10.57,4.097c-18.977,7.363-36.446,14.624-48.245,20.027c-3.302,1.512-9.13,4.293-12.936,6.201 c-3.807,1.899-6.915,3.396-6.915,3.316c0-0.079,2.392-1.881,5.312-4.001c23.158-16.81,43.125-35.215,58.169-53.618 C200.775,243.395,202.236,241.689,202.42,241.575z M207.322,321.574c-6.013-6.977-10.768-13.899-14.233-20.723 c-1.467-2.888-3.653-8.116-4.193-9.891c10.964-4.457,22.374-8.918,34.327-13.413c2.58-0.969,5.236-1.945,7.93-2.926 c0.279,3.169-0.044,17.627-0.551,21.875c-1.356,11.312-3.568,21.775-7.109,33.672c-0.844,2.842-1.638,5.297-1.763,5.44 C221.422,335.967,210.838,325.655,207.322,321.574z M219.71,267.058c-0.197,0.068-0.321-1.057-0.323-2.835 c-0.019-9.362-2.388-19.371-6.573-27.845c-1.769-3.58-2.065-4.446-1.7-4.776c1.457-1.32,23.998-14.172,38.208-21.791 c9.76-5.232,24.749-12.847,24.931-12.66c0.183,0.186-10.472,15.111-16.806,23.54c-7.576,10.084-21.07,26.941-30.354,37.917 C223.213,263.189,219.891,266.997,219.71,267.058z M267.467,188.554c-14.535,7.272-26.984,14.14-39.984,22.083 c-3.708,2.265-6.815,4.128-6.916,4.128c-0.323,0-0.196-0.281,1.879-4.081c6.925-12.68,12.506-27.817,15.721-42.611 c0.287-1.32,0.631-2.126,0.874-2.073c1.075,0.241,11.12,4.915,18.7,8.711c6.931,3.471,17.433,9.06,17.957,9.552 C275.758,184.325,272.064,186.257,267.467,188.554z M277.912,105.257c10.765,2.062,26.343,5.323,27.277,5.717 c0.456,0.188-1.155,1.065-6.33,3.398c-20.457,9.226-35.609,17.458-50.671,27.54c-3.969,2.656-7.267,4.824-7.335,4.824 c-0.066,0-0.127-2.217-0.129-4.922c-0.009-14.689-2.942-29.517-8.321-42.044c-0.578-1.347-1.015-2.504-0.956-2.557 C231.687,96.989,263.47,102.493,277.912,105.257z M225.575,60.049c0.327,0.025,0.673,0.688,1.636,2.8 c2.639,5.781,10.854,21.449,12.839,24.479c0.166,0.253,0.355,0.444,0.369,0.564c-16.954-2.664-31.012-4.924-44.218-7.117 c0.108-0.148,0.817-0.61,1.708-1.106c8.114-4.512,16.3-10.192,23.588-16.336c1.742-1.468,3.417-2.867,3.724-3.123 C225.345,60.106,225.466,60.04,225.575,60.049z M168.653,21.938c10.677-4.966,39.749-17.071,41.866-17.451 c0.068-0.014,0.103-0.014,0.114,0c0.053,0.064,0.367,2.225,0.68,4.791c1.32,10.813,3.741,21.302,7.529,32.591 c2.852,8.506,2.894,8.006-0.503,7.058c-7.894-2.204-43.266-8.274-68.854-11.819c-4.123-0.57-7.556-1.077-7.611-1.132 C141.551,35.65,160.328,25.812,168.653,21.938z M138.961,40.136c16.428,5.591,57.606,13.458,80.365,15.349 c2.569,0.212,4.727,0.44,4.792,0.501c0.066,0.059-2.114,1.225-4.839,2.589c-10.981,5.5-23.065,12.204-31.426,17.437 c-1.934,1.212-3.729,2.229-4.552,2.597c-2.512-0.427-5.025-0.856-7.542-1.29l-7.381-7.168 c-13.642-13.204-24.292-23.419-28.413-27.279l-3.999-3.756L138.961,40.136z M114.129,63.887l0.013-0.876 c0.053-5.217,6.63-12.913,17.792-20.788l0.988-0.68l10.88,13.583c5.988,7.47,11.992,14.885,13.323,16.481 c1.128,1.351,2.033,2.519,2.246,2.876c-7.571-1.316-15.975-2.817-22.228-4.164c-0.585-0.131-1.147-0.256-1.679-0.38 c-2.172-0.496-4.011-0.927-5.639-1.32c-4.246-1.055-9.127-2.386-13.291-3.821C115.767,64.499,114.957,64.197,114.129,63.887z M166.575,124.297c-0.072,0.072-0.938-1.271-1.909-2.979c-9.04-15.897-23.354-32.061-39.909-45.073 c-2.063-1.621-3.739-2.998-3.739-3.059c0.049-0.043,1.339,0.355,2.914,0.889c2.903,0.986,6.731,2.139,11.186,3.383 c3.124,0.874,6.555,1.79,10.2,2.721c4.653,1.189,8.5,2.211,8.549,2.267c0.515,0.579,8.329,25.516,10.992,35.083 C165.877,121.181,166.647,124.225,166.575,124.297z M174.379,125.138c-2.81-10.77-8.619-26.675-13.827-37.867 c-0.836-1.801-1.521-3.389-1.521-3.53c0-0.019,0.024-0.028,0.082-0.032c0.399-0.028,2.114,0.26,4.161,0.712 c13.181,2.915,36.719,7.458,51.857,10.004c2.519,0.426,4.597,0.881,4.597,1.02s-0.942,0.735-2.089,1.313 c-2.539,1.276-12.816,7.428-16.255,9.729c-8.583,5.745-16.3,11.895-21.92,17.485c-2.259,2.246-4.149,4.079-4.21,4.079 C175.192,128.053,174.797,126.744,174.379,125.138z M158.077,259.076c5.108-7.816,7.677-12.239,10.361-17.891 c2.384-5.023,4.761-10.984,6.458-16.173c0.707-2.154,1.444-3.917,1.638-3.917c0.192,0,2,0.908,4.014,2.023 c4.934,2.734,9.364,5.739,13.274,9.001c0.152,0.125-1.874,1.78-4.499,3.674c-7.333,5.291-18.498,13.718-24.965,18.863 C157.536,260.083,157.308,260.251,158.077,259.076z M131.558,293.396c5.069-5.521,8.95-10.107,13.355-15.829 c2.903-3.77,3.456-4.302,7.708-7.371c11.45-8.263,37.627-25.996,37.932-25.692c0.306,0.306-8.545,10.316-14.505,16.402 c-14.921,15.225-29.711,27.163-48.034,38.79c-2.293,1.451-4.389,2.77-4.662,2.929C122.847,302.918,123.512,302.166,131.558,293.396 z M119.557,325.993c0.532-2.558,0.773-3.728,1.216-4.442c13.867-6.922,28.45-13.708,43.967-20.441 c-0.897,2.234-4.132,8.975-7.332,15.222c-7.487,14.598-15.74,28.972-26.698,46.507c-1.891,3.032-3.632,5.798-3.868,6.14 c-0.391,0.563-0.551,0.38-1.75-2.006c-2.624-5.221-4.822-11.802-5.958-17.927C118.01,342.988,118.202,332.498,119.557,325.993z M37.474,398.474c1.763-11.349,10.42-26.251,22.52-38.759c6.957-7.189,12.721-11.848,21.234-17.022 c3.749-2.15,8.376-4.72,14.275-7.945c3.684-2.018,7.428-4.009,11.208-5.995c0.095,0.28-0.038,1.144-0.414,3.313 c-0.344,1.979-0.733,5.727-0.875,8.303c-0.622,11.314,1.214,19.666,6.833,31.088c1.562,3.177,2.783,5.821,2.718,5.874 c-0.562,0.472-51.731,15.445-67.819,19.85c-4.769,1.307-8.935,2.454-9.276,2.561C37.32,399.906,37.271,399.785,37.474,398.474z M68.77,453.47l-3.465-2.915c-4.065-3.412-11.18-10.661-14.408-14.682c-6.642-8.283-11.144-16.995-12.92-25.001 c-0.819-3.693-0.844-5.574-0.064-5.806c1.126-0.342,21.791-5.205,41.17-9.7c10.764-2.496,23.21-5.419,27.668-6.494 c4.457-1.071,8.148-1.915,8.192-1.877c0.19,0.183-9.666,14.287-23.426,33.543c-4.784,6.695-10.401,14.587-12.481,17.539 c-2.081,2.948-5.227,7.614-7.01,10.373L68.77,453.47z M74.079,457.516l-1.425-1.018l2.234-3.223 c7.25-10.502,16.359-22.053,36.297-46.043l13.666-16.449l2.492,2.785c11.146,12.418,22.482,21.681,36.313,29.675 c2.443,1.414,4.303,2.638,4.145,2.736c-0.577,0.357-47.827,17.159-69.681,24.773c-12.326,4.293-22.448,7.793-22.505,7.785 C75.561,458.526,74.864,458.07,74.079,457.516z M140.183,488.084l-1.149-0.308c-2.775-0.753-22.339-7.66-27.507-9.712 c-6.406-2.546-13.082-5.616-18.002-8.275c-6.152-3.321-13.952-8.253-13.34-8.451c0.174-0.053,10.76-2.952,23.506-6.429 c33.91-9.24,52.668-14.552,64.969-18.39c2.299-0.715,4.216-1.258,4.257-1.216c0.101,0.103-5.388,8.891-15.039,24.089 c-4.077,6.422-8.697,13.732-10.282,16.24c-1.583,2.515-3.902,6.33-5.148,8.503L140.183,488.084z M146.367,489.509 c0-0.167,1.856-2.516,4.111-5.213c11.135-13.314,22.192-28.189,31.425-42.256c2.525-3.845,4.639-7.056,4.694-7.124 s3.509,1.159,7.69,2.721c10.078,3.769,17.985,6.224,28.689,8.906c13.143,3.29,32.141,6.581,43.389,7.526 c1.726,0.145,2.606,0.343,2.333,0.518c-0.524,0.33-11.916,4.138-20.288,6.767c-13.292,4.18-53.914,16.179-87.037,25.708 c-6.144,1.771-11.397,3.264-11.672,3.321C148.96,490.538,146.367,489.858,146.367,489.509z M252.521,504.486 c-1.026,2.466-1.408,3.063-1.941,3.04c-1.3-0.054-19.503-2.599-30.519-4.271c-19.285-2.93-51.587-8.572-59.741-10.427l-1.895-0.425 l11.561-2.607c24.777-5.577,36.675-8.571,48.747-12.269c15.225-4.662,30.3-10.472,45.527-17.55c2.408-1.117,4.46-1.977,4.97-2.09 c0.072-0.016,0.106-0.016,0.113,0C269.663,458.693,257.109,493.46,252.521,504.486z M284.27,410.181 c-2.729,9.662-5.016,17.22-9.264,30.613c-1.869,5.916-3.48,10.741-3.572,10.719c-0.099-0.026-0.547-0.114-1.007-0.197 c-22.987-4.157-43.577-9.963-62.864-17.706c-5.396-2.174-13.188-5.624-13.601-6.026c-0.139-0.137,4.521-2.333,10.346-4.871 c35.226-15.373,71.723-32.874,84.201-40.382c1.504-0.897,2.613-1.426,2.864-1.372c0.038,0.008,0.054,0.034,0.054,0.064 C291.428,382.74,287.521,398.66,284.27,410.181z M290.052,377.299c-10.273,5.699-44.102,19.773-78.651,32.737 c-5.044,1.893-9.966,3.746-10.93,4.126c-0.961,0.381-1.748,0.643-1.748,0.566s1.425-2.819,3.172-6.091 c9.701-18.132,19.382-40.169,24.352-55.462c0.505-1.563,0.954-2.873,1.003-2.93c0.047-0.062,1.945,0.957,4.21,2.265 c16.526,9.56,39.586,18.526,59.252,23.025l1.778,0.402L290.052,377.299z M295.341,299.65c2.873,1.254,3.203,0.768-3.412,5.267 c-14.104,9.574-31.643,18.99-53.167,28.558c-3.752,1.664-6.932,3.024-7.06,3.024s0.291-1.9,0.923-4.24 c5.215-19.295,8.158-38.764,8.239-54.38c0.021-3.822,0.032-5.761,0.127-6.771c0.697-0.243,1.389-0.486,2.092-0.732 c1.064,0.527,2.758,1.538,5.407,3.195C264.458,283.57,286.078,295.607,295.341,299.65z M251.275,267.552 c13.544-4.605,28.027-9.252,43.024-13.826c1.103,4.501,3.101,24.551,3.667,37.846c0.137,3.199,0.11,5.247-0.08,5.247 c-0.615,0-13.108-7.341-21.969-12.903C268.272,279.117,253.874,269.55,251.275,267.552z M298.434,309.043 c-0.015,17.258-1.857,40.892-4.528,58.134c-0.472,3.028-0.878,5.524-0.908,5.555c-0.034,0.03-2.216-0.607-4.845-1.425 c-11.611-3.605-24.203-8.993-35.566-15.217c-7.523-4.123-18.405-10.799-18.101-11.106c0.083-0.084,3.289-1.782,7.124-3.773 c15.193-7.884,29.704-16.384,42.322-24.818c4.73-3.161,11.813-8.283,13.386-9.666l1.117-0.969V309.043z M330.206,231.084 c-35.438,9.832-62.814,18.583-94.76,30.323c-3.545,1.304-6.606,2.383-6.816,2.383c-0.439,0-0.878,0.402,7.092-6.933 c20.432-18.802,38.482-39.52,51.967-59.674l2.721-4.079l3.773,2.443c8.651,5.62,18.902,13.177,26.715,19.688 c4.377,3.647,12.888,11.268,14.636,13.114l0.935,0.986L330.206,231.084z M344.257,227.103c-0.076,0-1.063-1.396-2.203-3.093 c-8.687-12.979-18.995-24.38-31.294-34.614c-2.295-1.909-4.887-4.004-5.745-4.646c-0.866-0.643-1.565-1.235-1.573-1.326 c-0.007-0.213,13.128-5.846,23.155-9.925c17.451-7.103,41.306-15.606,59.152-21.08c9.415-2.886,19.415-5.76,19.56-5.618 c0.16,0.162-4.978,8.192-8.177,12.774c-4.666,6.685-11.429,15.46-26.84,34.84c-8.097,10.179-17.228,21.697-20.306,25.596 C346.909,223.907,344.333,227.103,344.257,227.103z M473.664,204.548c-32.582,2.451-74.233,9.381-114.334,19.025 c-2.725,0.653-5.08,1.197-5.232,1.197c-0.147,0,2.835-2.992,6.627-6.638c23.55-22.64,34.287-36.936,46.933-62.475 c1.881-3.805,3.48-7.086,3.541-7.286c0.008-0.013,0.016-0.013,0.038-0.015c0.281-0.059,2.15,0.847,4.399,2.135 c18.801,10.77,37.225,24.601,51.713,38.824c4.119,4.044,14.203,14.532,14.051,14.619 C481.361,203.957,477.881,204.231,473.664,204.548z"> </path> 
+                                        </g> 
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="timeline-icon d-flex align-items-center justify-content-center" tooltip="PostgresSQL" containerClass="tooltipFooter">
+                                <div style="height: 25px;">
+                                    <svg class="objectSvg icon-object" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" >
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                        <g id="3e91140ac1bfb9903b91c1b0ca09020a"> 
+                                            <path display="inline" d="M400.264,168.995c1.028-6.661,1.993-13.04,2.114-20.066c-16.78-2.065-36.036-1.596-43.639,9.272 c-14.791,21.138,14.097,72.94,26.432,95.061c3.17,5.683,5.461,9.789,6.514,12.347c1.166,2.831,2.44,5.385,3.755,7.728 c8.487-18.056,6.297-36.352,4.163-54.124c-1.057-8.799-2.154-17.898-1.867-26.649C398.021,183.57,399.163,176.16,400.264,168.995z M386.131,164.883c-1.363,1.436-4.243,3.927-8.172,4.472c-0.505,0.07-1.021,0.106-1.533,0.106c-5.792,0-10.79-4.52-11.205-7.45 c-0.476-3.535,5.292-6.224,11.245-7.053c1.303-0.181,2.598-0.273,3.84-0.273c5.144,0,8.552,1.526,8.895,3.98 C389.422,160.252,388.22,162.692,386.131,164.883z M327.039,33.711c10.601-2.196,25.097-4.245,41.328-3.889 c41.125,0.91,73.651,16.294,96.683,45.725c17.667,22.573-1.782,125.291-58.099,213.903c-0.553-0.706-1.121-1.42-1.706-2.15 c-0.233-0.294-0.472-0.593-0.714-0.895c14.553-24.032,11.705-47.806,9.173-68.887c-1.041-8.652-2.021-16.824-1.771-24.498 c0.259-8.14,1.335-15.115,2.376-21.863c1.278-8.313,2.581-16.915,2.219-27.055c0.27-1.063,0.379-2.319,0.237-3.812 c-0.915-9.728-12.02-38.829-34.651-65.174C369.738,60.709,351.685,44.587,327.039,33.711z M171.328,292.222 c1.615,1.686,3.301,3.267,5.044,4.759c-6.948,7.438-22.048,23.891-38.119,43.224c-11.372,13.674-19.226,11.06-21.809,10.196 c-16.828-5.614-36.354-41.182-53.569-97.587c-14.896-48.802-23.603-97.875-24.29-111.638c-2.176-43.52,8.373-73.852,31.356-90.151 c37.4-26.526,98.897-10.648,123.607-2.595c-0.357,0.349-0.725,0.677-1.075,1.032c-40.549,40.952-39.587,110.918-39.486,115.193 c-0.006,1.649,0.133,3.984,0.323,7.199c0.697,11.766,1.996,33.668-1.473,58.473C148.615,253.376,155.718,275.934,171.328,292.222z M397.933,301.079c-8.035,2.319-22.459,7.667-21.144,34.405c-1.057,13.407-8.6,76.218-12.428,98.418 c-5.054,29.324-15.848,40.246-46.18,46.749c-31.457,6.743-42.586-9.31-49.927-27.654c-4.735-11.847-7.059-65.254-5.413-124.232 c0.024-0.782-0.089-1.541-0.307-2.251c-0.186-1.375-0.476-2.767-0.879-4.17c-2.452-8.584-8.438-15.759-15.617-18.736 c-2.247-0.932-5.644-2.335-9.822-2.335c-1.543,0-3.062,0.193-4.558,0.581c1.343-5.526,3.669-11.762,6.189-18.519l1.059-2.843 c1.19-3.207,2.687-6.526,4.268-10.044c8.545-18.981,20.248-44.984,7.547-103.724c-4.758-22.001-20.647-32.744-44.728-30.25 c-14.44,1.495-27.647,7.321-34.236,10.661c-1.422,0.72-2.727,1.417-3.941,2.095c1.817-22.136,8.735-63.497,34.751-89.773 c16.366-16.531,38.163-24.695,64.748-24.256c52.314,0.859,85.861,27.706,104.795,50.078c16.315,19.28,25.148,38.699,28.674,49.173 c-26.504-2.696-44.546,2.539-53.686,15.607c-19.89,28.429,10.878,83.603,25.665,110.121c2.71,4.862,5.054,9.058,5.788,10.845 c4.812,11.669,11.048,19.461,15.605,25.148C395.549,297.917,396.9,299.61,397.933,301.079z M248.003,326.252 c0.581,2.037,1.238,5.901-0.907,8.902c-10.808,15.134-25.686,22.81-44.22,22.81c-6.095,0-12.566-0.848-19.24-2.518 c-3.904-0.976-7.415-2.67-9.477-4.073c1.721-0.812,4.784-1.912,10.096-3.005c25.71-5.297,29.679-9.031,38.349-20.039 c1.989-2.524,4.244-5.385,7.367-8.874c2.358-2.638,4.46-3.977,6.246-3.977c1.253,0,2.666,0.54,4.383,1.25 C243.724,318.027,246.769,321.94,248.003,326.252z M469.358,317.431c0.108-0.024,0.218-0.049,0.322-0.068 c-3.937,3.683-10.669,8.619-20.224,13.057c-8.213,3.812-21.951,6.671-35.007,7.284c-14.42,0.67-21.761-1.613-23.487-3.025 c-0.807-16.658,5.396-18.4,11.959-20.244c1.028-0.29,2.037-0.572,3.005-0.911c0.605,0.488,1.267,0.979,1.993,1.456 C419.508,322.63,440.18,323.453,469.358,317.431z M224.536,278.37l1.055-2.823c1.357-3.658,2.948-7.188,4.633-10.931 c8.163-18.14,18.326-40.719,6.614-94.891c-2.265-10.464-7.708-16.544-16.642-18.591c-19.575-4.485-47.027,10.223-52.95,15.475 c0.055,1.186,0.144,2.69,0.244,4.404c0.728,12.258,2.081,35.077-1.583,61.281c-2.616,18.712,3.098,36.972,15.676,50.093 c9.895,10.325,22.902,16.037,36.275,16.077C219.396,292.156,221.874,285.518,224.536,278.37z M206.106,168.942 c-0.917-1.216-2.411-3.575-2.109-5.707c0.428-3.124,4.188-4.998,10.058-4.998c1.301,0,2.648,0.097,4.008,0.287 c6.336,0.881,12.875,3.882,12.245,8.386c-0.474,3.412-5.877,8.472-12.366,8.472c-0.567,0-1.14-0.04-1.698-0.119 C212.492,174.745,208.7,172.381,206.106,168.942z M503.183,308.227c-2.113-9.584-10.793-20.777-28.299-20.777 c-3.513,0-7.32,0.432-11.641,1.327c-8.301,1.71-15.706,2.775-22.071,3.171c22.293-38.223,40.23-81.256,50.633-121.528 c9.628-37.277,16.912-87.071-3.054-112.586C459.399,20.326,416.475,0.501,364.616,0.501c-29.228,0-53.098,6.53-60.326,8.74 c-11.398-1.988-23.668-3.102-36.482-3.31c-0.855-0.014-1.702-0.02-2.546-0.02c-23.059,0-43.723,5.237-61.434,15.567 c-16.13-5.401-47.269-14.147-79.702-14.147c-36.481,0-65.214,10.757-85.396,31.976C16.385,62.799,6.212,97.864,8.497,143.529 c0.956,19.149,11.989,76.369,27.785,126.056c24.404,76.774,51.286,112.527,84.595,112.527c10.429,0,20.326-3.65,29.448-10.854 c7.999,8.717,19.609,12.653,25.994,14.251c9.058,2.267,17.989,3.416,26.547,3.416c11.437,0,22.208-1.997,32.061-5.941 c0.064,2.142,0.123,4.171,0.173,6.002c0.117,4.162,0.23,8.244,0.384,12.061c1.04,25.951,2.815,46.143,8.089,60.381 c0.278,0.747,0.649,1.888,1.053,3.122c2.305,7.067,5.788,17.739,13.801,27.428c10.563,12.771,25.616,19.522,43.525,19.522 c5.72,0,11.847-0.689,18.215-2.057c19.248-4.122,41.114-10.423,57.019-33.067c14.911-21.232,22.144-53,23.454-103.008l0.577-4.921 l2.775,0.227c1.758,0.08,3.577,0.116,5.408,0.116c18.672,0,39.363-4.005,52.723-10.208 C473.222,353.426,508.999,334.565,503.183,308.227z M455.442,343.302c-11.487,5.332-29.791,8.704-45.659,8.704 c-7.611,0-14.649-0.782-20.119-2.484c-2.59,23.806-8.096,68.198-11.302,86.801c-6.002,34.785-21.503,50.564-57.204,58.22 c-6.078,1.299-11.604,1.88-16.622,1.884c-34.212,0.004-45.038-27.077-49.469-38.153c-5.413-13.536-7.294-57.953-6.913-103.031 c-12.282,11.116-27.68,16.929-45.278,16.929c-7.256,0-14.888-0.988-22.685-2.94c-2.255-0.565-22.035-5.873-21.771-18.519 c0.239-11.572,16.753-14.977,22.969-16.259c21.854-4.502,23.266-6.292,30.056-14.912c1.373-1.746,2.986-3.787,4.953-6.119 c-0.022-0.258-0.051-0.512-0.066-0.77c-9.8-0.263-19.379-2.876-28.1-7.556c-5.899,6.28-21.91,23.564-39.055,44.191 c-10.323,12.411-20.244,16.058-28.337,16.058c-3.3,0.004-6.295-0.604-8.893-1.473c-22.182-7.396-43.266-43.368-62.66-106.91 c-14.736-48.277-24.072-98.686-24.891-115.076c-2.437-48.707,10.132-83.181,37.356-102.47 c48.744-34.534,127.507-8.015,144.689-1.577c16.941-11.55,37.393-17.215,61.105-16.842c12.92,0.212,24.782,1.874,35.665,4.58 c5.171-2.269,31.844-10.338,63.378-9.991c45.897,0.488,83.813,18.193,109.647,51.204c17.433,22.279,5.93,76.516,0.169,98.799 c-11.971,46.351-34.163,96.026-61.14,137.128c4.082,3.001,16.518,7.962,51.218,0.798c11.688-2.412,18.724-0.282,20.909,6.325 C491.615,322.609,468.342,337.315,455.442,343.302z"> </path>
+                                            </g> 
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col px-1 d-flex flex-column">
+                <div class="row mb-2">
+                    <div class="col timeline-box">
+                        <div class="timeline title">
+                            <div class="about-title px-3">
+                                <h2>Academic background</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0 flex-fill">
+                    <div class="col timeline-box">
+                        <div class="timeline ">
+                            <div class="timeline-item">
+                                <div class="circle-dot"></div>
+                                <h3 class="timeline-date">
+                                    <i class="fa fa-calendar"></i> 2018 - April 2023
+                                </h3>
+                                <h4 class="timeline-title mb-0">Systems engineer</h4>
+                                <h4 class="timeline-title"><span class="important">Escuela Tecnológica Instituto Técnico Central</span></h4>
+                                <p class="timeline-text"></p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="circle-dot"></div>
+                                <h3 class="timeline-date">
+                                    <i class="fa fa-calendar"></i> 2017 - 2018
+                                </h3>
+                                <h4 class="timeline-title mb-0">Software Development Technologist</h4>
+                                <h4 class="timeline-title"><span class="important">Escuela Tecnológica Instituto Técnico Central</span></h4>
+                                <p class="timeline-text"></p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="circle-dot"></div>
+                                <h3 class="timeline-date">
+                                    <i class="fa fa-calendar"></i> 2015 - 2018
+                                </h3>
+                                <h4 class="timeline-title mb-0">Professional Computer Technician</h4>
+                                <h4 class="timeline-title"><span class="important">Escuela Tecnológica Instituto Técnico Central</span></h4>
+                                <p class="timeline-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- == | Abour Section End ===== -->
     </div>
 </section>
