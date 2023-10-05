@@ -40,19 +40,19 @@ ul{
 
 /* aside */
 .aside{
-    width: 300px; /*Ancho Navbar*/
-    background: var(--bg-black-100);
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 20px 30px;
-    height: 100%;
-    border-right: 1px solid var(--bg-black-50);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    transition: left 0.3s ease;
+  width: 300px; /*Ancho Navbar*/
+  background: var(--bg-black-100);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px 30px;
+  height: 100%;
+  border-right: 1px solid var(--bg-black-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: left 0.3s ease;
 }
 
 .aside .logo{
@@ -163,10 +163,15 @@ ul{
   border-bottom: 1px solid var(--bg-black-50);
   color: var(--text-black-900);
   padding: 5px 15px;
+  transition: font-size 0.3s ease, border-bottom 0.3s ease;
+}
+.aside .nav-page-links li a:hover{
+  font-size: 18px;
+  border-bottom: 1px solid var(--text-black-900);
 }
 .aside .nav-page-links li a.active{
   color: var(--skin-color);
-  
+  border-bottom: 2px solid var(--skin-color);
 }
 .aside .nav-page-links li a i{
   margin-right: 15px;
@@ -216,29 +221,29 @@ ul{
 }
 .aside .user-content .user-social-media a:hover{
   color: var(--skin-color);
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .aside .user-content .user-social-media::before{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-bottom: 5px solid var(--text-black-900);
-    border-left: 5px solid var(--text-black-900);
-    bottom: 0;
-    left: 0px;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--text-black-900);
+  border-left: 5px solid var(--text-black-900);
+  bottom: 0;
+  left: 0px;
 }
 
 .aside .user-content .user-social-media::after{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-top: 5px solid var(--text-black-900);
-    border-right: 5px solid var(--text-black-900);
-    top: 0;
-    right: 0px;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid var(--text-black-900);
+  border-right: 5px solid var(--text-black-900);
+  top: 0;
+  right: 0px;
 }
 
 @media (max-width:992px){

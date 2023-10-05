@@ -28,7 +28,7 @@
     text-align: center;
 }
 
-.sevices-item .card .card-body .icon .fa{
+.sevices-item .card .card-body .icon :is(.fa,.fa-solid){
     font-size: 40px;
     line-height: 60px;
     color: var(--skin-color);
@@ -41,7 +41,7 @@
     background: var(--skin-color);
 }
 
-.sevices-item .card:hover .card-body .icon .fa{
+.sevices-item .card:hover .card-body .icon :is(.fa,.fa-solid){
     font-size: 25px;
     color: #fff;
 }
@@ -58,4 +58,9 @@
     font-size: 16px;
     color: var(--text-black-700);
     line-height: 25px;
+}
+
+span.important{
+    color: var(--skin-color);
+    font-weight: 500;
 }
