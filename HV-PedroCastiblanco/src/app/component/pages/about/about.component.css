@@ -12,19 +12,19 @@
 }
 
 .about .about-content{
-    flex: 0 0 100%;
-    max-width: 100%;
+    /* flex: 0 0 100%; */
+    /* max-width: 100%; */
+    text-align: left;
 }
 
 .about .about-content .about-text{
     flex: 0 0 100%;
     max-width: 100%;
-
 }
 
 .about .about-content .about-text h3{
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     font-weight: 700;
     color: var(--text-black-900);
 }
@@ -32,10 +32,40 @@
 .about .about-content .about-text h3 span{
     color: var(--skin-color);
 }
+.about span.important{
+    color: var(--skin-color);
+    font-weight: 600;
+}
+
+.time-exp h2{
+    color: var(--skin-color);
+    font-weight: 700;
+    text-align: center;
+}
+
+.time-exp p{
+    color: var(--text-black-900);
+    font-weight: 400;
+    text-align: center;
+}
+.time-exp .fa-star{
+    color: gold;
+    font-size: 20px;
+    margin: auto 5px;
+}
+
+.country{
+    background: linear-gradient(135deg, rgba(235,198,14,0.6) 35%, rgba(9,9,121,0.6) 35%, rgba(9,9,121,0.6) 65%, rgba(255,41,0,0.6) 65%);
+}
+.about-content p {
+    color: var(--text-black-900);
+    font-weight: 400;
+}
 
 .about .about-content .about-text p{
     font-size: 16px;
     line-height: 25px;
+    margin-bottom: 0;
     color: var(--text-black-700);
 }
 
@@ -63,7 +93,7 @@
     margin-top: 30px;
 }
 
-.about .about-content .personal-info .buttons .btn{
+.about .about-content .personal-info .buttons .bttn{
     margin-right: 15px;
     margin-top: 15px;
 }
@@ -105,26 +135,27 @@
     color: var(--text-black-900);
 }
 
-.about .about-content .timeline{
+.timeline{
     background-color: var(--bg-black-100);
-    padding: 30px 15px;
+    padding: 20px 10px;
     border: 1p solid var(--bg-black-50);
     border-radius: 10px;
     width: 100%;
+    height: 100%;
     position: relative;
 }
 
-.about .about-content .timeline .timeline-item{
+.timeline .timeline-item{
     position: relative;
-    padding-left: 37px;
-    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
 }
 
-.about .about-content .timeline .timeline-item:last-child{
+.timeline .timeline-item:last-child{
     padding-bottom: 0;
 }
 
-.about .about-content .timeline .timeline-item::before{
+.timeline .timeline-item::before{
     content: '';
     width: 1px;
     position: absolute;
@@ -134,7 +165,7 @@
     background-color: var(--skin-color);
 }
 
-.about .about-content .timeline .circle-dot{
+.timeline .circle-dot{
     position: absolute;
     left: 0;
     top: 0;
@@ -144,27 +175,182 @@
     background-color: var(--skin-color);
 }
 
-.about .about-content .timeline .timeline-date{
+.timeline .timeline-date{
     font-weight: 400;
     font-size: 14px;
     margin-bottom: 12px;
+    /* margin-left: 15px; */
     color: var(--text-black-700);
 }
-.about .about-content .timeline .timeline-date .fa{
+.timeline .timeline-date .fa{
     margin-right: 5px;
 }
 
-.about .about-content .timeline .timeline-title{
+.timeline .timeline-title{
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 15px;
+    /* margin-left: 15px; */
     text-transform: capitalize;
     color: var(--text-black-900);
 }
 
-.about .about-content .timeline .timeline-text{
+.timeline.title{
+    color: var(--text-black-900);
+    background-color: var(--skin-color);
+    padding: 0 10px;
+}
+
+.timeline.title-2{
+    color: var(--skin-color);
+    background-color: var(--bg-footer-900);
+    padding: 0 10px;
+}
+
+.timeline .about-title h2{
+    text-align: center;
+}
+
+.timeline .timeline-text{
     line-height: 25px;
     font-size: 16px;
-    text-align: justify;
+    /* margin-left: 15px; */
     color: var(--text-black-700);
+}
+.timeline .timeline-text ul{
+    color: var(--text-black-700);
+}
+
+.timeline.especial{
+    background: var(--bg-footer-900);
+}
+.timeline.especial p{
+    color: var(--text-footer-900) !important;
+}
+.timeline.especial .fa-graduation-cap{
+    color: var(--skin-color);
+    font-size: 20px;
+    margin: auto 5px;
+}
+
+.timeline.button-cv{
+    background: var(--bg-black-100);
+    margin: 0;
+    padding: 0;
+}
+.timeline.button-cv .bttn{
+    background: var(--skin-color);
+    color: var(--text-black-900);
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.timeline-icon{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: var(--skin-color);
+    font-size: 25px;
+    background: var(--bg-footer-900);
+    transition: background 0.3s ease;
+}
+.timeline-icon::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    left: 0px;
+    top: 0px;
+    transition: left 0.3s ease, top 0.3s ease;
+}
+.timeline-icon::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    right: 0px;
+    bottom: 0px;
+    transition: right 0.3s ease, bottom 0.3s ease;
+}
+
+.timeline-icon:hover{
+    background: var(--bg-black-900);
+}
+.timeline-icon:hover:before{
+    left: -5px;
+    top: -5px;
+}
+.timeline-icon:hover:after{
+    right: -5px;
+    bottom: -5px;
+}
+
+.objectSvg {
+    fill: var(--skin-color);
+    height: 25px;
+    position: relative;
+    top: -10px;
+}
+
+.animation-time {
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-name: slideInUp;
+    animation-fill-mode: both;
+  }
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.counter{
+    transition: --num 5s;
+    counter-set: num var(--num);
+    animation-name: counterNum;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.counter::after {
+    content: counter(num);
+}
+/* .counter:hover {
+    --num: 4;
+} */
+
+@keyframes counterNum {
+    0% {
+        /* --num: 0;
+        counter-set: num var(--num); */
+        counter-reset: my-sec-counter;
+    }
+    100% {
+        /* --num: 4;
+        counter-set: num var(--num); */
+        counter-increment: my-sec-counter 1;
+        content: counter(my-sec-counter) ;
+    }
 }
