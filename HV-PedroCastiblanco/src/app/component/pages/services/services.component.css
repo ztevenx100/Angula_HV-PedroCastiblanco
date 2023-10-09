@@ -20,6 +20,15 @@
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
+.bg-list{
+    background: var(--bg-footer-900);
+    color: var(--text-footer-900);
+}
+
+.card-footer.card-text-muted{
+    color: var(--text-black-700);
+}
+
 .sevices-item .card-body .icon{
     height: 60px;
     width: 60px;
