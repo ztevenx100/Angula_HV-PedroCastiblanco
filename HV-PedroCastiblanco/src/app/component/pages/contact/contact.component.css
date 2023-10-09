@@ -33,7 +33,7 @@
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
-    color: var(--text-black-900);
+    color: var(--text-footer-900);
     text-transform: capitalize;
     margin: 15px 0 5 px;
 }
@@ -41,7 +41,7 @@
 .contact .contact-info-item p{
     font-size: 16px;
     line-height: 25px;
-    color: var(--text-black-700);
+    color: var(--text-footer-900);
     font-weight: 400;
 }
 
@@ -53,7 +53,24 @@
     height: 38px; 
 }
 
-.contact .contact-form .form-item .btn{
+.contact .contact-form .form-item .bttn{
     height: 38px; 
-    padding: 6px 20px;
+    padding: 6px 10px;
+}
+
+.bg-card{
+    background: var(--bg-footer-900);
+}
+.bg-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 350px;
+}
+
+.bg-contact img{
+    flex-shrink: 0;
+    /* min-width: ; */
+    max-height: 350px;
 }
