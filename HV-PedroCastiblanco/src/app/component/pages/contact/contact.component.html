@@ -9,65 +9,63 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <h3 class="contact-title">Have you any questions?</h3>
-                <h4 class="contact-sub-title">I'n at your services</h4>
+        <div class="card bg-card">
+            <div class="row g-0">
+            <div class="col-md-4 bg-contact">
+                <img src="../../../../assets/img/contact/mobile-contact-us-form.jpg" alt="" class="">
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md contact-info-item text-center">
-                <div class="icon"><i class="fa fa-envelope"></i></div>
-                <h4>Email</h4>
-                <p>pscastiblanco@gmail.com</p>
-            </div>
-            <div class="col-md contact-info-item text-center">
-                <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                <h4>Website</h4>
-                <p>www.domain.com</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3 class="contact-title">Send me an email</h3>
-                <h4 class="contact-sub-title">I'm very responsive to messages</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="contact-form">
-                <form >
-                    <div class="form-group row form-item mb-3">
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">Name</div>
-                                </div>
-                                <input type="text" class="form-control" id="name" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">Email</div>
-                                </div>
-                                <input type="text" class="form-control" id="email" placeholder="Email">
-                            </div>
-                        </div>
+            <div class="col-md-8 py-2">
+                <div class="row card-header">
+                    <div class="col-md contact-info-item text-center">
+                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>pscastiblanco@gmail.com</p>
                     </div>
-                    <div class="form-group row form-item mb-3">
-                        <div class="col-sm-8">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">Message</div>
-                                </div>
-                                <textarea class="form-control" id="message" placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <button type="submit" class="bttn ">Send message</button>
-                        </div>
+                    <div class="col-md contact-info-item text-center">
+                        <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                        <h4>Website</h4>
+                        <p>www.domain.com</p>
                     </div>
-                </form>
+                </div>
+                <div class="row card-body">
+                    <h5 class="card-title contact-title">Send me an email</h5>
+                    <div class="contact-form">
+                        <form (submit)="sendEmail($event)">
+                            <div class="form-group row form-item mb-3">
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Name</div>
+                                        </div>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" [disabled]="campoDeshabilitado" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Email</div>
+                                        </div>
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" [disabled]="campoDeshabilitado" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row form-item mb-3">
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">Message</div>
+                                        </div>
+                                        <textarea class="form-control" name="message" id="message" placeholder="Message" [disabled]="campoDeshabilitado" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="submit" class="bttn ">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
         <!-- == | Contact Section End ===== -->
