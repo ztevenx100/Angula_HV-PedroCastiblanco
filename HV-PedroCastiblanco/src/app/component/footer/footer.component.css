@@ -36,7 +36,7 @@
 }
 
 .footer-content .tecnology-info-icons{
-    padding-bottom: 0 !important;
+    padding-bottom: 0;
 }
 .footer-content .tecnology-info-icons i{
     text-align: center;
@@ -51,10 +51,10 @@
 
 .footer-content .tecnology-info-text{
     text-align: center;
-    padding-top: 0 !important;
+    padding-top: 0;
 }
 
 .tooltipFooter{
-    color: var(--text-black-900) !important;
-    background: var(--bg-black-900) !important;
+    color: var(--text-black-900);
+    background: var(--bg-black-900);
 }

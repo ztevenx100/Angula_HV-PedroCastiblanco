@@ -19,3 +19,68 @@
     color: var(--text-black-900);
     font-weight: 500;
 }
+
+.modalOpenButton{
+    color: var(--skin-color);
+    transition: color 0.3s ease;
+    /* transition: font-size 0.3s ease; */
+}
+
+.modalOpenButton:hover{
+    color: #FFF;
+    /* font-size: 20px; */
+}
+
+.tecnology-card{
+    background-color: var(--bg-footer-900);
+    color: var(--text-footer-900);
+}
+
+.bttn-repository{
+    background-color: var(--bg-footer-900);
+    color: var(--text-footer-900);
+    font-size: 25px;
+    transition: color 0,3s ease;
+}
+
+.bttn-repository:hover{
+    color: var(--skin-color);
+}
+
+.bg-modal{
+    background-color: var(--bg-black-900);
+    color: var(--text-black-900);
+}
+
+.bg-card{
+    background-color: var(--bg-footer-900);
+    color: var(--text-footer-900);
+}
+
+.carousel-indicators button{
+    background-color: #000;
+}
+
+.main-image{
+    background-color: #0006;
+    color: #FFF;
+}
+
+.tag-tecnology{
+    background-color: var(--skin-color);
+    /* box-sizing: border-box; */
+    /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
+    border-radius: 20px 0px;
+    padding: 0px 10px;
+    color: var(--text-footer-900);
+    margin: auto 0px;
+}
+
+.img-aspect{
+    aspect-ratio: 16 / 9;
+}
+
+.tooltipPorfolio{
+    color: var(--text-black-900);
+    background: var(--bg-black-900);
+}
