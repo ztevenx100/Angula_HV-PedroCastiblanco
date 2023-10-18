@@ -190,7 +190,6 @@
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 15px;
-    /* margin-left: 15px; */
     text-transform: capitalize;
     color: var(--text-black-900);
 }
@@ -214,7 +213,6 @@
 .timeline .timeline-text{
     line-height: 25px;
     font-size: 16px;
-    /* margin-left: 15px; */
     color: var(--text-black-700);
 }
 .timeline .timeline-text ul{
@@ -225,7 +223,7 @@
     background: var(--bg-footer-900);
 }
 .timeline.especial p{
-    color: var(--text-footer-900) !important;
+    color: var(--text-footer-900);
 }
 .timeline.especial .fa-graduation-cap{
     color: var(--skin-color);

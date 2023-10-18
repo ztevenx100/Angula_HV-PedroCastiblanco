@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ,NgxTypedJsModule
     ,BrowserAnimationsModule
     ,TooltipModule.forRoot()
+    ,BsDropdownModule.forRoot()
+    ,CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
