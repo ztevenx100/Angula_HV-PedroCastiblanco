@@ -1,74 +1,54 @@
 <!-- == | Main Container Start ===== -->
-<section class="contact section" id="contact">
-    <div class="container">
-        <!-- == | Contact Section Start ===== -->
-        <div class="row">
-            <div class="col d-flex align-items-center">
-                <div class="section-title">
-                    <h2>Contact</h2>
-                </div>
-            </div>
-        </div>
-        <div class="card bg-card">
-            <div class="row g-0">
-            <div class="col-md-4 bg-contact">
+<section id="contact" class="contact section row row-cols-1">
+    <!-- == | Contact Section Start ===== -->
+    <div class="col d-flex align-items-center" role="rowheader">
+        <span class="section-title">
+            <h2>Contact</h2>
+        </span>
+    </div>
+    <article class="col card bg-card mb-1">
+        <div class="row" role="row">
+            <figure class="col-md-4 bg-contact mb-0">
                 <img src="../../../../assets/img/contact/mobile-contact-us-form.jpg" alt="" class="">
-            </div>
+            </figure>
             <div class="col-md-8 py-2">
-                <div class="row card-header">
-                    <div class="col-md contact-info-item text-center">
+                <header class="row card-header">
+                    <div class="col-sm-6 contact-info-item text-center">
                         <div class="icon"><i class="fa fa-envelope"></i></div>
                         <h4>Email</h4>
                         <p>pscastiblanco@gmail.com</p>
                     </div>
-                    <div class="col-md contact-info-item text-center">
+                    <div class="col-sm-6 contact-info-item text-center">
                         <div class="icon"><i class="fa fa-globe-europe"></i></div>
                         <h4>Website</h4>
                         <p>www.domain.com</p>
                     </div>
-                </div>
-                <div class="row card-body">
-                    <h5 class="card-title contact-title">Send me an email</h5>
-                    <div class="contact-form">
-                        <form (submit)="sendEmail($event)">
-                            <div class="form-group row form-item mb-3">
-                                <div class="col-sm-6">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">Name</div>
-                                        </div>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" [disabled]="campoDeshabilitado" required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">Email</div>
-                                        </div>
-                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" [disabled]="campoDeshabilitado" required>
-                                    </div>
-                                </div>
+                </header>
+                <div class="row card-body py-0">
+                    <form class="contact-form" (submit)="sendEmail($event)">
+                        <fieldset class="form-group row form-item mb-1 d-flex flex-wrap justify-content-center gap-3">
+                            <legend class="card-title contact-title">Send me an email</legend>
+                            
+                            <div class="col-md-6 input-group">
+                                <label for="name" class="input-group-text">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" [disabled]="campoDeshabilitado" required>
                             </div>
-                            <div class="form-group row form-item mb-3">
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">Message</div>
-                                        </div>
-                                        <textarea class="form-control" name="message" id="message" placeholder="Message" [disabled]="campoDeshabilitado" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <button type="submit" class="bttn ">Send message</button>
-                                </div>
+                            <div class="col-md-6 input-group">
+                                <label for="message" class="input-group-text">Message</label>
+                                <textarea class="form-control" name="message" id="message" placeholder="Message" [disabled]="campoDeshabilitado" required></textarea>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col input-group">
+                                <label for="email" class="input-group-text">Email</label>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="Email" [disabled]="campoDeshabilitado" required>
+                                <button type="submit" class="bttn ">Send message</button>
+                            </div>
+
+                        </fieldset>
+                    </form>
                 </div>
-            </div>
             </div>
         </div>
-        <!-- == | Contact Section End ===== -->
-    </div>
+    </article>
+    <!-- == | Contact Section End ===== -->
 </section>
 <!-- == | Main Container End ===== -->

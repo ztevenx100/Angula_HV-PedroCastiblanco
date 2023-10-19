@@ -42,8 +42,6 @@ body{
 }
 
 .section{
-    padding-top: 60px;
-    padding-bottom: 70px;
     transition: left 0.3s ease;
 }
 

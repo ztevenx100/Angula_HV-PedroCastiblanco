@@ -15,7 +15,7 @@ import { HomeComponent } from './component/pages/home/home.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ServicesComponent } from './component/pages/services/services.component';
 import { ContactComponent } from './component/pages/contact/contact.component';
-import { StyleSwicherComponent } from './component/style-swicher/style-swicher.component';
+import { StyleSwicherComponent } from './component/UI/style-swicher/style-swicher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
