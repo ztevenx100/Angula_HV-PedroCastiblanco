@@ -1,75 +1,67 @@
-<div class="container-fluid" style="margin: 0; padding: 0;">
-    <div class="row bg-base" style="margin: 0; padding: 0;">
+<div class="row bg-base p-0 m-0" >
 
-        <div class="col-lg-3 base-navbar" >
-            <nav class="navbar" >
-                <!-- Links -->
-                <div class="aside d-flex flex-column align-items-start">
-                    <div class="nav-item logo d-flex justify-content-center">
-                        <!-- Brand/logo routerLink="/"  -->
-                        <a class="navbar-brand" routerLink="/"> 
-                            <span>Dev</span> PSCP
-                        </a>
-                    </div>
-                    <div class="nav-toggler">
-                        <span></span>
-                    </div>
-                    <div class="mb-3 mt-md-5 mt-lg-3 container user-content">
-                        <div class="row ">
-                            <div class="user-img d-flex align-items-center py-2">
-                                <img src="../../../../assets/img/Dreamer.png" alt="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="d-flex user-social-media justify-content-around py-2">
-                                <a href='https://www.linkedin.com/in/pedro-steven-castiblanco-piracoca-a54a1a164/' ref="noreferrer" target="_blank" class="fa-brands fa-linkedin"></a>
-                                <a href='https://github.com/ztevenx100' ref="noreferrer" target="_blank" class="fa-brands fa-square-github"></a>
-                                <a href='https://gitlab.com/pscastiblanco' ref="noreferrer" target="_blank"  class="fa-brands fa-square-gitlab"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="mb-auto mt-md-5 mt-lg-3 navbar-nav nav-page-links px-4">
-                        <li class="nav-item">
-                            <a class="nav-link active" routerLink="/home" >
-                                <i class="fa fa-home"></i>Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/about" >
-                                <i class="fa fa-user"></i>About Me
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/services" >
-                                <i class="fa fa-list"></i>Services
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/portfolio" >
-                                <i class="fa fa-briefcase"></i>Portfolio
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" routerLink="/contact" >
-                                <i class="fa fa-comments"></i>Contact
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Footer navbar -->
-                    <footer class="footer">
-                        <i class="fa-solid fa-copyright"></i> Copyright 2023
-                        <p>Designed by Dev PSCP</p>
-                    </footer>
+    <div class="col-lg-3 base-navbar" >
+        <nav class="navbar d-flex flex-column align-items-start" >
+            <!-- Links -->
+                <div class="nav-item logo d-flex justify-content-center" role="rowheader">
+                    <!-- Brand/logo routerLink="/"  -->
+                    <a class="navbar-brand" routerLink="/"> 
+                        <span>Dev</span> PSCP
+                    </a>
                 </div>
-            </nav>
-        </div>
-        
-        <div class="col-lg-9" style="overflow: hidden;">
-            <!-- Others pages -->
-            <router-outlet></router-outlet>
-        </div>
-
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+                <div class="row row-cols-1 mb-3 mt-md-5 mt-lg-3 user-content px-4" role="row">
+                    <figure class="col user-img d-flex align-items-center py-2">
+                        <img src="../../../../assets/img/Dreamer.png" alt="">
+                    </figure>
+                    <menu class="col d-flex user-social-media justify-content-around py-2">
+                        <a href='https://www.linkedin.com/in/pedro-steven-castiblanco-piracoca-a54a1a164/' ref="noreferrer" target="_blank" class="fa-brands fa-linkedin"></a>
+                        <a href='https://github.com/ztevenx100' ref="noreferrer" target="_blank" class="fa-brands fa-square-github"></a>
+                        <a href='https://gitlab.com/pscastiblanco' ref="noreferrer" target="_blank"  class="fa-brands fa-square-gitlab"></a>
+                    </menu>
+                </div>
+                <menu class="mb-auto mt-md-5 mt-lg-3 navbar-nav nav-page-links px-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="/home" >
+                            <i class="fa fa-home"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/about" >
+                            <i class="fa fa-user"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/services" >
+                            <i class="fa fa-list"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/portfolio" >
+                            <i class="fa fa-briefcase"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact" >
+                            <i class="fa fa-comments"></i>Contact
+                        </a>
+                    </li>
+                </menu>
+                <!-- Footer navbar -->
+                <footer class="footer">
+                    <i class="fa-solid fa-copyright"></i> 2023
+                    <p>Designed by Dev PSCP</p>
+                </footer>
+        </nav>
     </div>
-    <!-- == | Style switcher Start ===== -->
-    <app-style-swicher></app-style-swicher>
+    
+    <div class="col-lg-9">
+        <!-- Others pages -->
+        <router-outlet></router-outlet>
+    </div>
+
 </div>
+<!-- == | Style switcher Start ===== -->
+<app-style-swicher></app-style-swicher>

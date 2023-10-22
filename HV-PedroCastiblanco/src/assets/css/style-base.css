@@ -12,7 +12,6 @@
     --bg-footer-900:#151515;
     --text-footer-900:#f2f2fc;
 }
-
 body.dark{
     --bg-black-900:#151515;
     --bg-black-100:#222;
@@ -27,14 +26,17 @@ body{
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Raleway' sans-serif;
+    overflow-x: hidden;
 }
 
+::-webkit-scrollbar {display: none;} /*Chrome*/
 *{
     margin: 0;
     padding: 0;
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
+    scrollbar-width: none; /*firefox*/
 }
 
 ::before,::after{

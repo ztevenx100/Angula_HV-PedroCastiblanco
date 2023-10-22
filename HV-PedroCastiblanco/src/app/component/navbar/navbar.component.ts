@@ -55,7 +55,7 @@ export class NavbarComponent {
     }
 
     const navTogglerBtn = document.querySelector(".nav-toggler");
-    const aside = document.querySelector(".aside");
+    const aside = document.querySelector(".navbar");
 
     const asideSectionTogglerBtn = () => {
       aside?.classList.toggle("open");
