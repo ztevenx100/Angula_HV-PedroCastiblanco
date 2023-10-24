@@ -15,6 +15,8 @@ class ProjectItem {
     , public title:string = ""
     , public subTitle:string = ""
     , public description:string = ""
+    , public owner:string|null = "own project"
+    , public urlProject:string = ""
     , public urlRepository:string = ""
     , public nameMainImage:string = "project-0.png"
     , public namesImages: string[] = []
@@ -33,6 +35,12 @@ class ProjectItem {
   }
   get getDescription(): string {
     return this.description;  
+  }
+  get getOwner(): string{
+    return this.owner ?? "Own project"
+  }
+  get getUrlProject(): string{
+    return this.urlProject
   }
   get getIconRepository() {
     let image:string = "";
@@ -77,7 +85,7 @@ export class PortfolioComponent implements OnInit {
   projectItems: Array<ProjectItem>= new Array<ProjectItem>();
   projecyModal: ProjectItem = new ProjectItem();
   activeSlideIndex = 0;
-  myInterval = 0;
+  myInterval = 2500;
 
   constructor(){
     // const PROYECTS =[
@@ -92,32 +100,51 @@ export class PortfolioComponent implements OnInit {
     
     this.projectItems.push(new ProjectItem(
       0
-      , "Orario"
-      , "Web tasks managment"
-      , "Degree project presented for the Escuela Tecnológica Instituto Técnico Central"
-      , "https://gitlab.com/itcproyect/pg-taskmanagement"
-      , "project-1.png"
-      , ["Orario-1.png","Orario-2.png","Orario-3.png"]
-      , 1
-      , ['Java',"Tomcat","JSP","HTML","CSS3","Bootstrap","MySQL"]
+      , "Neon"
+      , "Application of megasoft contractual processes"
+      , "Participant in the development of application of megasoft contractual processes."
+      , "Megasoft S.A.S."
+      , "https://www.megasoft.com.co"
+      , ""
+      , "project-3.png"
+      , ["Neon-1.png","Neon-2.png","Neon-3.png"]
+      , 4
+      , ['Java',"Tomcat","JSP","HTML","CSS3","JavaScript","Bootstrap","Oracle","SqlServer","PostgreSql","Eclipse"]
     ));
     this.projectItems.push(new ProjectItem(
       1
       , "Orario"
+      , "Web tasks managment"
+      , "Degree project presented for the Escuela Tecnológica Instituto Técnico Central, website of a task manager for companies."
+      , null
       , ""
-      , "Test React"
       , "https://gitlab.com/itcproyect/pg-taskmanagement"
-      , "project-0.png"
+      , "project-1.png"
       , ["Orario-1.png","Orario-2.png","Orario-3.png"]
       , 1
-      , ['Java',"JSP","HTML","CSS3","Bootstrap","MySQL"]
+      , ["Java","Tomcat","JSP","HTML","CSS3","JavaScript","TypeScript","Bootstrap","MySQL","Eclipse"]
+    ));
+    this.projectItems.push(new ProjectItem(
+      2
+      , "My world"
+      , "React test"
+      , "This page was a practice exercise for the use of react."
+      , undefined
+      , ""
+      , "https://gitlab.com/itcproyect/pg-taskmanagement"
+      , "project-2.png"
+      , ["MyWorld-1.png","MyWorld-2.png","MyWorld-3.png","MyWorld-4.png","MyWorld-5.png","MyWorld-6.png"]
+      , 0
+      , ["React","HTML","CSS3","JavaScript","TypeScript","Bootstrap","Visual Studio Code"]
     ));
   
     // console.log(this.projectItems);
   }
 
   dataModal(id:number){
+    this.projecyModal = new ProjectItem();
     this.projecyModal = this.projectItems[id];
+    console.log(this.projecyModal);
   }
 
 }
