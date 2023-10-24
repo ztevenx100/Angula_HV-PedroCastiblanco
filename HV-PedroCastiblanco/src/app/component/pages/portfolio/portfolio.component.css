@@ -78,9 +78,18 @@
 
 .img-aspect{
     aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .tooltipPorfolio{
     color: var(--text-black-900);
     background: var(--bg-black-900);
+}
+
+.bg-important{
+    background: var(--skin-color);
+}
+
+.icon-next{
+    fill: #000;
 }

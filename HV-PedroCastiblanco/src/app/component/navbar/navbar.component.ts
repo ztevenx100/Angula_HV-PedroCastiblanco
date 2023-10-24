@@ -31,7 +31,7 @@ export class NavbarComponent {
     
     const allSection = document.querySelectorAll(".section");
     const totalSection = allSection.length;
-    console.log(allSection);
+    // console.log(allSection);
 
     // Set CssClass when push clicking on navbar buttons
     for (let i = 0; i < totalNavList; i++) {
