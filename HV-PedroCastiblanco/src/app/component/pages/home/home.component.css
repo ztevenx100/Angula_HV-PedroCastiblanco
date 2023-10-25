@@ -33,69 +33,6 @@ app-footer {
   height: 100vh;
 }
 
-.cube {
-  position: absolute;
-  top: 80vh;
-  left: 15vw;
-  width: 10px;
-  height: 10px;
-  border: solid 1px color-mix(in srgb, var(--skin-color) 30%, var(--bg-footer-900));
-  transform-origin: top left;
-  transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  animation: cube 12s ease-in forwards infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-.cube:nth-child(2n) {
-  border-color: color-mix(in srgb, var(--skin-color) 30%, var(--bg-black-900));
-}
-.cube:nth-child(2) {
-  animation-delay: 2s;
-  left: 5vw;
-  top: 10vh;
-}
-.cube:nth-child(3) {
-  animation-delay: 4s;
-  left: 40vw;
-  top: 20vh;
-}
-.cube:nth-child(4) {
-  animation-delay: 6s;
-  left: 70vw;
-  top: 10vh;
-}
-.cube:nth-child(5) {
-  animation-delay: 8s;
-  left: 60vw;
-  top: 85vh;
-}
-.cube:nth-child(6) {
-  animation-delay: 10s;
-  left: 30vw;
-  top: 10vh;
-}
-.cube:nth-child(7) {
-  animation-delay: 4s;
-  left: 60vw;
-  top: 50vh;
-}
-.cube:nth-child(8) {
-  animation-delay: 2s;
-  left: 40vw;
-  top: 70vh;
-}
-
-@keyframes cube {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
-  }
-}
-
 /* home */
 .home.section{
   background-color: var(--bg-black-900);
@@ -125,12 +62,34 @@ h3.hello{
   font-size: 28px;
   margin: 15px 0;
 }
-h3.hello span{
+h3.hello .name{
   font-family: 'Caveat', cursive;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
-  color: var(--skin-color);
+  /* color: var(--skin-color); */
+  background: linear-gradient(
+    45deg
+    , var(--skin-color)
+    , var(--text-black-900));
+  background-clip: text;
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
 }
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 h3.my-profession{
   font-size: 30px;
@@ -176,7 +135,8 @@ h3.my-profession{
 }
 
 .home .home-img img{
-  margin: auto;
   border-radius: 5px;
   height: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }

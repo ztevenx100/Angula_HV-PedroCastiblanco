@@ -169,12 +169,15 @@ ul{
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 50px;
-  padding: 20px 5px;
+  min-height: 40px;
+  padding: 10px 5px;
   background: var(--bg-footer-900);
   color: var(--text-footer-900);
   text-align: center;
   font-size: 12px;
+}
+.footer p{
+  margin-bottom: 0px;
 }
 
 .navbar .user-content{
@@ -182,16 +185,20 @@ ul{
   top: 0px;
 }
 
-.navbar .user-content .user-img{
+.user-content .user-img{
   position: relative;
+  overflow: hidden;
+  height: 120px;
 }
 
-.navbar .user-img img{
+.user-img img{
   margin: auto;
   border-radius: 50%;
-  border: 5px solid var(--text-black-900);
-  height: 120px;
+  outline: 5px solid var(--text-black-900);
+  height: 100%;
   transform: scale(1);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .navbar .user-content .user-social-media{

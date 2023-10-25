@@ -25,9 +25,10 @@ export class NavbarComponent {
       document.querySelector("#"+target)?.classList.add("active");
     };
     
-    const nav = document.querySelector(".nav-page-links");
+    const nav = document.querySelector(".nav-links-class");
+    //console.log(nav)
     const navList: NodeListOf<HTMLLIElement> = nav?.querySelectorAll("li") as NodeListOf<HTMLLIElement>;
-    //console.log(navList)
+    console.log(navList)
     
     const totalNavList = navList.length;
     
