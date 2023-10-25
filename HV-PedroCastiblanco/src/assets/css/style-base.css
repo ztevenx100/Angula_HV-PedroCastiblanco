@@ -128,3 +128,8 @@ body{
 @media (max-width:992px){
 
 }
+
+.tooltipStyle{
+    color: var(--text-footer-900);
+    background: var(--bg-footer-900);
+}

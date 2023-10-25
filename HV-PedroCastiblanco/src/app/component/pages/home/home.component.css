@@ -43,7 +43,8 @@ app-footer {
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 12s ease-in forwards infinite;
-  z-index: 5;
+  z-index: 0;
+  pointer-events: none;
 }
 .cube:nth-child(2n) {
   border-color: color-mix(in srgb, var(--skin-color) 30%, var(--bg-black-900));
