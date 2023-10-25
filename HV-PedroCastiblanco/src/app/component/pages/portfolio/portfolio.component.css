@@ -90,6 +90,8 @@
     background: var(--skin-color);
 }
 
-.icon-next{
-    fill: #000;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #000;
+    border-radius: 5px;
 }

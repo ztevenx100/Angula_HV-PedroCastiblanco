@@ -27,6 +27,8 @@ export class NavbarComponent {
     
     const nav = document.querySelector(".nav-page-links");
     const navList: NodeListOf<HTMLLIElement> = nav?.querySelectorAll("li") as NodeListOf<HTMLLIElement>;
+    //console.log(navList)
+    
     const totalNavList = navList.length;
     
     const allSection = document.querySelectorAll(".section");
@@ -49,21 +51,21 @@ export class NavbarComponent {
         this.classList.add("active");
         showSection(this);
         if (window.innerWidth < 1200) {
-          asideSectionTogglerBtn();
+          navSectionTogglerBtn();
         }
       })
     }
 
     const navTogglerBtn = document.querySelector(".nav-toggler");
-    const aside = document.querySelector(".navbar");
+    const navbar = document.querySelector(".navbar");
 
-    const asideSectionTogglerBtn = () => {
-      aside?.classList.toggle("open");
+    const navSectionTogglerBtn = () => {
+      navbar?.classList.toggle("open");
       navTogglerBtn?.classList.toggle("open");
     }
 
     navTogglerBtn?.addEventListener("click", () => {
-      asideSectionTogglerBtn();
+      navSectionTogglerBtn();
     });
 
   }
