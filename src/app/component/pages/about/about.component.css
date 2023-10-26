@@ -12,8 +12,6 @@
 }
 
 .about .about-content{
-    /* flex: 0 0 100%; */
-    /* max-width: 100%; */
     text-align: left;
 }
 
@@ -179,7 +177,6 @@
     font-weight: 400;
     font-size: 14px;
     margin-bottom: 12px;
-    /* margin-left: 15px; */
     color: var(--text-black-700);
 }
 .timeline .timeline-date .fa{
@@ -312,43 +309,5 @@
     }
     100% {
         transform: translateY(0);
-    }
-}
-
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
-
-.counter{
-    transition: --num 5s;
-    counter-set: num var(--num);
-    animation-name: counterNum;
-    animation-iteration-count: 2;
-    animation-timing-function: ease-in-out;
-    animation-duration: 2s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-}
-
-.counter::after {
-    content: counter(num);
-}
-/* .counter:hover {
-    --num: 4;
-} */
-
-@keyframes counterNum {
-    0% {
-        /* --num: 0;
-        counter-set: num var(--num); */
-        counter-reset: my-sec-counter;
-    }
-    100% {
-        /* --num: 4;
-        counter-set: num var(--num); */
-        counter-increment: my-sec-counter 1;
-        content: counter(my-sec-counter) ;
     }
 }
