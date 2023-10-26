@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
 
 //Constants
-const PATH_PROJECT_IMAGE: string = "../../../../assets/img/project/";
+const PATH_PROJECT_IMAGE: string = "./assets/img/project/";
 
 //Interfaces
 class ProjectItem {
