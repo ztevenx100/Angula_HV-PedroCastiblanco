@@ -4,39 +4,43 @@
         <div class="row my-2 animation-time">
             <div class="col-md px-1 d-flex align-items-center timeline-box">
                 <div class="section-title my-0 timeline">
-                    <h2>About me</h2>
+                    <h2>{{ 'ABOUT.Title' | translate }}</h2>
                 </div>
             </div>
         </div>
         
         <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.6s;">
             <div class="col-md-6 px-1 timeline-box">
+                <!-- Card 1 -->
                 <div class="timeline d-flex align-items-center py-2 ">
                     <div class="about-text px-3">
-                        <h3>I'm Pedro Steven Castiblanco</h3>
+                        <h3>{{ 'ABOUT.Card01Text01' | translate }}Pedro Steven Castiblanco</h3>
                         <h3><span>Junior Full Stack Developer</span></h3>
                     </div>
                 </div>
             </div>
             <div class="col-md-2 px-1 timeline-box">
+                <!-- Card 2 -->
                 <div class="timeline button-cv">
                     <!-- Descargar documento en PDF -->
-                    <a href="./assets/docs/pdf/HV - Pedro Castiblanco (23-09-08) - EN.pdf" download="CV - Pedro Castiblanco.pdf" title="Download CV" class="bttn" tooltip="Download CV" containerClass="tooltipStyle">
+                    <a href="./assets/docs/pdf/HV - Pedro Castiblanco (23-09-08) - EN.pdf" download="CV - Pedro Castiblanco.pdf" title="Download CV" class="bttn" tooltip="{{ 'ABOUT.BtnDownloadCV' | translate }}" containerClass="tooltipStyle">
                         <i class="fa-solid fa-file-arrow-down" ></i>
                     </a>
                 </div>
             </div>
             <div class="col-6 col-md-2 px-1 timeline-box">
+                <!-- Card 3 -->
                 <div class="timeline d-flex justify-content-center align-items-center">
                     <img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 50px;margin: 0 10px;" tooltip="Colombia, Bogotá D.C." containerClass="tooltipStyle">
                 </div>
             </div>
             <aside class="col-6 col-md-2 px-1 timeline-box">
+                <!-- Card 4 -->
                 <div class="timeline especial py-1 px-4 ">
                     <div class="time-exp text-center">
                         <h2 class="mb-0 d-flex align-items-center"><span>+</span><span class="">{{counterYears.count}}</span><i class="fa-regular fa-star"></i></h2>
-                        <p class="mb-0">Years</p>
-                        <p class="mb-0">Experience</p>
+                        <p class="mb-0">{{ 'ABOUT.Card04Text01' | translate }}</p>
+                        <p class="mb-0">{{ 'ABOUT.Card04Text02' | translate }}</p>
                     </div>
                 </div>
             </aside>
@@ -44,37 +48,43 @@
 
         <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.7s;">
             <div class="col-md-6 px-1 timeline-box">
+                <!-- Card 5 -->
                 <div class="timeline">
                     <div class="about-text px-3">
-                        <p> <span class="important">Junior software developer</span> with a strong background in web development, including experience with 
-                            <span class="important">front-end</span>, <span class="important">back-end</span> and <span class="important">database technologies</span>, passionate about software 
-                            development and solving challenging technology problems, with experience in <span class="important">providing technical support</span> and 
-                            <span class="important">developing software solutions</span>.</p>
+                        <p> <span class="important">{{ 'ABOUT.Card05Text01' | translate }}</span> {{ 'ABOUT.Card05Text02' | translate }}
+                            <span class="important">front-end</span>, <span class="important">back-end</span> {{ 'ABOUT.WordAnd' | translate }} 
+                            <span class="important">{{ 'ABOUT.Card05Text03' | translate }}</span>{{ 'ABOUT.Card05Text04' | translate }}
+                            {{ 'ABOUT.Card05Text05' | translate }}<span class="important">{{ 'ABOUT.Card05Text06' | translate }}</span> {{ 'ABOUT.WordAnd' | translate }} 
+                            <span class="important">{{ 'ABOUT.Card05Text07' | translate }}</span>.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 px-1 d-flex flex-column">
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
+                        <!-- Card 6 -->
                         <div class="timeline especial d-flex align-items-center">
-                            <p class="mb-0"><i class="fa-solid fa-graduation-cap" tooltip="Degree" containerClass="tooltipStyle"></i> <span>Systems engineer</span></p>
+                            <p class="mb-0"><i class="fa-solid fa-graduation-cap" tooltip="{{ 'ABOUT.Card06Tooltip' | translate }}" containerClass="tooltipStyle"></i> <span>{{ 'ABOUT.Card06Text01' | translate }}</span></p>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-0 flex-fill">
                     <div class="col timeline-box">
+                        <!-- Card 7 -->
                         <div class="timeline d-flex justify-content-right align-items-center">
-                            <p class="mb-0">Email: <span class="important" >pscastiblanco@gmail.com</span></p>
+                            <p class="mb-0">{{ 'ABOUT.Card07Text01' | translate }}: <span class="important" >pscastiblanco@gmail.com</span></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 px-1 timeline-box">
+                <!-- Card 8 -->
                 <div class="timeline especial d-flex align-items-center justify-content-center">
                     <div class="text-center">
-                        <h3 class="mb-3"><span class="important">Lenguages</span></h3>
-                        <p class="mb-0">Spanish<img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 22px;margin: 0 10px;"></p>
-                        <p class="mb-0">English<img src="./assets/img/icon/png/892858.png" alt="English" style="height: 22px;margin: 0 10px;"></p>
+                        <h3 class="mb-3"><span class="important">{{ 'ABOUT.Card08Title' | translate }}</span></h3>
+                        <p class="mb-0">{{ 'ABOUT.Card08Text01' | translate }}<img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 22px;margin: 0 10px;"></p>
+                        <p class="mb-0">{{ 'ABOUT.Card08Text02' | translate }}<img src="./assets/img/icon/png/892858.png" alt="English" style="height: 22px;margin: 0 10px;"></p>
                     </div>
                 </div>
             </div>
@@ -84,34 +94,34 @@
             <div class="col-md-6 px-1 d-flex flex-column">
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
+                        <!-- Card 9 -->
                         <div class="timeline ">
                             <div class="about-text px-3">
-                                <p> Skilled in solving complex problems, delivering high quality code, in addition to working in a dynamic 
-                                    and demanding environment. Able to work independently or as part of a team, with communication and project management skills.</p>
+                                <p> {{ 'ABOUT.Card09Text01' | translate }} </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
+                        <!-- Card 10 -->
                         <div class="timeline ">
                             <div class="about-text px-3">
-                                <p>Currently holding position as a junior programmer and support engineer, with <span class="important">over 4 years of experience </span>
-                                    in developing project requirements and supporting enterprise web applications. </p>
-                                <p> Focus is on delivering results with discipline, honesty and accountability. </p>
-                                <p> Possess an outstanding learning ability and my ability to work both independently and as part of a team, in 
-                                    addition, I am analytical, organized and punctual.</p>
+                                <p>{{ 'ABOUT.Card10Text01' | translate }}<span class="important">{{ 'ABOUT.Card10Text02' | translate }}</span>{{ 'ABOUT.Card10Text03' | translate }}</p>
+                                <p>{{ 'ABOUT.Card10Text04' | translate }}</p>
+                                <p>{{ 'ABOUT.Card10Text05' | translate }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-0">
                     <div class="col timeline-box">
+                        <!-- Card 11 -->
                         <div class="timeline d-flex justify-content-right align-items-center ">
                             <div class="about-title px-3">
-                                <p> My work experience includes programming in several languages, such as 
-                                <span class="important">Java</span>, <span class="important">JavaScript</span>, <span class="important">HTML5</span>, <span class="important">CSS3</span> and <span class="important">JSP</span>
-                                , as well as relational database management such as <span class="important">Oracle</span>, <span class="important">SQLServer</span> and <span class="important">Postgres</span>.</p>
+                                <p>{{ 'ABOUT.Card11Text01' | translate }}
+                                <span class="important">Java</span>, <span class="important">JavaScript</span>, <span class="important">HTML5</span>, <span class="important">CSS3</span> {{ 'ABOUT.WordAnd' | translate }} <span class="important">JSP</span>
+                                {{ 'ABOUT.Card11Text02' | translate }}<span class="important">Oracle</span>, <span class="important">SQLServer</span> {{ 'ABOUT.WordAnd' | translate }} <span class="important">Postgres</span>.</p>
                             </div>
                         </div>
                     </div>
@@ -120,29 +130,31 @@
             <article class="col-md-6 px-1 d-flex flex-column">
                 <div class="row mb-2">
                     <div class="col timeline-box">
+                        <!-- Card 12 -->
                         <div class="timeline title">
                             <div class="about-title px-3">
-                                <h2>Experience</h2>
+                                <h2>{{ 'ABOUT.Card12Text01' | translate }}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
+                        <!-- Card 13 -->
                         <div class="timeline ">
                             <div class="timeline-item">
                                 <div class="circle-dot"></div>
                                 <h3 class="timeline-date">
-                                    <i class="fa fa-calendar"></i> January 2019 – Currently
+                                    <i class="fa fa-calendar"></i>{{ 'ABOUT.Card13Text01' | translate }}
                                 </h3>
-                                <h4 class="timeline-title mb-0">Support engineer and programmer</h4>
+                                <h4 class="timeline-title mb-0">{{ 'ABOUT.Card13Text02' | translate }}</h4>
                                 <h4 class="timeline-title"><span class="important">MEGASOFT S.A.S.</span></h4>
                                 <div class="timeline-text">
                                     <ul>
-                                        <li> Debugging and troubleshooting of web applications and interfaces.</li>
-                                        <li> Developed new functionalities and maintained existing ones.</li>
-                                        <li> Provided technical support to customers, resolving company software issues in a timely and efficient manner.</li>
-                                        <li> Collaborated with cross-functional teams to identify and prioritize software and system requirements, ensuring successful completion of projects within tight deadlines.</li>
+                                        <li>{{ 'ABOUT.Card13Text03' | translate }}</li>
+                                        <li>{{ 'ABOUT.Card13Text04' | translate }}</li>
+                                        <li>{{ 'ABOUT.Card13Text05' | translate }}</li>
+                                        <li>{{ 'ABOUT.Card13Text06' | translate }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -151,16 +163,18 @@
                 </div>
                 <div class="row mb-0">
                     <aside class="col pe-1 timeline-box">
+                        <!-- Card 14 -->
                         <div class="timeline especial">
                             <div class="text-center">
-                                <p class="mb-0"><span class="important h3">+{{counterSolutions.count}}</span> Support solution</p>
+                                <p class="mb-0"><span class="important h3">+{{counterSolutions.count}}</span> {{ 'ABOUT.Card14Text01' | translate }}</p>
                             </div>
                         </div>
                     </aside>
                     <aside class="col ps-1 timeline-box">
+                        <!-- Card 15 -->
                         <div class="timeline especial">
                             <div class="text-center">
-                                <p class="mb-0"><span class="important h3">+{{counterRequest.count}}</span> Development requests</p>
+                                <p class="mb-0"><span class="important h3">+{{counterRequest.count}}</span> {{ 'ABOUT.Card15Text01' | translate }}</p>
                             </div>
                         </div>
                     </aside>
@@ -170,11 +184,12 @@
 
         <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.9s;">
             <article class="col px-1 timeline-box">
+                <!-- Card 16 -->
                 <div class="row mb-2">
                     <div class="col timeline-box">
                         <div class="timeline title-2">
                             <div class="about-title px-3">
-                                <h2>Skills</h2>
+                                <h2>{{ 'ABOUT.Card16Title' | translate }}</h2>
                             </div>
                         </div>
                     </div>
@@ -247,7 +262,7 @@
                     <div class="col timeline-box">
                         <div class="timeline title">
                             <div class="about-title px-3">
-                                <h2>Database</h2>
+                                <h2>{{ 'ABOUT.Card16Text01' | translate }}</h2>
                             </div>
                         </div>
                     </div>
@@ -305,11 +320,12 @@
                 </div>
             </article>
             <article class="col px-1 d-flex flex-column">
+                <!-- Card 17 -->
                 <div class="row mb-2">
                     <div class="col timeline-box">
                         <div class="timeline title">
                             <div class="about-title px-3">
-                                <h2>Academic background</h2>
+                                <h2>{{ 'ABOUT.Card17Title' | translate }}</h2>
                             </div>
                         </div>
                     </div>
@@ -320,9 +336,9 @@
                             <div class="timeline-item">
                                 <div class="circle-dot"></div>
                                 <h3 class="timeline-date">
-                                    <i class="fa fa-calendar"></i> 2018 - April 2023
+                                    <i class="fa fa-calendar"></i>{{ 'ABOUT.Card17Text01' | translate }}
                                 </h3>
-                                <h4 class="timeline-title mb-0">Systems engineer</h4>
+                                <h4 class="timeline-title mb-0">{{ 'ABOUT.Card17Text02' | translate }}</h4>
                                 <h4 class="timeline-title"><span class="important">Escuela Tecnológica Instituto Técnico Central</span></h4>
                                 <p class="timeline-text"></p>
                             </div>
@@ -331,7 +347,7 @@
                                 <h3 class="timeline-date">
                                     <i class="fa fa-calendar"></i> 2017 - 2018
                                 </h3>
-                                <h4 class="timeline-title mb-0">Software Development Technologist</h4>
+                                <h4 class="timeline-title mb-0">{{ 'ABOUT.Card17Text03' | translate }}</h4>
                                 <h4 class="timeline-title"><span class="important">Escuela Tecnológica Instituto Técnico Central</span></h4>
                                 <p class="timeline-text"></p>
                             </div>
@@ -340,7 +356,7 @@
                                 <h3 class="timeline-date">
                                     <i class="fa fa-calendar"></i> 2015 - 2018
                                 </h3>
-                                <h4 class="timeline-title mb-0">Professional Computer Technician</h4>
+                                <h4 class="timeline-title mb-0">{{ 'ABOUT.Card17Text04' | translate }}</h4>
                                 <h4 class="timeline-title"><span class="important">Escuela Tecnológica Instituto Técnico Central</span></h4>
                                 <p class="timeline-text"></p>
                             </div>

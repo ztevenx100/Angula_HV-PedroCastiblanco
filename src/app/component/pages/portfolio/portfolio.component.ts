@@ -15,7 +15,7 @@ class ProjectItem {
     , public title:string = ""
     , public subTitle:string = ""
     , public description:string = ""
-    , public owner:string|null = "Own project"
+    , public owner:string|null = "PORTFOLIO.Project.OwnProject"
     , public urlProject:string = ""
     , public urlRepository:string = ""
     , public nameMainImage:string = "project-0.png"
@@ -31,13 +31,19 @@ class ProjectItem {
     return this.title;  
   }
   get getSubTitle(): string {
-    return this.subTitle;  
+    return this.subTitle;
+  }
+  get getTranslateSubTitle(): string {
+    return "PORTFOLIO.Project.Subtitle" + this.id;
   }
   get getDescription(): string {
     return this.description;  
   }
+  get getTranslateDescription(): string {
+    return "PORTFOLIO.Project.Description" + this.id;
+  }
   get getOwner(): string{
-    return this.owner ?? "Own project"
+    return this.owner ?? "PORTFOLIO.Project.OwnProject"
   }
   get getUrlProject(): string{
     return this.urlProject
@@ -68,6 +74,9 @@ class ProjectItem {
   }
   get getYearsExpirienceText(): string {
     return "+" + this.yearsExpirience + " years";  
+  }
+  get getTranslateYearsExpirience(): string {
+    return "PORTFOLIO.Project.TextYears";
   }
   get getTechnologies(): string[] {
     return this.technologies;
