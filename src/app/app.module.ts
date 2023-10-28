@@ -5,8 +5,11 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './component/pages/about/about.component';
 import { PortfolioComponent } from './component/pages/portfolio/portfolio.component';
@@ -16,7 +19,12 @@ import { FooterComponent } from './component/footer/footer.component';
 import { ServicesComponent } from './component/pages/services/services.component';
 import { ContactComponent } from './component/pages/contact/contact.component';
 import { StyleSwicherComponent } from './component/UI/style-swicher/style-swicher.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SwicherLangComponent } from './component/UI/swicher-lang/swicher-lang.component';
+
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -28,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     ServicesComponent,
     ContactComponent,
-    StyleSwicherComponent
+    StyleSwicherComponent,
+    SwicherLangComponent
   ],
   imports: [
     BrowserModule
@@ -46,6 +55,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ,TooltipModule.forRoot()
     ,BsDropdownModule.forRoot()
     ,CarouselModule.forRoot()
+    ,HttpClientModule
+    ,TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,7 +11,7 @@
     <!-- == | Contact Section Start ===== -->
     <div class="col d-flex align-items-center" role="rowheader">
         <span class="section-title">
-            <h2>Contact</h2>
+            <h2>{{ 'CONTACT.Title' | translate }}</h2>
         </span>
     </div>
     <article class="col card bg-card mb-1">
@@ -23,32 +23,32 @@
                 <header class="row card-header">
                     <address class="col-sm-6 contact-info-item text-center">
                         <div class="icon"><i class="fa fa-envelope"></i></div>
-                        <h4>Email</h4>
+                        <h4>{{ 'CONTACT.TextEmail' | translate }}</h4>
                         <p>pscastiblanco@gmail.com</p>
                     </address>
                     <address class="col-sm-6 contact-info-item text-center">
                         <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                        <h4>Website</h4>
-                        <p>www.domain.com</p>
+                        <h4>{{ 'CONTACT.TextWebsite' | translate }}</h4>
+                        <p>https://ztevenx100.github.io/Angula_HV-PedroCastiblanco/home</p>
                     </address>
                 </header>
                 <div class="row card-body py-0">
                     <form class="contact-form" (submit)="sendEmail($event)">
                         <fieldset class="form-group row form-item mb-1 d-flex flex-wrap justify-content-center gap-3">
-                            <legend class="card-title contact-title">Send me an email</legend>
+                            <legend class="card-title contact-title">{{ 'CONTACT.TextTitleForm' | translate }}</legend>
                             
                             <div class="col-md-6 input-group">
-                                <label for="name" class="input-group-text">Name</label>
+                                <label for="name" class="input-group-text">{{ 'CONTACT.LblName' | translate }}</label>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Name" [disabled]="campoDeshabilitado" required>
                             </div>
                             <div class="col-md-6 input-group">
-                                <label for="message" class="input-group-text">Message</label>
+                                <label for="message" class="input-group-text">{{ 'CONTACT.LblMessage' | translate }}</label>
                                 <textarea class="form-control" name="message" id="message" placeholder="Message" [disabled]="campoDeshabilitado" required></textarea>
                             </div>
                             <div class="col input-group">
-                                <label for="email" class="input-group-text">Email</label>
+                                <label for="email" class="input-group-text">{{ 'CONTACT.LblEmail' | translate }}</label>
                                 <input type="text" class="form-control" name="email" id="email" placeholder="Email" [disabled]="campoDeshabilitado" required>
-                                <button type="submit" class="bttn ">Send message</button>
+                                <button type="submit" class="bttn ">{{ 'CONTACT.btnSubmit' | translate }}</button>
                             </div>
 
                         </fieldset>

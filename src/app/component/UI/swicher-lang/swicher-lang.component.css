@@ -1,0 +1,15 @@
+.s-icon{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    top: 110px;
+    right: 100%;
+    border: 3px solid var(--skin-color);
+    margin-right: 25px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}

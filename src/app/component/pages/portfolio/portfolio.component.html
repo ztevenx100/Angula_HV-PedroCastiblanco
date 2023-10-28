@@ -4,14 +4,14 @@
         <div class="row" role="heading">
             <div class="col d-flex align-items-center">
                 <div class="section-title">
-                    <h2 >Portfolio</h2>
+                    <h2 >{{ 'PORTFOLIO.Title' | translate }}</h2>
                 </div>
             </div>
         </div>
         <div class="row" role="rowgroup">
             <div class="col">
                 <div class="portfolio-head">
-                    <h2 class="mb-0">My Last Proyect:</h2>
+                    <h2 class="mb-0">{{ 'PORTFOLIO.Subtitle' | translate }}:</h2>
                 </div>
             </div>
         </div>
@@ -22,13 +22,15 @@
                     <header class="card-header">
                         {{project.getTitle}}
                     </header>
-                    <p class="d-flex flex-wrap justify-content-center py-2 bg-important">{{project.getOwner}}</p>
+                    <p class="d-flex flex-wrap justify-content-center py-2 bg-important">
+                        {{ project.getOwner | translate }}
+                    </p>
                     <img class="card-img-top img-aspect" src={{project.getUrlMainImage}} alt="{{project.getSubTitle}}">
                     <div class="card-body d-flex flex-wrap justify-content-center gap-3">
                         <span class="tag-tecnology" *ngFor="let technologies of project.getTechnologies">{{technologies}}</span>
                     </div>
                     <footer class="card-footer text-white d-flex justify-content-between">
-                        <small>{{project.getYearsExpirienceText}}</small>
+                        <small>{{ project.getTranslateYearsExpirience | translate:project }}</small>
                         <a href="/" class="modalOpenButton" data-bs-toggle="modal" data-bs-target="#myModal" (click)="dataModal(index)">
                             <i class="fa-solid fa-square-up-right"></i>
                         </a>
@@ -66,7 +68,7 @@
                                     <img src={{projecyModal.getUrlMainImage}} alt="{{projecyModal.getSubTitle}}" class="img-aspect" style="display: block; width: 100%;">
                                     <div class="carousel-caption d-none d-md-block main-image p-0 text-white" >
                                         <h3>{{projecyModal.getTitle}}</h3>
-                                        <p>{{projecyModal.getSubTitle}}</p>
+                                        <p>{{ projecyModal.getTranslateSubTitle | translate }}</p>
                                     </div>
                                 </slide>
                                 <slide *ngFor="let slide of projecyModal.getUrlImages; let index=index">
@@ -83,13 +85,13 @@
                         <div class="col-md-4">
 
                             <div class="row mb-3" >
-                                <p>{{projecyModal.getDescription}}</p>
-                                <h6>Owner: {{projecyModal.getOwner}}</h6>
+                                <p>{{ projecyModal.getTranslateDescription | translate }}</p>
+                                <h6>{{ "PORTFOLIO.OwnerText" | translate }}: {{ projecyModal.getOwner | translate }}</h6>
                             </div>
                             <div class="row">
                                 <div class="card tecnology-card" style="margin:10px; width: 100%;">
                                     <header class="card-header">
-                                        Technologies
+                                        {{ "PORTFOLIO.TechnologiesText" | translate }}
                                     </header>
                                     <div class="card-body d-flex flex-wrap justify-content-center gap-3">
                                         <span class="tag-tecnology" *ngFor="let technologies of projecyModal.getTechnologies">{{technologies}}</span>

@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-7 d-flex align-items-center">
                 <div class="home-info px-3">
-                    <h3 class="hello">Hello, my name is </h3>
+                    <h3 class="hello">{{ 'HOME.Title' | translate }}</h3>
                     <h3 class="hello"><span class="name">Pedro Castiblanco</span></h3>
                     <h3 class="my-profession">
                         <ngx-typed-js
@@ -18,11 +18,11 @@
                             [typeSpeed]="100"
                             [shuffle]="true"
                         >
-                            I'm a <span class="typing"></span>
+                        {{ 'HOME.Subtitle' | translate }}<span class="typing"></span>
                         </ngx-typed-js>
                     </h3>
                     <p></p>
-                    <a routerLink="/contact" class="bttn hire-me">Hire Me</a>
+                    <a routerLink="/contact" class="bttn hire-me">{{ 'HOME.BtnHireMe' | translate }}</a>
                 </div>
             </div>
         </div>
