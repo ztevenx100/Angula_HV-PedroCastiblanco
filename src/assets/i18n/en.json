@@ -18,7 +18,7 @@
         , "BtnDownloadCV": "Download CV"
         , "Card04Text01": "Years "
         , "Card04Text02": "Experience "
-        , "Card05Text01": "Junior software developer "
+        , "Card05Text01": "Full Stack developer "
         , "Card05Text02": "with a strong background in web development, including experience with "
         , "Card05Text03": "database technologies "
         , "Card05Text04": ", passionate about software "
@@ -102,5 +102,8 @@
         , "LblMessage": "Message"
         , "LblEmail": "Email"
         , "btnSubmit": "Send message"
+    }
+    , "FOOTER": {
+        "footnote": "Technologies used in this page"
     }
 }
