@@ -18,7 +18,7 @@
         , "BtnDownloadCV": "Descargar HV"
         , "Card04Text01": "Años de "
         , "Card04Text02": "Experiencia "
-        , "Card05Text01": "Junior software developer "
+        , "Card05Text01": "Full Stack developer "
         , "Card05Text02": "con una sólida formación en desarrollo web, incluida experiencia con "
         , "Card05Text03": "tecnologías de bases de datos "
         , "Card05Text04": ", apasionado por el desarrollo de software "
@@ -103,5 +103,8 @@
         , "LblMessage": "Mensaje"
         , "LblEmail": "Correo"
         , "btnSubmit": "Enviar mensaje"
+    }
+    , "FOOTER": {
+        "footnote": "Tecnologías usadas en esta pagina"
     }
 }
