@@ -112,9 +112,9 @@ export class PortfolioComponent implements OnInit {
       , "https://www.megasoft.com.co"
       , ""
       , "project-3.png"
-      , ["Neon-1.png","Neon-2.png","Neon-3.png"]
+      , ["Neon-1.png","Neon-2.jpg"]
       , 4
-      , ['Java',"Tomcat","JSP","HTML","CSS3","JavaScript","Bootstrap","Oracle","SqlServer","PostgreSql","Eclipse"]
+      , ['Java',"Tomcat","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
     ));
     this.projectItems.push(new ProjectItem(
       1
@@ -138,7 +138,7 @@ export class PortfolioComponent implements OnInit {
       , ""
       , "https://gitlab.com/itcproyect/pg-taskmanagement"
       , "project-2.png"
-      , ["MyWorld-1.png","MyWorld-2.png","MyWorld-3.png","MyWorld-4.png","MyWorld-5.png","MyWorld-6.png"]
+      , ["MyWorld-1.png","MyWorld-2.png","MyWorld-3.png","MyWorld-4.png","MyWorld-5.png","MyWorld-6.png","MyWorld-7.png","MyWorld-8.png"]
       , 0
       , ["React","HTML","CSS3","JavaScript","TypeScript","Bootstrap","Visual Studio Code"]
     ));
@@ -156,7 +156,7 @@ export class PortfolioComponent implements OnInit {
       , ["JavaScript","C#","Unity"]
     ));
     this.projectItems.push(new ProjectItem(
-      2
+      4
       , "Star Collector"
       , "Platform videogame"
       , "This project presented for the Escuela Tecnológica Instituto Técnico Central, Platform videogame."
