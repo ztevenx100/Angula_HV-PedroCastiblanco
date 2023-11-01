@@ -5,6 +5,7 @@
         , "LinkServices": "Servicios"
         , "LinkPortfolio": "Portafolio"
         , "LinkContact": "Contacto"
+        , "TitleStyleSwicher": "Colores temáticos"
     }
     , "HOME": {
         "Title": "Hola, mi nombre es "
@@ -25,7 +26,7 @@
         , "Card05Text05": "desarrollo y resolución de problemas tecnológicos complejos, con experiencia en la "
         , "Card05Text06": "prestación de soporte técnico"
         , "Card05Text07": "el desarrollo de soluciones de software "
-        , "Card06Tooltop": "Título"
+        , "Card06Tooltip": "Título"
         , "Card06Text01": "Ingeniero de sistemas"
         , "Card07Text01": "Correo"
         , "Card08Title": "Idiomas"

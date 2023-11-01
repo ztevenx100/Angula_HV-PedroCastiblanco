@@ -5,6 +5,7 @@
         , "LinkServices": "Services"
         , "LinkPortfolio": "Portfolio"
         , "LinkContact": "Contact"
+        , "TitleStyleSwicher": "Theme Colors"
     }
     , "HOME": {
         "Title": "Hello, my name is "
@@ -25,7 +26,7 @@
         , "Card05Text05": "development and solving challenging technology problems, with experience in "
         , "Card05Text06": "providing technical support"
         , "Card05Text07": "developing software solutions"
-        , "Card06Tooltop": "Degree"
+        , "Card06Tooltip": "Degree"
         , "Card06Text01": "Systems engineer"
         , "Card07Text01": "Email"
         , "Card08Title": "Lenguages"
