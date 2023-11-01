@@ -48,7 +48,7 @@
                             <div class="col input-group">
                                 <label for="email" class="input-group-text">{{ 'CONTACT.LblEmail' | translate }}</label>
                                 <input type="text" class="form-control" name="email" id="email" placeholder="Email" [disabled]="campoDeshabilitado" required>
-                                <button type="submit" class="bttn ">{{ 'CONTACT.btnSubmit' | translate }}</button>
+                                <button type="submit" class="bttn" [disabled]="campoDeshabilitado" id="submitContact">{{ 'CONTACT.btnSubmit' | translate }}</button>
                             </div>
 
                         </fieldset>
