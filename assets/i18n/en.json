@@ -5,6 +5,7 @@
         , "LinkServices": "Services"
         , "LinkPortfolio": "Portfolio"
         , "LinkContact": "Contact"
+        , "TitleStyleSwicher": "Theme Colors"
     }
     , "HOME": {
         "Title": "Hello, my name is "
@@ -14,8 +15,8 @@
     , "ABOUT": {
         "Title": "About me"
         , "WordAnd": "and "
-        , "NameFileCV": "HV - Pedro Castiblanco - EN.pdf "
-        , "NameFileDownloadCV": "CV - Pedro Castiblanco.pdf "
+        , "NameFileCV": "HV - Pedro Castiblanco - EN.pdf"
+        , "NameFileDownloadCV": "CV - Pedro Castiblanco.pdf"
         , "Card01Text01": "I'm "
         , "BtnDownloadCV": "Download CV"
         , "Card04Text01": "Years "
@@ -27,7 +28,7 @@
         , "Card05Text05": " My work history also includes "
         , "Card05Text06": "providing technical support"
         , "Card05Text07": "developing software solutions"
-        , "Card06Tooltop": "Degree"
+        , "Card06Tooltip": "Degree"
         , "Card06Text01": "Systems engineer"
         , "Card07Text01": "Email"
         , "Card08Title": "Lenguages"

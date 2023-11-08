@@ -5,6 +5,7 @@
         , "LinkServices": "Servicios"
         , "LinkPortfolio": "Portafolio"
         , "LinkContact": "Contacto"
+        , "TitleStyleSwicher": "Colores temáticos"
     }
     , "HOME": {
         "Title": "Hola, mi nombre es "
@@ -14,7 +15,7 @@
     , "ABOUT": {
         "Title": "Sobre mi"
         , "WordAnd": "y "
-        , "NameFileCV": "HV - Pedro Castiblanco - ES.pdf "
+        , "NameFileCV": "HV - Pedro Castiblanco - ES.pdf"
         , "NameFileDownloadCV": "HV - Pedro Castiblanco.pdf"
         , "Card01Text01": "Soy "
         , "BtnDownloadCV": "Descargar HV"
@@ -27,7 +28,7 @@
         , "Card05Text05": " Mi historial laboral también incluye la "
         , "Card05Text06": "prestación de soporte técnico"
         , "Card05Text07": "el desarrollo de soluciones de software "
-        , "Card06Tooltop": "Título"
+        , "Card06Tooltip": "Título"
         , "Card06Text01": "Ingeniero de sistemas"
         , "Card07Text01": "Correo"
         , "Card08Title": "Idiomas"
