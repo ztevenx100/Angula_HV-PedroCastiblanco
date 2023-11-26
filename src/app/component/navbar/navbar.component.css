@@ -39,7 +39,6 @@ ul{
 
 .navbar .logo{
   /* position: absolute; */
-  /* top: 50px; */
   font-size: 30px;
   text-transform: capitalize;
 }
@@ -141,7 +140,6 @@ ul{
   font-size: 16px;
   font-weight: 600;
   display: block;
-  /*border-bottom: 1px solid var(--bg-black-50);*/
   border-bottom: 1px solid var(--bg-black-50);
   color: var(--text-black-900);
   padding: 5px 15px;
@@ -177,6 +175,11 @@ ul{
 }
 .footer p{
   margin-bottom: 0px;
+}
+
+.nav-user{
+  margin-left: 22px;
+  margin-right: 22px;
 }
 
 .navbar .user-content{
@@ -235,6 +238,12 @@ ul{
   right: 0px;
 }
 
+@media (max-width:992px) and (min-height:551px){
+  .navbar .user-img img{
+    height: 120px;
+  }
+}
+
 @media (max-width:992px){
   .navbar{
     left: -300px;
@@ -243,24 +252,60 @@ ul{
     display: flex;
     left: 10px;
   }
+
   .navbar.open{
     left:0;
   }
+
   .navbar .nav-toggler.open{
     left: 310px;
   }
-
   .navbar .user-content{
     position: relative;
     top: -10px;
   }
-
   .navbar .user-img img{
-    height: 120px;
     transform: scale(1);
   }
   .navbar .user-content .user-social-media{
     font-size: 15px;
   }
   
+}
+
+@media (max-height:550px){
+  nav.navbar{
+    padding: 5px 30px;
+  }
+  menu.navbar-nav{
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .navbar .logo{
+    font-size: 20px;
+  }
+  .navbar .logo a{
+    font-size: 20px;
+    padding: 5px 20px;
+  }
+  .navbar-brand{
+    margin: 0 22px;
+  }
+  .nav-user{
+    margin: 0 22px;
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .user-content .user-img{
+    height: 80px;
+  }
+  .user-img img{
+    height: 80px;
+  }
+  .navbar .nav-page-links li a{
+    font-size: 12px;
+  }
+  .navbar .nav-page-links li a:hover{
+    font-size: 12px;
+  }
 }
