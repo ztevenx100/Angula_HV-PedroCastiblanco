@@ -25,7 +25,7 @@
                     <p class="d-flex flex-wrap justify-content-center py-2 bg-important">
                         {{ project.getOwner | translate }}
                     </p>
-                    <img class="card-img-top img-aspect" src={{project.getUrlMainImage}} alt="{{project.getSubTitle}}">
+                    <img class="card-img-top img-aspect" src={{project.getUrlMainImage}} alt="{{project.getSubTitle}}" data-bs-toggle="modal" data-bs-target="#myModal" (click)="dataModal(index)" >
                     <div class="card-body d-flex flex-wrap justify-content-center gap-3">
                         <span class="tag-tecnology" *ngFor="let technologies of project.getTechnologies">{{technologies}}</span>
                     </div>
