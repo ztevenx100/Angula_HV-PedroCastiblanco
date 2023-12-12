@@ -295,7 +295,7 @@
 }
 
 .animation-time {
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
