@@ -23,12 +23,10 @@
 .modalOpenButton{
     color: var(--skin-color);
     transition: color 0.3s ease;
-    /* transition: font-size 0.3s ease; */
 }
 
 .modalOpenButton:hover{
     color: #FFF;
-    /* font-size: 20px; */
 }
 
 .tecnology-card{
@@ -79,6 +77,9 @@
 .img-aspect{
     aspect-ratio: 16 / 9;
     object-fit: cover;
+}
+.card-img-top{
+    cursor: pointer;
 }
 
 .tooltipPorfolio{
