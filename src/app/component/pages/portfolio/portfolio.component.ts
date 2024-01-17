@@ -113,7 +113,7 @@ export class PortfolioComponent implements OnInit {
       , ""
       , "project-3.webp"
       , ["Neon-1.webp","Neon-2.webp"]
-      , 4
+      , 5
       , ['Java',"Tomcat","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
     ));
     this.projectItems.push(new ProjectItem(
