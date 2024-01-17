@@ -17,7 +17,7 @@
 }
 
 .sevices-item .card:hover{
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
 .bg-list{
