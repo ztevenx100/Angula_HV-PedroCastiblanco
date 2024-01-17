@@ -53,6 +53,7 @@
 .bg-card{
     background-color: var(--bg-footer-900);
     color: var(--text-footer-900);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .carousel-indicators button{
@@ -68,10 +69,14 @@
     background-color: var(--skin-color);
     /* box-sizing: border-box; */
     /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
-    border-radius: 20px 0px;
+    border-radius: 5px 0px;
     padding: 0px 10px;
     color: var(--text-footer-900);
     margin: auto 0px;
+}
+
+.project-carousel{
+    width: 100%;
 }
 
 .img-aspect{
@@ -80,6 +85,13 @@
 }
 .card-img-top{
     cursor: pointer;
+    overflow: hidden;
+    transition-property: transform;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .tooltipPorfolio{
