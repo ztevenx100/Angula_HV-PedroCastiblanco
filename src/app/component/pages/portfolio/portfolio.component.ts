@@ -18,7 +18,7 @@ class ProjectItem {
     , public owner:string|null = "PORTFOLIO.Project.OwnProject"
     , public urlProject:string = ""
     , public urlRepository:string = ""
-    , public nameMainImage:string = "project-0.png"
+    , public nameMainImage:string = "project-0.webp"
     , public namesImages: string[] = []
     , public yearsExpirience:number = 0
     , public technologies: string[] = []
@@ -111,8 +111,8 @@ export class PortfolioComponent implements OnInit {
       , "Megasoft S.A.S."
       , "https://www.megasoft.com.co"
       , ""
-      , "project-3.png"
-      , ["Neon-1.png","Neon-2.jpg"]
+      , "project-3.webp"
+      , ["Neon-1.webp","Neon-2.webp"]
       , 4
       , ['Java',"Tomcat","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
     ));
@@ -124,8 +124,8 @@ export class PortfolioComponent implements OnInit {
       , null
       , ""
       , "https://gitlab.com/itcproyect/pg-taskmanagement"
-      , "project-1.png"
-      , ["Orario-1.png","Orario-2.png","Orario-3.png"]
+      , "project-1.webp"
+      , ["Orario-1.webp","Orario-2.webp","Orario-3.webp"]
       , 1
       , ["Java","Tomcat","JSP","HTML","CSS3","JavaScript","TypeScript","Bootstrap","MySQL","Eclipse"]
     ));
@@ -137,8 +137,8 @@ export class PortfolioComponent implements OnInit {
       , undefined
       , ""
       , "https://gitlab.com/itcproyect/pg-taskmanagement"
-      , "project-2.png"
-      , ["MyWorld-1.png","MyWorld-2.png","MyWorld-3.png","MyWorld-4.png","MyWorld-5.png","MyWorld-6.png","MyWorld-7.png","MyWorld-8.png"]
+      , "project-2.webp"
+      , ["MyWorld-1.webp","MyWorld-2.webp","MyWorld-3.webp","MyWorld-4.webp","MyWorld-5.webp","MyWorld-6.webp","MyWorld-7.webp","MyWorld-8.webp"]
       , 0
       , ["React","HTML","CSS3","JavaScript","TypeScript","Bootstrap","Visual Studio Code"]
     ));
@@ -150,8 +150,8 @@ export class PortfolioComponent implements OnInit {
       , undefined
       , ""
       , "https://github.com/ztevenx100/PG-DailyStress-Git"
-      , "project-4.png"
-      , ["DailyStress-1.png","DailyStress-2.png","DailyStress-3.png","DailyStress-4.png","DailyStress-5.png"]
+      , "project-4.webp"
+      , ["DailyStress-1.webp","DailyStress-2.webp","DailyStress-3.webp","DailyStress-4.webp","DailyStress-5.webp"]
       , 0
       , ["JavaScript","C#","Unity"]
     ));
@@ -163,8 +163,8 @@ export class PortfolioComponent implements OnInit {
       , undefined
       , ""
       , ""
-      , "project-5.png"
-      , ["StarCollector-1.png","StarCollector-2.png","StarCollector-3.png","StarCollector-4.png","StarCollector-5.png","StarCollector-6.png"]
+      , "project-5.webp"
+      , ["StarCollector-1.webp","StarCollector-2.webp","StarCollector-3.webp","StarCollector-4.webp","StarCollector-5.webp","StarCollector-6.webp"]
       , 0
       , ["JavaScript","C#","Unity"]
     ));
