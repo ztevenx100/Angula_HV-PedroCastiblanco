@@ -88,11 +88,13 @@
             , "Subtitle2": "Prueba de React"
             , "Subtitle3": "Videojuego de estrategia y salud"
             , "Subtitle4": "Videojuego de plataformas"
+            , "Subtitle5": "Sumérgete en una nueva aventura con 'Azar de las dos manos', un sistema de rol innovador que te permite crear historias únicas e inolvidables."
             , "Description0": "Participante en el desarrollo de la aplicación de procesos contractuales de megasoft."
             , "Description1": "Proyecto de fin de carrera presentado para la Escuela Tecnológica Instituto Técnico Central, web de un gestor de tareas para empresas."
             , "Description2": "Esta página era un ejercicio de práctica para el uso de react."
             , "Description3": "Proyecto de fin de carrera presentado para la Escuela Tecnológica Instituto Técnico Central, videojuego de estrategia y salud."
             , "Description4": "Este proyecto presentado para la Escuela Tecnológica Instituto Técnico Central, Plataforma videojuego."
+            , "Description5": "'Azar de las dos manos' es un sistema de rol diseñado para ofrecer una experiencia de juego fluida, dinámica y creativa. Con reglas intuitivas y una mecánica de dados innovadora, este sistema te permite dar vida a tus personajes y explorar mundos apasionantes. En DnD-newSystem, encontrarás todo lo que necesitas para empezar a jugar con 'Azar de las dos manos'."
             , "TextYears": "+{{getYearsExpirience}} año(s)"
         }
 
