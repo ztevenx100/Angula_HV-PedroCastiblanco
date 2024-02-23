@@ -40,7 +40,7 @@ class ProjectItem {
     return this.description;  
   }
   get getTranslateDescription(): string {
-    return "PORTFOLIO.Project.Description" + this.id;
+    return "PORTFOLIO.Project.Description" + this.getId;
   }
   get getOwner(): string{
     return this.owner ?? "PORTFOLIO.Project.OwnProject"
@@ -103,6 +103,19 @@ export class PortfolioComponent implements OnInit {
   
   ngOnInit(): void{
     
+    this.projectItems.push(new ProjectItem(
+      5
+      , "DnD-newSystem"
+      , "Immerse yourself in a new adventure with 'Azar de las dos manos', an innovative role-playing system that allows you to create unique and unforgettable stories."
+      , "'Azar de las dos manos' is a role-playing system designed to offer a fluid, dynamic and creative gaming experience. With intuitive rules and innovative dice mechanics, this system allows you to bring your characters to life and explore exciting worlds. At DnD-newSystem, you will find everything you need to start playing with 'Azar de las dos manos'"
+      , null
+      , "https://dnd-newsystem.vercel.app"
+      , "https://github.com/ztevenx100/DnD-newSystem"
+      , "project-6.webp"
+      , ["DnD-newSystem-1.webp","DnD-newSystem-2.webp"]
+      , 0
+      , ['React',"Vite","HTML","CSS3","JavaScript","Tailwind","UNO-CSS","Supabase","PostgreSql"]
+    ));
     this.projectItems.push(new ProjectItem(
       0
       , "Neon"
