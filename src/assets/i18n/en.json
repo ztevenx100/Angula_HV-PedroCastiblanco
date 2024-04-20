@@ -89,12 +89,14 @@
             , "Subtitle3": "Strategy and health videogame"
             , "Subtitle4": "Platform videogame"
             , "Subtitle5": "Immerse yourself in a new adventure with 'Azar de las dos manos', an innovative role-playing system that allows you to create unique and unforgettable stories."
+            , "Subtitle6": "Technical test of 'Ingeneo'."
             , "Description0": "Participant in the development of application of megasoft contractual processes."
             , "Description1": "Degree project presented for the Escuela Tecnológica Instituto Técnico Central, website of a task manager for companies."
             , "Description2": "This page was a practice exercise for the use of react."
             , "Description3": "Degree project presented for the Escuela Tecnológica Instituto Técnico Central, strategy and health videogame."
             , "Description4": "This project presented for the Escuela Tecnológica Instituto Técnico Central, Platform videogame."
             , "Description5": "'Azar de las dos manos' is a role-playing system designed to offer a fluid, dynamic and creative gaming experience. With intuitive rules and innovative dice mechanics, this system allows you to bring your characters to life and explore exciting worlds. At DnD-newSystem, you will find everything you need to start playing with 'Azar de las dos manos'."
+            , "Description6": "Test of logistics company with customers products, transportation and warehouses with unit tests."
             , "TextYears": "+{{getYearsExpirience}} year(s)"
         }
     }
