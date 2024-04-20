@@ -104,6 +104,19 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      6
+      , "Test empresa de logistica"
+      , "Technical test of 'Ingeneo'."
+      , "'Test of logistics company with customers products, transportation and warehousing with tests. "
+      , null
+      , "https://ingeneo-pruebatecnica.onrender.com/index"
+      , "https://github.com/ztevenx100/Ingeneo-PruebaTecnica"
+      , "project-7.webp"
+      , ["testEmpresaGestion-1.webp","testEmpresaGestion-2.webp","testEmpresaGestion-3.webp","testEmpresaGestion-4.webp","testEmpresaGestion-5.webp","testEmpresaGestion-6.webp","testEmpresaGestion-7.webp"]
+      , 0
+      , ["Java","Spring Boot","HTML","CSS3","JavaScript","Tailwind","thymeleaf","Supabase","PostgreSql","Playwright"]
+    ));
+    this.projectItems.push(new ProjectItem(
       5
       , "DnD-newSystem"
       , "Immerse yourself in a new adventure with 'Azar de las dos manos', an innovative role-playing system that allows you to create unique and unforgettable stories."
@@ -114,7 +127,7 @@ export class PortfolioComponent implements OnInit {
       , "project-6.webp"
       , ["DnD-newSystem-1.webp","DnD-newSystem-2.webp"]
       , 0
-      , ['React',"Vite","HTML","CSS3","JavaScript","Tailwind","UNO-CSS","Supabase","PostgreSql"]
+      , ["React","Vite","HTML","CSS3","JavaScript","Tailwind","UNO-CSS","Supabase","PostgreSql"]
     ));
     this.projectItems.push(new ProjectItem(
       0
@@ -127,7 +140,7 @@ export class PortfolioComponent implements OnInit {
       , "project-3.webp"
       , ["Neon-1.webp","Neon-2.webp"]
       , 5
-      , ['Java',"Tomcat","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
+      , ["Java","Tomcat","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
     ));
     this.projectItems.push(new ProjectItem(
       1
