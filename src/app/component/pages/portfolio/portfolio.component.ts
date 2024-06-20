@@ -125,7 +125,7 @@ export class PortfolioComponent implements OnInit {
       , "https://dnd-newsystem.vercel.app"
       , "https://github.com/ztevenx100/DnD-newSystem"
       , "project-6.webp"
-      , ["DnD-newSystem-1.webp","DnD-newSystem-2.webp"]
+      , ["DnD-newSystem-1.webp","DnD-newSystem-2.webp","DnD-newSystem-3.webp","DnD-newSystem-4.webp"]
       , 0
       , ["React","Vite","HTML","CSS3","JavaScript","Tailwind","UNO-CSS","Supabase","PostgreSql"]
     ));
@@ -140,7 +140,7 @@ export class PortfolioComponent implements OnInit {
       , "project-3.webp"
       , ["Neon-1.webp","Neon-2.webp"]
       , 5
-      , ["Java","Tomcat","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
+      , ["Java","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
     ));
     this.projectItems.push(new ProjectItem(
       1

@@ -1,6 +1,6 @@
 {
   "name": "hv-pedro-castiblanco",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -32,7 +32,7 @@
     "zone.js": "~0.14.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.2.3",
+    "@angular-devkit/build-angular": "^17.3.8",
     "@angular/cli": "~17.2.3",
     "@angular/compiler-cli": "^17.2.4",
     "@types/jasmine": "~5.1.4",

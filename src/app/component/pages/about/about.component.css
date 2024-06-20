@@ -13,43 +13,45 @@
 
 .about .about-content{
     text-align: left;
+    & .about-text{
+        flex: 0 0 100%;
+        max-width: 100%;
+        & h3{
+            font-size: 24px;
+            margin-bottom: 0px;
+            font-weight: 700;
+            color: var(--text-black-900);
+        }
+        
+        & h3 span{
+            color: var(--skin-color);
+        }
+    }
 }
 
-.about .about-content .about-text{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
 
-.about .about-content .about-text h3{
-    font-size: 24px;
-    margin-bottom: 0px;
-    font-weight: 700;
-    color: var(--text-black-900);
-}
-
-.about .about-content .about-text h3 span{
-    color: var(--skin-color);
-}
 .about span.important{
     color: var(--skin-color);
     font-weight: 600;
 }
 
-.time-exp h2{
-    color: var(--skin-color);
-    font-weight: 700;
-    text-align: center;
-}
-
-.time-exp p{
-    color: var(--text-black-900);
-    font-weight: 400;
-    text-align: center;
-}
-.time-exp .fa-star{
-    color: gold;
-    font-size: 20px;
-    margin: auto 5px;
+.time-exp{
+    & h2{
+        color: var(--skin-color);
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    & p{
+        color: var(--text-black-900);
+        font-weight: 400;
+        text-align: center;
+    }
+    & .fa-star{
+        color: gold;
+        font-size: 20px;
+        margin: auto 5px;
+    }
 }
 
 .country{
@@ -141,27 +143,27 @@
     width: 100%;
     height: 100%;
     position: relative;
+    & .timeline-item{
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        
+        &:last-child{
+            padding-bottom: 0;
+        }
+        
+        &::before{
+            content: '';
+            width: 1px;
+            position: absolute;
+            height: 100%;
+            left: 7px;
+            top: 0;
+            background-color: var(--skin-color);
+        }
+    }
 }
 
-.timeline .timeline-item{
-    position: relative;
-    padding-left: 30px;
-    padding-bottom: 30px;
-}
-
-.timeline .timeline-item:last-child{
-    padding-bottom: 0;
-}
-
-.timeline .timeline-item::before{
-    content: '';
-    width: 1px;
-    position: absolute;
-    height: 100%;
-    left: 7px;
-    top: 0;
-    background-color: var(--skin-color);
-}
 
 .timeline .circle-dot{
     position: absolute;

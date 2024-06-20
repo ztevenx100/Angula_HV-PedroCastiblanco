@@ -1,26 +1,13 @@
 <!-- == | Main Container Start ===== -->
 <section id="about" class="about section">
         <!-- == | About Section Start ===== -->
-        <div class="row my-2 animation-time">
+        <header class="row my-2 ">
             <div class="col-md px-1 d-flex align-items-center timeline-box">
                 <div class="section-title my-0 timeline">
                     <h2>{{ 'ABOUT.Title' | translate }}</h2>
                 </div>
             </div>
-        </div>
-        
-        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.6s;">
-            <div class="col-md-6 px-1 timeline-box">
-                <!-- Card 1 -->
-                <div class="timeline d-flex align-items-center py-2 ">
-                    <div class="about-text px-3">
-                        <h3>{{ 'ABOUT.Card01Text01' | translate }}Pedro Steven Castiblanco</h3>
-                        <h3><span>Full Stack Developer</span></h3>
-                    </div>
-                </div>
-            </div>
             <div class="col-md-2 px-1 timeline-box">
-                <!-- Card 2 -->
                 <div class="timeline button-cv">
                     <!-- Descargar documento en PDF -->
                     <a href="./assets/docs/pdf/{{ 'ABOUT.NameFileCV' | translate }}" download="{{ 'ABOUT.NameFileDownloadCV' | translate }}" title="Download CV" class="bttn" tooltip="{{ 'ABOUT.BtnDownloadCV' | translate }}" containerClass="tooltipStyle">
@@ -28,70 +15,36 @@
                     </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 px-1 timeline-box">
-                <!-- Card 3 -->
-                <div class="timeline d-flex justify-content-center align-items-center">
-                    <img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 50px;margin: 0 10px;" tooltip="Colombia, Bogotá D.C." containerClass="tooltipStyle">
-                </div>
-            </div>
-            <aside class="col-6 col-md-2 px-1 timeline-box">
-                <!-- Card 4 -->
-                <div class="timeline especial py-1 px-4 ">
-                    <div class="time-exp text-center">
-                        <h2 class="mb-0 d-flex align-items-center"><span>+</span><span class="">{{counterYears.count}}</span><i class="fa-regular fa-star"></i></h2>
-                        <p class="mb-0">{{ 'ABOUT.Card04Text01' | translate }}</p>
-                        <p class="mb-0">{{ 'ABOUT.Card04Text02' | translate }}</p>
-                    </div>
-                </div>
-            </aside>
-        </div>
+        </header>
 
-        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.7s;">
-            <div class="col-md-6 px-1 timeline-box">
-                <!-- Card 5 -->
-                <div class="timeline">
-                    <div class="about-text px-3">
-                        <p> <span class="important">{{ 'ABOUT.Card05Text01' | translate }}</span> {{ 'ABOUT.Card05Text02' | translate }}
-                            <span class="important">front-end</span>, <span class="important">back-end</span> {{ 'ABOUT.WordAnd' | translate }} 
-                            <span class="important">{{ 'ABOUT.Card05Text03' | translate }}</span>{{ 'ABOUT.Card05Text04' | translate }}
-                            {{ 'ABOUT.Card05Text05' | translate }}<span class="important">{{ 'ABOUT.Card05Text06' | translate }}</span> {{ 'ABOUT.WordAnd' | translate }} 
-                            <span class="important">{{ 'ABOUT.Card05Text07' | translate }}</span>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 px-1 d-flex flex-column">
+        <section class="row my-2 about-content d-flex align-items-stretch " style="animation-delay: 0.8s;">
+            <div class="col-md-6 px-1 d-flex flex-column">
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
-                        <!-- Card 6 -->
-                        <div class="timeline especial d-flex align-items-center">
-                            <p class="mb-0"><i class="fa-solid fa-graduation-cap" tooltip="{{ 'ABOUT.Card06Tooltip' | translate }}" containerClass="tooltipStyle"></i> <span>{{ 'ABOUT.Card06Text01' | translate }}</span></p>
+                        <!-- Card 1 -->
+                        <div class="timeline d-flex align-items-center py-2 ">
+                            <div class="about-text px-3">
+                                <h3>{{ 'ABOUT.Card01Text01' | translate }}Pedro Steven Castiblanco</h3>
+                                <h3><span>Full Stack Developer</span></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mb-0 flex-fill">
+                <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
-                        <!-- Card 7 -->
-                        <div class="timeline d-flex justify-content-right align-items-center">
-                            <p class="mb-0">{{ 'ABOUT.Card07Text01' | translate }}: <span class="important" >pscastiblanco@gmail.com</span></p>
+                        <!-- Card 5 -->
+                        <div class="timeline">
+                            <div class="about-text px-3">
+                                <p> <span class="important">{{ 'ABOUT.Card05Text01' | translate }}</span> {{ 'ABOUT.Card05Text02' | translate }}
+                                    <span class="important">front-end</span>, <span class="important">back-end</span> {{ 'ABOUT.WordAnd' | translate }} 
+                                    <span class="important">{{ 'ABOUT.Card05Text03' | translate }}</span>{{ 'ABOUT.Card05Text04' | translate }}
+                                    {{ 'ABOUT.Card05Text05' | translate }}<span class="important">{{ 'ABOUT.Card05Text06' | translate }}</span> {{ 'ABOUT.WordAnd' | translate }} 
+                                    <span class="important">{{ 'ABOUT.Card05Text07' | translate }}</span>.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-1 timeline-box">
-                <!-- Card 8 -->
-                <div class="timeline especial d-flex align-items-center justify-content-center">
-                    <div class="text-center">
-                        <h3 class="mb-3"><span class="important">{{ 'ABOUT.Card08Title' | translate }}</span></h3>
-                        <p class="mb-0">{{ 'ABOUT.Card08Text01' | translate }}<img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 22px;margin: 0 10px;"></p>
-                        <p class="mb-0">{{ 'ABOUT.Card08Text02' | translate }}<img src="./assets/img/icon/png/892858.png" alt="English" style="height: 22px;margin: 0 10px;"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row my-2 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.8s;">
-            <div class="col-md-6 px-1 d-flex flex-column">
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
                         <!-- Card 9 -->
@@ -104,27 +57,47 @@
                 </div>
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
-                        <!-- Card 10 -->
-                        <div class="timeline ">
-                            <div class="about-text px-3">
-                                <p>{{ 'ABOUT.Card10Text01' | translate }}<span class="important">{{ 'ABOUT.Card10Text02' | translate }}</span>{{ 'ABOUT.Card10Text03' | translate }}</p>
-                            </div>
+                        <!-- Card 6 -->
+                        <div class="timeline especial d-flex align-items-center">
+                            <p class="mb-0"><i class="fa-solid fa-graduation-cap" tooltip="{{ 'ABOUT.Card06Tooltip' | translate }}" containerClass="tooltipStyle"></i> <span>{{ 'ABOUT.Card06Text01' | translate }}</span></p>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-0">
                     <div class="col timeline-box">
-                        <!-- Card 11 -->
-                        <div class="timeline d-flex justify-content-right align-items-center ">
-                            <div class="about-title px-3">
-                                <p>{{ 'ABOUT.Card11Text01' | translate }}
-                                <span class="important">Java</span>, <span class="important">JavaScript</span>, <span class="important">HTML5</span>, <span class="important">CSS3</span> {{ 'ABOUT.WordAnd' | translate }} <span class="important">JSP</span>
-                                {{ 'ABOUT.Card11Text02' | translate }}<span class="important">Oracle</span>, <span class="important">SQLServer</span> {{ 'ABOUT.WordAnd' | translate }} <span class="important">Postgres</span>.</p>
-                                <p>{{ 'ABOUT.Card11Text03' | translate }} <span class="important">React</span> {{ 'ABOUT.WordAnd' | translate }} <span class="important">Angular</span>. {{ 'ABOUT.Card11Text04' | translate }}</p>
+                        <!-- Card 7 -->
+                        <div class="timeline d-flex justify-content-right align-items-center">
+                            <p class="mb-0">{{ 'ABOUT.Card07Text01' | translate }}: <span class="important" >pscastiblanco&#64;gmail.com</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-fill">
+                    <div class="col-6 col-md-4 timeline-box">
+                        <!-- Card 3 -->
+                        <div class="timeline d-flex justify-content-center align-items-center">
+                            <img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 50px;margin: 0 10px;" tooltip="Colombia, Bogotá D.C." containerClass="tooltipStyle">
+                        </div>
+                    </div>
+                    <aside class="col-6 col-md-4 timeline-box">
+                        <!-- Card 4 -->
+                        <div class="timeline especial py-1 px-4 d-flex justify-content-center align-items-center">
+                            <div class="time-exp text-center">
+                                <h2 class="mb-0 d-flex align-items-center"><span>+</span><span class="">{{counterYears.count}}</span><i class="fa-regular fa-star"></i></h2>
+                                <p class="mb-0">{{ 'ABOUT.Card04Text01' | translate }}</p>
+                                <p class="mb-0">{{ 'ABOUT.Card04Text02' | translate }}</p>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="col-md-4 timeline-box">
+                        <!-- Card 8 -->
+                        <div class="timeline especial d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h3 class="mb-3"><span class="important">{{ 'ABOUT.Card08Title' | translate }}</span></h3>
+                                <p class="mb-0">{{ 'ABOUT.Card08Text01' | translate }}<img src="./assets/img/icon/png/6656067.png" alt="Colombia" style="height: 22px;margin: 0 10px;"></p>
+                                <p class="mb-0">{{ 'ABOUT.Card08Text02' | translate }}<img src="./assets/img/icon/png/892858.png" alt="English" style="height: 22px;margin: 0 10px;"></p>
                             </div>
                         </div>
                     </div>
                 </div>
+                 
             </div>
             <article class="col-md-6 px-1 d-flex flex-column">
                 <div class="row mb-2">
@@ -161,27 +134,27 @@
                     </div>
                 </div>
                 <div class="row mb-0">
-                    <aside class="col pe-1 timeline-box">
+                    <aside class="col timeline-box">
                         <!-- Card 14 -->
                         <div class="timeline especial">
                             <div class="text-center">
-                                <p class="mb-0"><span class="important h3">+{{counterSolutions.count}}</span> {{ 'ABOUT.Card14Text01' | translate }}</p>
+                                <p class="mb-0"><span class="important h3">+{{counterSolutions.count}}</span><br/> {{ 'ABOUT.Card14Text01' | translate }}</p>
                             </div>
                         </div>
                     </aside>
-                    <aside class="col ps-1 timeline-box">
+                    <aside class="col timeline-box">
                         <!-- Card 15 -->
                         <div class="timeline especial">
                             <div class="text-center">
-                                <p class="mb-0"><span class="important h3">+{{counterRequest.count}}</span> {{ 'ABOUT.Card15Text01' | translate }}</p>
+                                <p class="mb-0"><span class="important h3">+{{counterRequest.count}}</span><br/> {{ 'ABOUT.Card15Text01' | translate }}</p>
                             </div>
                         </div>
                     </aside>
                 </div>
             </article>
-        </div>
+        </section>
 
-        <div class="row mt-2 mb-4 about-content d-flex align-items-stretch animation-time" style="animation-delay: 0.9s;">
+        <section class="row mt-2 mb-4 about-content d-flex align-items-stretch " style="animation-delay: 0.9s;">
             <article class="col px-1 timeline-box">
                 <!-- Card 16 -->
                 <div class="row mb-2">
@@ -444,7 +417,7 @@
                     </div>
                 </div>
             </article>
-        </div>
+        </section>
 
         <!-- == | Abour Section End ===== -->
 </section>
