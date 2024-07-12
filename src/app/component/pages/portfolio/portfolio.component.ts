@@ -104,6 +104,32 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      8
+      , "App del clima"
+      , "Weather App."
+      , "'Test of logistics company with customers products, transportation and warehousing with tests. "
+      , null
+      , "https://ztevenx100.github.io/js_weather-app-1/"
+      , "https://github.com/ztevenx100/js_weather-app-1"
+      , "project-9.webp"
+      , ["weather-app-1.webp","weather-app-2.webp"]
+      , 0
+      , ["HTML","CSS3","JavaScript"]
+    ));
+    this.projectItems.push(new ProjectItem(
+      7
+      , "Dashboard con nextJs"
+      , "Technical test of 'Ingeneo'."
+      , "'Test of logistics company with customers products, transportation and warehousing with tests. "
+      , null
+      , "https://nextjs-first-project-orcin.vercel.app"
+      , "https://github.com/ztevenx100/nextjs_first-project"
+      , "project-8.webp"
+      , ["nextjs-dashboard-1.webp","nextjs-dashboard-2.webp","nextjs-dashboard-3.webp"]
+      , 0
+      , ["React","Next JS","HTML","CSS3","JavaScript","Tailwind","PostgreSql"]
+    ));
+    this.projectItems.push(new ProjectItem(
       6
       , "Test empresa de logistica"
       , "Technical test of 'Ingeneo'."
@@ -138,9 +164,9 @@ export class PortfolioComponent implements OnInit {
       , "https://www.megasoft.com.co"
       , ""
       , "project-3.webp"
-      , ["Neon-1.webp","Neon-2.webp"]
+      , []
       , 5
-      , ["Java","JSP","HTML","CSS3","JavaScript","Oracle","SqlServer","PostgreSql","Eclipse","iReport"]
+      , ["Java","HTML","CSS3","JavaScript"]
     ));
     this.projectItems.push(new ProjectItem(
       1
