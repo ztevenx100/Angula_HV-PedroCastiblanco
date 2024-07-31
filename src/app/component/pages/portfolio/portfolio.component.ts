@@ -104,10 +104,23 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      9
+      , "App de tetris"
+      , "Tetris App."
+      , "Tetris App. "
+      , null
+      , "https://ztevenx100.github.io/js-tetris/"
+      , "https://github.com/ztevenx100/js-tetris"
+      , "project-10.webp"
+      , ["tetris-app-1.webp"]
+      , 0
+      , ["HTML","CSS3","JavaScript"]
+    ));
+    this.projectItems.push(new ProjectItem(
       8
       , "App del clima"
       , "Weather App."
-      , "'Test of logistics company with customers products, transportation and warehousing with tests. "
+      , "Weather App. "
       , null
       , "https://ztevenx100.github.io/js_weather-app-1/"
       , "https://github.com/ztevenx100/js_weather-app-1"
@@ -119,8 +132,8 @@ export class PortfolioComponent implements OnInit {
     this.projectItems.push(new ProjectItem(
       7
       , "Dashboard con nextJs"
-      , "Technical test of 'Ingeneo'."
-      , "'Test of logistics company with customers products, transportation and warehousing with tests. "
+      , "Dashboard with nextJs"
+      , "Dashboard con nextJs. "
       , null
       , "https://nextjs-first-project-orcin.vercel.app"
       , "https://github.com/ztevenx100/nextjs_first-project"

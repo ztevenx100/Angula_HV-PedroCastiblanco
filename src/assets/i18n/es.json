@@ -92,6 +92,7 @@
             , "Subtitle6": "Prueba técnica de Ingeneo"
             , "Subtitle7": "Dashboard con NextJS"
             , "Subtitle8": "App del clima"
+            , "Subtitle9": "App del tetris"
             , "Description0": "Participante en el desarrollo de la aplicación de procesos contractuales de megasoft."
             , "Description1": "Proyecto de fin de carrera presentado para la Escuela Tecnológica Instituto Técnico Central, web de un gestor de tareas para empresas."
             , "Description2": "Esta página era un ejercicio de práctica para el uso de react."
@@ -101,6 +102,7 @@
             , "Description6": "Prueba de empresa logistica que cuenta con clientes productos, transporte y almacenes con pruebas unitarias"
             , "Description7": "Prueba de dashboard con NextJS"
             , "Description8": "App del clima con JavaScript vanilla"
+            , "Description9": "App del tetris con JavaScript vanilla"
             , "TextYears": "+{{getYearsExpirience}} año(s)"
         }
 

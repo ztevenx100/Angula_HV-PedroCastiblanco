@@ -92,6 +92,7 @@
             , "Subtitle6": "Technical test of 'Ingeneo'"
             , "Subtitle7": "Dashboard with NextJS"
             , "Subtitle8": "Weather App"
+            , "Subtitle9": "Tetris App"
             , "Description0": "Participant in the development of application of megasoft contractual processes."
             , "Description1": "Degree project presented for the Escuela Tecnológica Instituto Técnico Central, website of a task manager for companies."
             , "Description2": "This page was a practice exercise for the use of react."
@@ -101,6 +102,7 @@
             , "Description6": "Test of logistics company with customers products, transportation and warehouses with unit tests."
             , "Description7": "Dashboard testing with NextJS"
             , "Description8": "Weather App with vanilla JavaScript"
+            , "Description9": "Tetris App with vanilla JavaScript"
             , "TextYears": "+{{getYearsExpirience}} year(s)"
         }
     }
