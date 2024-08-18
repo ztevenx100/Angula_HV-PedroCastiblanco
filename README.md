@@ -2,9 +2,9 @@
 Hoja de vida de Pedro Castiblanco
 Items
 - Perfil
-- About
-- Portfolio
-- Contact
+- Sobre mi
+- Portafolio
+- Contacto
 
 Tecnologias:
 - HTML5 / CSS3 / JavaScript
@@ -15,4 +15,3 @@ Tecnologias:
 - ngx-translate/core: 15.0.0
 - ngx-translate/http-loader: 8.0.0
 
-# HVPedroCastiblanco
