@@ -1,12 +1,13 @@
 # Angula_HV-PedroCastiblanco
-Hoja de vida de Pedro Castiblanco
+
+## Hoja de vida de Pedro Castiblanco
 Items
 - Perfil
 - Sobre mi
 - Portafolio
 - Contacto
 
-Tecnologias:
+### Tecnologias:
 - HTML5 / CSS3 / JavaScript
 - Angular: 16.2.2 / typeScript
 - ngx-bootstrap: 11.0.2
