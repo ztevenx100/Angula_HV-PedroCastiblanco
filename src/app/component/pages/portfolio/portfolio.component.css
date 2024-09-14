@@ -13,9 +13,6 @@
 
 .portfolio .portfolio-head{
     text-align: left;
-}
-
-.portfolio .portfolio-head{
     color: var(--text-black-900);
     font-weight: 500;
 }
