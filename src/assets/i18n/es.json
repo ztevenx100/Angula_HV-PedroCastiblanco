@@ -93,6 +93,7 @@
             , "Subtitle7": "Dashboard con NextJS"
             , "Subtitle8": "App del clima"
             , "Subtitle9": "App del tetris"
+            , "Subtitle10": "Colección de proyectos en JavaScript"
             , "Description0": "Participante en el desarrollo de la aplicación de procesos contractuales de megasoft."
             , "Description1": "Proyecto de fin de carrera presentado para la Escuela Tecnológica Instituto Técnico Central, web de un gestor de tareas para empresas."
             , "Description2": "Esta página era un ejercicio de práctica para el uso de react."
@@ -103,6 +104,7 @@
             , "Description7": "Prueba de dashboard con NextJS"
             , "Description8": "App del clima con JavaScript vanilla"
             , "Description9": "App del tetris con JavaScript vanilla"
+            , "Description10": "Pagina web con colección de proyectos en vanilla JavaScript"
             , "TextYears": "+{{getYearsExpirience}} año(s)"
         }
 

@@ -111,36 +111,35 @@ h3.my-profession{
 }
 
 .home .home-img{
-  /* flex: 0 0 40%; */
-  /* max-width: 40%; */
-  /* background: var(--skin-color); */
   text-align: center;
   position: relative;
-}
-.home-img::before{
-  content: '';
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-top: 10px solid var(--skin-color);
-  border-left: 10px solid var(--skin-color);
-  left: 0px;
-  top: -15px;
-}
-.home-img::after{
-  content: '';
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-bottom: 10px solid var(--skin-color);
-  border-right: 10px solid var(--skin-color);
-  right: 0px;
-  bottom: -15px;
-}
 
-.home .home-img img{
-  border-radius: 5px;
-  height: 300px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  &::before{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: 0px;
+    top: -15px;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: 0px;
+    bottom: -15px;
+  }
+
+  & img{
+    border-radius: 5px;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }

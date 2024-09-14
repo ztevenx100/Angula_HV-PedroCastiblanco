@@ -4,76 +4,77 @@
 */
 /* Contact */
 .contact.section{
-    background-color: var(--bg-black-900);
-    min-height: 100vh;
-    display: block;
-    padding: 0 30px;
-    opacity: 1;
+  background-color: var(--bg-black-900);
+  min-height: 100vh;
+  display: block;
+  padding: 0 30px;
+  opacity: 1;
 }
 
 .contact-title{
-    color: var(--skin-color);
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 5px;
-    font-weight: 500;
+  color: var(--skin-color);
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .contact-sub-title{
-    color: var(--text-black-900);
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 50px;
+  color: var(--text-black-900);
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 50px;
 }
 
 .contact .contact-info-item .icon .fa{
-    font-size: 25px;
-    color: var(--skin-color);
+  font-size: 25px;
+  color: var(--skin-color);
 }
 
 .contact .contact-info-item h4{
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text-footer-900);
-    text-transform: capitalize;
-    margin: 15px 0 5 px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-footer-900);
+  text-transform: capitalize;
+  margin: 15px 0 5 px;
 }
 
 .contact .contact-info-item p{
-    font-size: 16px;
-    line-height: 25px;
-    color: var(--text-footer-900);
-    font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-footer-900);
+  font-weight: 400;
 }
 
 .contact .contact-form .form-item .form-control:focus{
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
 .contact .contact-form .form-item textarea.form-control{
-    height: 38px; 
-    max-height: 120px;
+  height: 38px; 
+  max-height: 120px;
 }
 
 .contact .contact-form .form-item .bttn{
-    height: 38px; 
-    padding: 6px 10px;
+  height: 38px; 
+  padding: 6px 10px;
 }
 
 .bg-card{
-    background: var(--bg-footer-900);
+  background: var(--bg-footer-900);
 }
 
 .bg-contact{
-    min-height: 350px;
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-}
-.bg-contact img{
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+
+  & img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
 }
 
 .input-group-text{
@@ -82,64 +83,64 @@
 
 /* Animation background*/
 .cube {
-    position: absolute;
-    top: 80vh;
-    left: 15vw;
-    width: 10px;
-    height: 10px;
-    border: solid 1px color-mix(in srgb, var(--skin-color) 30%, var(--bg-footer-900));
-    transform-origin: top left;
+  position: absolute;
+  top: 80vh;
+  left: 15vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px color-mix(in srgb, var(--skin-color) 30%, var(--bg-footer-900));
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+.cube:nth-child(2n) {
+  border-color: color-mix(in srgb, var(--skin-color) 30%, var(--bg-black-900));
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 5vw;
+  top: 10vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 40vw;
+  top: 20vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 70vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 60vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 30vw;
+  top: 10vh;
+}
+.cube:nth-child(7) {
+  animation-delay: 4s;
+  left: 60vw;
+  top: 50vh;
+}
+.cube:nth-child(8) {
+  animation-delay: 2s;
+  left: 40vw;
+  top: 70vh;
+}
+
+@keyframes cube {
+  from {
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    animation: cube 12s ease-in forwards infinite;
-    z-index: 0;
-    pointer-events: none;
+    opacity: 1;
   }
-  .cube:nth-child(2n) {
-    border-color: color-mix(in srgb, var(--skin-color) 30%, var(--bg-black-900));
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
   }
-  .cube:nth-child(2) {
-    animation-delay: 2s;
-    left: 5vw;
-    top: 10vh;
-  }
-  .cube:nth-child(3) {
-    animation-delay: 4s;
-    left: 40vw;
-    top: 20vh;
-  }
-  .cube:nth-child(4) {
-    animation-delay: 6s;
-    left: 70vw;
-    top: 10vh;
-  }
-  .cube:nth-child(5) {
-    animation-delay: 8s;
-    left: 60vw;
-    top: 85vh;
-  }
-  .cube:nth-child(6) {
-    animation-delay: 10s;
-    left: 30vw;
-    top: 10vh;
-  }
-  .cube:nth-child(7) {
-    animation-delay: 4s;
-    left: 60vw;
-    top: 50vh;
-  }
-  .cube:nth-child(8) {
-    animation-delay: 2s;
-    left: 40vw;
-    top: 70vh;
-  }
-  
-  @keyframes cube {
-    from {
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
-    }
-    to {
-      transform: scale(20) rotate(960deg) translate(-50%, -50%);
-      opacity: 0;
-    }
-  }
+}

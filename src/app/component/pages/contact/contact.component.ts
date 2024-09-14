@@ -21,7 +21,7 @@ export class ContactComponent {
       }, (error) => {
         console.log(error.text);
       });
-        
+    
   }
 
   disabledFields(form:HTMLFormElement):void {

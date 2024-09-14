@@ -71,32 +71,38 @@
 
 .about .about-content .personal-info{
     margin-top: 40px;
-}
-.about .about-content .personal-info .info-item{
-    text-align: left;
-}
-.about .about-content .personal-info .info-item p{
-    font-weight: 600;
-    padding: 10px;
-    font-size: 16px;
-    color: var(--text-black-900);
-    border-bottom: 1px solid var(--bg-black-50);
-}
-.about .about-content .personal-info .info-item span{
-    font-weight: 400;
-    color: var(--text-black-700);
-    margin-left: 4px;
-    display: inline-block;
+
+    & .info-item{
+        text-align: left;
+
+        & p{
+            font-weight: 600;
+            padding: 10px;
+            font-size: 16px;
+            color: var(--text-black-900);
+            border-bottom: 1px solid var(--bg-black-50);
+        }
+
+        & span{
+            font-weight: 400;
+            color: var(--text-black-700);
+            margin-left: 4px;
+            display: inline-block;
+        }
+    }
+
+    & .buttons{
+        margin-top: 30px;
+
+        & .bttn{
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+    }
+
 }
 
-.about .about-content .personal-info .buttons{
-    margin-top: 30px;
-}
 
-.about .about-content .personal-info .buttons .bttn{
-    margin-right: 15px;
-    margin-top: 15px;
-}
 .about .about-content .skills{
     margin-top: 40px;
 }

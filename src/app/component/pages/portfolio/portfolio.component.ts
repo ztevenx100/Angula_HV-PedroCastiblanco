@@ -104,10 +104,23 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      10
+      , "Colección de proyectos en JavaScript"
+      , "Collection of JavaScript projects"
+      , "Collection of JavaScript projects"
+      , null
+      , "https://pscp-js-projects-collection.vercel.app/"
+      , "https://github.com/ztevenx100/js_projects-collection"
+      , "project-11.webp"
+      , ["js_projects-collection-1.webp", "js_projects-collection-2.webp", "js_projects-collection-3.webp"]
+      , 0
+      , ["HTML","CSS3","JavaScript","Astro"]
+    ));
+    this.projectItems.push(new ProjectItem(
       9
       , "App de tetris"
       , "Tetris App."
-      , "Tetris App. "
+      , "Tetris App."
       , null
       , "https://ztevenx100.github.io/js-tetris/"
       , "https://github.com/ztevenx100/js-tetris"
@@ -120,7 +133,7 @@ export class PortfolioComponent implements OnInit {
       8
       , "App del clima"
       , "Weather App."
-      , "Weather App. "
+      , "Weather App."
       , null
       , "https://ztevenx100.github.io/js_weather-app-1/"
       , "https://github.com/ztevenx100/js_weather-app-1"
@@ -133,7 +146,7 @@ export class PortfolioComponent implements OnInit {
       7
       , "Dashboard con nextJs"
       , "Dashboard with nextJs"
-      , "Dashboard con nextJs. "
+      , "nextJS introduction sample exercise. "
       , null
       , "https://nextjs-first-project-orcin.vercel.app"
       , "https://github.com/ztevenx100/nextjs_first-project"
