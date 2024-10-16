@@ -109,7 +109,7 @@ export class PortfolioComponent implements OnInit {
       , "Collection of JavaScript projects"
       , "Collection of JavaScript projects"
       , null
-      , "https://pscp-js-projects-collection.vercel.app/"
+      , "https://js-projects-collection-gamma.vercel.app/"
       , "https://github.com/ztevenx100/js_projects-collection"
       , "project-11.webp"
       , ["js_projects-collection-1.webp", "js_projects-collection-2.webp", "js_projects-collection-3.webp"]
