@@ -1,11 +1,13 @@
 # Angula_HV-PedroCastiblanco
 
 ## Hoja de vida de Pedro Castiblanco
-Items
+###Paginas
 - Perfil
 - Sobre mi
 - Portafolio
 - Contacto
+
+![image](https://github.com/user-attachments/assets/1932734f-0ac3-46cd-9688-705015af70ab)
 
 ### Tecnologias:
 - HTML5 / CSS3 / JavaScript
