@@ -1,7 +1,6 @@
-# Angula_HV-PedroCastiblanco
+# Hoja de vida de Pedro Castiblanco
 
-## Hoja de vida de Pedro Castiblanco
-###Paginas
+##Paginas
 - Perfil
 - Sobre mi
 - Portafolio
