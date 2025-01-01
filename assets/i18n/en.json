@@ -94,6 +94,7 @@
             , "Subtitle8": "Weather App"
             , "Subtitle9": "Tetris App"
             , "Subtitle10": "Collection of JavaScript projects"
+            , "Subtitle11": "Test app with Astro and Cloudinary"
             , "Description0": "Participant in the development of application of megasoft contractual processes."
             , "Description1": "Degree project presented for the Escuela Tecnológica Instituto Técnico Central, website of a task manager for companies."
             , "Description2": "This page was a practice exercise for the use of react."
@@ -105,6 +106,7 @@
             , "Description8": "Weather App with vanilla JavaScript."
             , "Description9": "Tetris App with vanilla JavaScript."
             , "Description10": "Web page with collection of vanilla JavaScript projects."
+            , "Description11": "Testing the cloudinary API to generate halloween themed images."
             , "TextYears": "+{{getYearsExpirience}} year(s)"
         }
     }
