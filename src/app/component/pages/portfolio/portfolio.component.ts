@@ -104,6 +104,19 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      11
+      , "App de prueba con Astro y Cloudinary"
+      , "Test app with Astro and Cloudinary"
+      , "Test app with Astro and Cloudinary"
+      , null
+      , ""
+      , "https://github.com/ztevenx100/cloudinary-astro-test"
+      , "project-12.webp"
+      , ["cloudinary-astro-test-1.webp", "cloudinary-astro-test-2.webp"]
+      , 0
+      , ["HTML","CSS3","JavaScript","Astro","Cloudinary"]
+    ));
+    this.projectItems.push(new ProjectItem(
       10
       , "Colección de proyectos en JavaScript"
       , "Collection of JavaScript projects"
