@@ -1,12 +1,13 @@
 # Hoja de vida de Pedro Castiblanco
 
-##Paginas
+## Paginas
 - Perfil
 - Sobre mi
 - Portafolio
 - Contacto
 
 ![image](https://github.com/user-attachments/assets/1932734f-0ac3-46cd-9688-705015af70ab)
+![image](https://github.com/user-attachments/assets/0a85ff0f-f4bb-4446-9b29-794a0f638cae)
 
 ### Tecnologias:
 - HTML5 / CSS3 / JavaScript
