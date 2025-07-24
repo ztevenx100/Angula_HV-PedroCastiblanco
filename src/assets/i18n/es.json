@@ -95,6 +95,7 @@
             , "Subtitle9": "App del tetris"
             , "Subtitle10": "Colección de proyectos en JavaScript"
             , "Subtitle11": "App de prueba con Astro y Cloudinary"
+            , "Subtitle12": "Catálogo de Componentes CSS"
             , "Description0": "Participante en el desarrollo de la aplicación de procesos contractuales de megasoft."
             , "Description1": "Proyecto de fin de carrera presentado para la Escuela Tecnológica Instituto Técnico Central, web de un gestor de tareas para empresas."
             , "Description2": "Esta página era un ejercicio de práctica para el uso de react."
@@ -107,6 +108,7 @@
             , "Description9": "App del tetris con JavaScript vanilla"
             , "Description10": "Pagina web con colección de proyectos en vanilla JavaScript"
             , "Description11": "Prueba del API de cloudinary para generar imagenes con tematica de halloween."
+            , "Description12": "Catálogo interactivo de componentes visuales modernos construido exclusivamente con HTML y CSS puro, sin dependencias de frameworks externos o librerías JavaScript. Incluye botones, tarjetas, formularios, navegación y sistema de temas con soporte para modo claro/oscuro."
             , "TextYears": "+{{getYearsExpirience}} año(s)"
         }
 

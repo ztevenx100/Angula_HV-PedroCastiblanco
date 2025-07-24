@@ -104,6 +104,19 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      12
+      , "Catálogo de Componentes CSS"
+      , "CSS Components Catalog"
+      , "Interactive catalog of modern visual components built exclusively with HTML and pure CSS, without external framework dependencies or JavaScript libraries. Features buttons, cards, forms, navigation, and theming system with light/dark mode support."
+      , null
+      , "https://astro-components-catalog.vercel.app/"
+      , "https://github.com/ztevenx100/astro-components-catalog"
+      , "project-13.webp"
+      , ["astro-components-catalog-1.webp", "astro-components-catalog-2.webp", "astro-components-catalog-3.webp"]
+      , 0
+      , ["HTML","CSS3","TypeScript","Astro"]
+    ));
+    this.projectItems.push(new ProjectItem(
       11
       , "App de prueba con Astro y Cloudinary"
       , "Test app with Astro and Cloudinary"
