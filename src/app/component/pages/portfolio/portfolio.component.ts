@@ -104,6 +104,19 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void{
     
     this.projectItems.push(new ProjectItem(
+      13
+      , "Sistema Solar Interactivo"
+      , "Interactive Solar System"
+      , "Immersive and scientifically accurate educational experience of the solar system built with Astro, TypeScript, and TailwindCSS. Features navigable constellations, realistic orbital simulations, advanced controls, and complete individual planet pages with scientific data from NASA/ESA."
+      , null
+      , "https://astro-sistema-solar.vercel.app/"
+      , "https://github.com/ztevenx100/astro-sistema-solar"
+      , "project-14.webp"
+      , ["astro-sistema-solar-1.webp", "astro-sistema-solar-2.webp", "astro-sistema-solar-3.webp", "astro-sistema-solar-4.webp"]
+      , 0
+      , ["Astro","TypeScript","TailwindCSS","CSS3","HTML"]
+    ));
+    this.projectItems.push(new ProjectItem(
       12
       , "Catálogo de Componentes CSS"
       , "CSS Components Catalog"
