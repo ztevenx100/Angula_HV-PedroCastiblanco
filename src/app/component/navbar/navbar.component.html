@@ -56,6 +56,9 @@
         </nav>
     </div>
     
+    <!-- Overlay para móviles -->
+    <div class="navbar-overlay" [class.show]="isNavbarOpen" (click)="closeNavbar()"></div>
+    
     <div class="col-md-7 col-lg-8 col-xl-9">
         <!-- Others pages -->
         <router-outlet></router-outlet>

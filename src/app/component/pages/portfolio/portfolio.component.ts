@@ -96,9 +96,20 @@ export class PortfolioComponent implements OnInit {
   projecyModal: ProjectItem = new ProjectItem();
   activeSlideIndex = 0;
   myInterval = 2500;
+  
+  // Estados de imagen para performance
+  imageStates: { [key: number]: { loaded: boolean; error: boolean } } = {};
 
   constructor(){
 
+  }
+
+  onImageLoad(index: number): void {
+    this.imageStates[index] = { loaded: true, error: false };
+  }
+
+  onImageError(index: number): void {
+    this.imageStates[index] = { loaded: true, error: true };
   }
   
   ngOnInit(): void{
@@ -286,6 +297,11 @@ export class PortfolioComponent implements OnInit {
       , ["JavaScript","C#","Unity"]
     ));
   
+    // Inicializar estados de imagen
+    this.projectItems.forEach((_, index) => {
+      this.imageStates[index] = { loaded: false, error: false };
+    });
+    
     // console.log(this.projectItems);
   }
 

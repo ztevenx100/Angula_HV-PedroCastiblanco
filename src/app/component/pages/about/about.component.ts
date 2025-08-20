@@ -29,8 +29,8 @@ export class AboutComponent implements OnInit{
 
   ngOnInit(): void {
     this.counterYears.actualizarCount(5, 600);
-    this.counterSolutions.actualizarCount(580,10);
-    this.counterRequest.actualizarCount(780,8);
+    this.counterSolutions.actualizarCount(590,10);
+    this.counterRequest.actualizarCount(785+45+15,8);
   }
 
 }

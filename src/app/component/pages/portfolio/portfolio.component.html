@@ -18,25 +18,74 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4 mt-3" role="rowgroup">
             <div class="col sevices-item d-flex align-items-stretch mb-2" *ngFor="let project of projectItems; let index=index">
 
-                <article class="card bg-card text-center ">
+                <article 
+                    class="card bg-card text-center"
+                    role="article"
+                    [attr.aria-labelledby]="'project-title-' + index"
+                    [attr.aria-describedby]="'project-desc-' + index"
+                >
                     <header class="card-header">
-                        {{project.getTitle}}
+                        <h3 [id]="'project-title-' + index">{{project.getTitle}}</h3>
                     </header>
                     <p class="d-flex flex-wrap justify-content-center py-2 bg-important">
                         {{ project.getOwner | translate }}
                     </p>
-                    <div style="overflow: hidden;">
-                        <img class="card-img-top img-aspect" src={{project.getUrlMainImage}} alt="{{project.getSubTitle}}" data-bs-toggle="modal" data-bs-target="#myModal" (click)="dataModal(index)" >
+                    <div class="image-container" style="overflow: hidden; position: relative;">
+                        <!-- Skeleton loader -->
+                        <div class="image-skeleton" [class.hidden]="imageStates[index].loaded"></div>
+                        
+                        <!-- Imagen principal -->
+                        <img 
+                            class="card-img-top img-aspect" 
+                            [src]="project.getUrlMainImage" 
+                            [alt]="'Imagen del proyecto: ' + project.getTitle"
+                            loading="lazy"
+                            [class.loaded]="imageStates[index].loaded"
+                            [class.error]="imageStates[index].error"
+                            (load)="onImageLoad(index)"
+                            (error)="onImageError(index)"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#myModal" 
+                            (click)="dataModal(index)"
+                            [attr.aria-label]="'Ver detalles del proyecto ' + project.getTitle"
+                            tabindex="0"
+                            (keydown.enter)="dataModal(index)"
+                        >
+                        
+                        <!-- Imagen de error fallback -->
+                        <div 
+                            class="error-placeholder" 
+                            [class.show]="imageStates[index].error"
+                            [attr.aria-label]="'Error al cargar imagen del proyecto ' + project.getTitle"
+                        >
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                            <span>Error al cargar imagen</span>
+                        </div>
                     </div>
-                    <div class="card-body d-flex flex-wrap justify-content-center gap-3">
-                        <p>{{ project.getTranslateDescription | translate }}</p>
-                        <span class="tag-tecnology" *ngFor="let technologies of project.getTechnologies">{{technologies}}</span>
+                    <div class="card-body">
+                        <p [id]="'project-desc-' + index">{{ project.getTranslateDescription | translate }}</p>
+                        <div class="technology-tags" role="list" [attr.aria-label]="'Tecnologías utilizadas en ' + project.getTitle">
+                            <span 
+                                class="tag-tecnology" 
+                                *ngFor="let technologies of project.getTechnologies"
+                                role="listitem"
+                                [attr.aria-label]="'Tecnología: ' + technologies"
+                            >{{technologies}}</span>
+                        </div>
                     </div>
                     <footer class="card-footer card-text-muted d-flex justify-content-between">
                         <small>{{ project.getTranslateYearsExpirience | translate:project }}</small>
-                        <a href="/" class="modalOpenButton" data-bs-toggle="modal" data-bs-target="#myModal" (click)="dataModal(index)">
-                            <i class="fa-solid fa-square-up-right"></i>
-                        </a>
+                        <button 
+                            class="modalOpenButton btn-link" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#myModal" 
+                            (click)="dataModal(index)"
+                            [attr.aria-label]="'Ver detalles completos del proyecto ' + project.getTitle"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-square-up-right" aria-hidden="true"></i>
+                            <span class="sr-only">Ver detalles</span>
+                        </button>
                     </footer>
                 </article>
 
@@ -46,14 +95,27 @@
 </section>
 
 <!-- The Modal -->
-<div class="modal fade " id="myModal" role="dialog">
+<div 
+    class="modal fade" 
+    id="myModal" 
+    role="dialog" 
+    aria-modal="true"
+    [attr.aria-labelledby]="'modal-title'"
+    [attr.aria-describedby]="'modal-description'"
+    tabindex="-1"
+>
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <dialog class="modal-content bg-modal">
   
             <!-- Modal Header -->
             <div class="modal-header">
-            <h4 class="modal-title">{{projecyModal.getTitle}}</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <h4 id="modal-title" class="modal-title">{{projecyModal.getTitle}}</h4>
+                <button 
+                    type="button" 
+                    class="btn-close" 
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar modal"
+                ></button>
             </div>
     
             <!-- Modal body -->
@@ -67,16 +129,28 @@
                                 [interval]="myInterval"
                                 [showIndicators]="false"
                                 class="project-carousel"
+                                role="region"
+                                aria-label="Galería de imágenes del proyecto"
                                 >
                                 <slide class="carousel-dark">
-                                    <img src={{projecyModal.getUrlMainImage}} alt="{{projecyModal.getSubTitle}}" class="img-aspect" style="display: block; width: 100%;">
+                                    <img 
+                                        [src]="projecyModal.getUrlMainImage" 
+                                        [alt]="'Imagen principal del proyecto: ' + projecyModal.getTitle" 
+                                        class="img-aspect" 
+                                        style="display: block; width: 100%;"
+                                    >
                                     <div class="carousel-caption d-none d-md-block main-image p-0 text-white" >
                                         <h3>{{projecyModal.getTitle}}</h3>
                                         <p>{{ projecyModal.getTranslateSubTitle | translate }}</p>
                                     </div>
                                 </slide>
-                                <slide *ngFor="let slide of projecyModal.getUrlImages; let index=index">
-                                    <img [src]="slide" alt="imagen de referencia del proyecto" class="img-aspect" style="display: block; width: 100%;">
+                                <slide *ngFor="let slide of projecyModal.getUrlImages; let slideIndex=index">
+                                    <img 
+                                        [src]="slide" 
+                                        [alt]="'Imagen ' + (slideIndex + 2) + ' del proyecto ' + projecyModal.getTitle" 
+                                        class="img-aspect" 
+                                        style="display: block; width: 100%;"
+                                    >
                                 
                                     <div class="carousel-caption text-dark">
                                         <h4></h4>
@@ -89,16 +163,25 @@
                         <div class="col-md-4">
 
                             <div class="row mb-3" >
-                                <p>{{ projecyModal.getTranslateDescription | translate }}</p>
+                                <p id="modal-description">{{ projecyModal.getTranslateDescription | translate }}</p>
                                 <h6>{{ "PORTFOLIO.OwnerText" | translate }}: {{ projecyModal.getOwner | translate }}</h6>
                             </div>
                             <div class="row">
                                 <div class="card tecnology-card" style="margin:10px; width: 100%;">
                                     <header class="card-header">
-                                        {{ "PORTFOLIO.TechnologiesText" | translate }}
+                                        <h5>{{ "PORTFOLIO.TechnologiesText" | translate }}</h5>
                                     </header>
-                                    <div class="card-body d-flex flex-wrap justify-content-center gap-3">
-                                        <span class="tag-tecnology" *ngFor="let technologies of projecyModal.getTechnologies">{{technologies}}</span>
+                                    <div 
+                                        class="card-body technology-tags"
+                                        role="list"
+                                        [attr.aria-label]="'Tecnologías utilizadas en el proyecto ' + projecyModal.getTitle"
+                                    >
+                                        <span 
+                                            class="tag-tecnology" 
+                                            *ngFor="let technologies of projecyModal.getTechnologies"
+                                            role="listitem"
+                                            [attr.aria-label]="'Tecnología: ' + technologies"
+                                        >{{technologies}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -110,11 +193,33 @@
     
             <!-- Modal footer -->
             <footer class="modal-footer">
-                <a *ngIf="projecyModal.getUrlRepository" href={{projecyModal.getUrlRepository}} ref="noreferrer" target="_blank" class="btn bttn-repository" placement="top" tooltip="Repository" containerClass="tooltipPorfolio">
-                    <i class={{projecyModal.getIconRepository}}></i>
+                <a 
+                    *ngIf="projecyModal.getUrlRepository" 
+                    [href]="projecyModal.getUrlRepository" 
+                    rel="noreferrer noopener" 
+                    target="_blank" 
+                    class="btn bttn-repository" 
+                    placement="top" 
+                    tooltip="Repository" 
+                    containerClass="tooltipPorfolio"
+                    [attr.aria-label]="'Ver repositorio del proyecto ' + projecyModal.getTitle + ' en ' + (projecyModal.getUrlRepository.includes('gitlab') ? 'GitLab' : 'GitHub') + ' (se abre en nueva ventana)'"
+                >
+                    <i [class]="projecyModal.getIconRepository" aria-hidden="true"></i>
+                    <span class="sr-only">Repositorio</span>
                 </a>
-                <a *ngIf="projecyModal.getUrlProject" href={{projecyModal.getUrlProject}} ref="noreferrer" target="_blank" class="btn bttn-repository" placement="top" tooltip="Website" containerClass="tooltipPorfolio">
-                    <i class="fa-solid fa-link"></i>
+                <a 
+                    *ngIf="projecyModal.getUrlProject" 
+                    [href]="projecyModal.getUrlProject" 
+                    rel="noreferrer noopener" 
+                    target="_blank" 
+                    class="btn bttn-repository" 
+                    placement="top" 
+                    tooltip="Website" 
+                    containerClass="tooltipPorfolio"
+                    [attr.aria-label]="'Visitar sitio web del proyecto ' + projecyModal.getTitle + ' (se abre en nueva ventana)'"
+                >
+                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                    <span class="sr-only">Sitio web</span>
                 </a>
             </footer>
   

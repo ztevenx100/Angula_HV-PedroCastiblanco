@@ -1,40 +1,50 @@
 <!-- == | Main Container Start ===== -->
-<section id="about" class="about section">
+<section id="about" class="about section" role="main" aria-labelledby="about-title">
         <!-- == | About Section Start ===== -->
-        <header class="row my-2 ">
+        <header class="row my-2">
             <div class="col-md px-1 d-flex align-items-center timeline-box">
                 <div class="section-title my-0 timeline">
-                    <h2>{{ 'ABOUT.Title' | translate }}</h2>
+                    <h1 id="about-title">{{ 'ABOUT.Title' | translate }}</h1>
                 </div>
             </div>
             <div class="col-md-2 px-1 timeline-box">
                 <div class="timeline button-cv">
                     <!-- Descargar documento en PDF -->
-                    <a href="./assets/docs/pdf/{{ 'ABOUT.NameFileCV' | translate }}" download="{{ 'ABOUT.NameFileDownloadCV' | translate }}" title="Download CV" class="bttn" tooltip="{{ 'ABOUT.BtnDownloadCV' | translate }}" containerClass="tooltipStyle">
-                        <i class="fa-solid fa-file-arrow-down" ></i>
+                    <a 
+                        [href]="'./assets/docs/pdf/' + ('ABOUT.NameFileCV' | translate)" 
+                        [download]="'ABOUT.NameFileDownloadCV' | translate" 
+                        class="bttn"
+                        [attr.aria-label]="('ABOUT.BtnDownloadCV' | translate) + ' - Descargar archivo PDF'"
+                        tooltip="{{ 'ABOUT.BtnDownloadCV' | translate }}" 
+                        containerClass="tooltipStyle"
+                        role="button"
+                    >
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                        <span class="sr-only">{{ 'ABOUT.BtnDownloadCV' | translate }}</span>
                     </a>
                 </div>
             </div>
         </header>
 
-        <section class="row my-2 about-content d-flex align-items-stretch " style="animation-delay: 0.8s;">
+        <section class="row my-2 about-content d-flex align-items-stretch" style="animation-delay: 0.8s;" role="region" aria-label="Información personal y profesional">
             <div class="col-md-6 px-1 d-flex flex-column">
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
                         <!-- Card 1 -->
-                        <div class="timeline d-flex align-items-center py-2 ">
+                        <article class="timeline d-flex align-items-center py-2" role="article" aria-labelledby="personal-info">
                             <div class="about-text px-3">
-                                <h3>{{ 'ABOUT.Card01Text01' | translate }}Pedro Steven Castiblanco</h3>
+                                <h2 id="personal-info">{{ 'ABOUT.Card01Text01' | translate }}Pedro Steven Castiblanco</h2>
                                 <h3><span>Full Stack Developer</span></h3>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
                 <div class="row mb-2 flex-fill">
                     <div class="col timeline-box">
                         <!-- Card 5 -->
-                        <div class="timeline">
+                        <article class="timeline" role="article" aria-labelledby="professional-description">
                             <div class="about-text px-3">
+                                <h3 id="professional-description" class="sr-only">Descripción profesional</h3>
                                 <p> <span class="important">{{ 'ABOUT.Card05Text01' | translate }}</span> {{ 'ABOUT.Card05Text02' | translate }}
                                     <span class="important">front-end</span>, <span class="important">back-end</span> {{ 'ABOUT.WordAnd' | translate }} 
                                     <span class="important">{{ 'ABOUT.Card05Text03' | translate }}</span>{{ 'ABOUT.Card05Text04' | translate }}
@@ -42,7 +52,7 @@
                                     <span class="important">{{ 'ABOUT.Card05Text07' | translate }}</span>.
                                 </p>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
                 <div class="row mb-2 flex-fill">
