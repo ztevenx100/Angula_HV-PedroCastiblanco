@@ -1,28 +1,52 @@
 <!-- == | Main Container Start ===== -->
-<section id="home" class="home section bg-home">
+<section id="home" class="home section bg-home" role="main" aria-labelledby="home-title">
         <!-- == | Home Section Start ===== -->
-        <div class="row content-home" role="row">
+        <div class="row content-home" role="region" aria-label="Información principal">
             <div class="col-md-5 d-flex align-items-center justify-content-center">
                 <figure class="home-img px-3 mt-5">
-                    <img src="./assets/img/Dreamer-2.webp" alt="Website owner: Pedro Castiblanco">
+                    <!-- Imagen con mejoras de performance y accesibilidad -->
+                    <div class="image-container">
+                        <div class="image-skeleton" [class.hidden]="imageLoaded"></div>
+                        <img 
+                            src="./assets/img/Dreamer-2.webp" 
+                            alt="Pedro Castiblanco - Desarrollador Full Stack y propietario del sitio web"
+                            loading="lazy"
+                            [class.loaded]="imageLoaded"
+                            (load)="onImageLoad()"
+                            (error)="onImageError()"
+                            class="profile-image"
+                        >
+                        <div class="error-placeholder" [class.show]="imageError">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span>Error al cargar imagen</span>
+                        </div>
+                    </div>
                 </figure>
             </div>
             <div class="col-md-7 d-flex align-items-center">
-                <div class="home-info px-3">
-                    <h4 class="hello">{{ 'HOME.Title' | translate }}</h4>
-                    <h3 class="hello"><span class="name">Pedro Castiblanco</span></h3>
-                    <h3 class="my-profession">
+                <div class="home-info px-3" role="region" aria-labelledby="home-title">
+                    <h1 id="home-title" class="hello">{{ 'HOME.Title' | translate }}</h1>
+                    <h2 class="hello"><span class="name">Pedro Castiblanco</span></h2>
+                    <h3 class="my-profession" aria-live="polite">
                         <ngx-typed-js
-                            [strings]="['Web Developer','Ingeniero de sistemas','Software Enginner','Full Stack Developer']"
+                            [strings]="['Web Developer','Ingeniero de sistemas','Software Engineer','Full Stack Developer']"
                             [loop]='true'
                             [typeSpeed]="100"
                             [shuffle]="true"
+                            aria-label="Profesiones: Desarrollador Web, Ingeniero de sistemas, Ingeniero de Software, Desarrollador Full Stack"
                         >
                         {{ 'HOME.Subtitle' | translate }}<span class="typing"></span>
                         </ngx-typed-js>
                     </h3>
-                    <p></p>
-                    <a routerLink="/contact" class="bttn hire-me">{{ 'HOME.BtnHireMe' | translate }}</a>
+                    <a 
+                        routerLink="/contact" 
+                        class="bttn hire-me"
+                        role="button"
+                        [attr.aria-label]="('HOME.BtnHireMe' | translate) + ' - Ir a la página de contacto'"
+                        (keydown.enter)="navigateToContact()"
+                    >
+                        {{ 'HOME.BtnHireMe' | translate }}
+                    </a>
                 </div>
             </div>
         </div>

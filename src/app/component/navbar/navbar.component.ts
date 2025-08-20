@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +7,25 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   titulo = "Mi pagina";
+  isNavbarOpen = false;
+  
   constructor(){
     
+  }
+
+  closeNavbar(): void {
+    this.isNavbarOpen = false;
+    const navbar = document.querySelector(".navbar");
+    const navTogglerBtn = document.querySelector(".nav-toggler");
+    navbar?.classList.remove("open");
+    navTogglerBtn?.classList.remove("open");
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    if (event.target.innerWidth >= 992) {
+      this.closeNavbar();
+    }
   }
 
   ngOnInit() {
@@ -51,7 +68,7 @@ export class NavbarComponent {
         }
         this.classList.add("active");
         showSection(this);
-        if (window.innerWidth < 1200) {
+        if (window.innerWidth < 992) {
           navSectionTogglerBtn();
         }
       })
@@ -61,6 +78,7 @@ export class NavbarComponent {
     const navbar = document.querySelector(".navbar");
 
     const navSectionTogglerBtn = () => {
+      this.isNavbarOpen = !this.isNavbarOpen;
       navbar?.classList.toggle("open");
       navTogglerBtn?.classList.toggle("open");
     }

@@ -2,6 +2,153 @@
     Created on : 21/09/2023, 12:29:36 PM
     Author     : Steven
 */
+
+/* Mejoras de Performance para Imágenes */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.image-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--bg-black-50) 25%,
+    var(--bg-black-100) 50%,
+    var(--bg-black-50) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  z-index: 1;
+}
+
+.image-skeleton.hidden {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.contact-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+.contact-image.loaded {
+  opacity: 1;
+}
+
+.contact-image.error {
+  display: none;
+}
+
+.error-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-black-50);
+  color: var(--text-black-700);
+  z-index: 2;
+}
+
+.error-placeholder.show {
+  display: flex;
+}
+
+.error-placeholder i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-black-700);
+}
+
+.error-placeholder span {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Mejoras de Accesibilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Validación de formulario */
+.error-message {
+  display: none;
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: #e74c3c;
+}
+
+/* Focus improvements */
+.form-control:focus,
+.bttn:focus {
+  outline: 3px solid var(--skin-color);
+  outline-offset: 2px;
+}
+
+/* Touch target improvements */
+.bttn,
+.form-control {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+/* Links accessibility */
+a:focus {
+  outline: 3px solid var(--skin-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .form-control:focus,
+  .bttn:focus,
+  a:focus {
+    outline: 3px solid;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .contact-image,
+  .image-skeleton {
+    animation: none;
+    transition: none;
+  }
+}
+
 /* Contact */
 .contact.section{
   background-color: var(--bg-black-900);

@@ -7,48 +7,130 @@
 <figure class="cube"></figure>
 <figure class="cube"></figure>
 <!-- == | Main Container Start ===== -->
-<section id="contact" class="contact section row row-cols-1">
+<section id="contact" class="contact section row row-cols-1" role="main" aria-labelledby="contact-title">
     <!-- == | Contact Section Start ===== -->
-    <div class="col d-flex align-items-center" role="rowheader">
+    <div class="col d-flex align-items-center">
         <span class="section-title">
-            <h2>{{ 'CONTACT.Title' | translate }}</h2>
+            <h1 id="contact-title">{{ 'CONTACT.Title' | translate }}</h1>
         </span>
     </div>
-    <article class="col card bg-card mb-1">
-        <div class="row" role="row">
+    <article class="col card bg-card mb-1" role="region" aria-labelledby="contact-form-section">
+        <div class="row">
             <figure class="col-md-4 bg-contact mb-0">
-                <img src="./assets/img/contact/mobile-contact-us-form.webp" alt="" class="">
+                <!-- Imagen con mejoras de performance -->
+                <div class="image-container">
+                    <div class="image-skeleton" [class.hidden]="contactImageLoaded"></div>
+                    <img 
+                        src="./assets/img/contact/mobile-contact-us-form.webp" 
+                        alt="Ilustración de formulario de contacto móvil"
+                        loading="lazy"
+                        [class.loaded]="contactImageLoaded"
+                        (load)="onContactImageLoad()"
+                        (error)="onContactImageError()"
+                        class="contact-image"
+                    >
+                    <div class="error-placeholder" [class.show]="contactImageError">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Error al cargar imagen</span>
+                    </div>
+                </div>
             </figure>
             <div class="col-md-8 py-2">
                 <header class="row card-header">
-                    <address class="col-sm-6 contact-info-item text-center">
-                        <div class="icon"><i class="fa fa-envelope"></i></div>
-                        <h4>{{ 'CONTACT.TextEmail' | translate }}</h4>
-                        <p>pscastiblanco&#64;gmail.com</p>
+                    <address class="col-sm-6 contact-info-item text-center" role="group" aria-labelledby="email-info">
+                        <div class="icon" aria-hidden="true"><i class="fa fa-envelope"></i></div>
+                        <h2 id="email-info">{{ 'CONTACT.TextEmail' | translate }}</h2>
+                        <p>
+                            <a href="mailto:pscastiblanco@gmail.com" aria-label="Enviar email a pscastiblanco@gmail.com">
+                                pscastiblanco&#64;gmail.com
+                            </a>
+                        </p>
                     </address>
-                    <address class="col-sm-6 contact-info-item text-center">
-                        <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                        <h4>{{ 'CONTACT.TextWebsite' | translate }}</h4>
-                        <p>https://ztevenx100.github.io/Angula_HV-PedroCastiblanco/home</p>
+                    <address class="col-sm-6 contact-info-item text-center" role="group" aria-labelledby="website-info">
+                        <div class="icon" aria-hidden="true"><i class="fa fa-globe-europe"></i></div>
+                        <h2 id="website-info">{{ 'CONTACT.TextWebsite' | translate }}</h2>
+                        <p>
+                            <a 
+                                href="https://ztevenx100.github.io/Angula_HV-PedroCastiblanco/home" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="Visitar sitio web (se abre en nueva ventana)"
+                            >
+                                ztevenx100.github.io/Angula_HV-PedroCastiblanco
+                            </a>
+                        </p>
                     </address>
                 </header>
                 <div class="row card-body py-0">
-                    <form class="contact-form" (submit)="sendEmail($event)">
+                    <form 
+                        class="contact-form" 
+                        (submit)="sendEmail($event)"
+                        role="form"
+                        aria-labelledby="contact-form-section"
+                        novalidate
+                    >
                         <fieldset class="form-group row form-item mb-1 d-flex flex-wrap justify-content-center gap-3">
-                            <legend class="card-title contact-title">{{ 'CONTACT.TextTitleForm' | translate }}</legend>
+                            <legend id="contact-form-section" class="card-title contact-title">{{ 'CONTACT.TextTitleForm' | translate }}</legend>
                             
                             <div class="col-md-6 input-group">
                                 <label for="name" class="input-group-text">{{ 'CONTACT.LblName' | translate }}</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Name" [disabled]="campoDeshabilitado" required>
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="name" 
+                                    id="name" 
+                                    [placeholder]="'CONTACT.LblName' | translate" 
+                                    [disabled]="campoDeshabilitado" 
+                                    required
+                                    aria-describedby="name-error"
+                                    [attr.aria-invalid]="nameInvalid"
+                                >
+                                <div id="name-error" class="error-message" [class.show]="nameInvalid" role="alert">
+                                    El nombre es requerido
+                                </div>
                             </div>
                             <div class="col-md-6 input-group">
                                 <label for="message" class="input-group-text">{{ 'CONTACT.LblMessage' | translate }}</label>
-                                <textarea class="form-control" name="message" id="message" placeholder="Message" [disabled]="campoDeshabilitado" required></textarea>
+                                <textarea 
+                                    class="form-control" 
+                                    name="message" 
+                                    id="message" 
+                                    [placeholder]="'CONTACT.LblMessage' | translate" 
+                                    [disabled]="campoDeshabilitado" 
+                                    required
+                                    rows="4"
+                                    aria-describedby="message-error"
+                                    [attr.aria-invalid]="messageInvalid"
+                                ></textarea>
+                                <div id="message-error" class="error-message" [class.show]="messageInvalid" role="alert">
+                                    El mensaje es requerido
+                                </div>
                             </div>
                             <div class="col input-group">
                                 <label for="email" class="input-group-text">{{ 'CONTACT.LblEmail' | translate }}</label>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="Email" [disabled]="campoDeshabilitado" required>
-                                <button type="submit" class="bttn" [disabled]="campoDeshabilitado" id="submitContact">{{ 'CONTACT.btnSubmit' | translate }}</button>
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    name="email" 
+                                    id="email" 
+                                    [placeholder]="'CONTACT.LblEmail' | translate" 
+                                    [disabled]="campoDeshabilitado" 
+                                    required
+                                    aria-describedby="email-error"
+                                    [attr.aria-invalid]="emailInvalid"
+                                >
+                                <div id="email-error" class="error-message" [class.show]="emailInvalid" role="alert">
+                                    El email es requerido y debe ser válido
+                                </div>
+                                <button 
+                                    type="submit" 
+                                    class="bttn" 
+                                    [disabled]="campoDeshabilitado" 
+                                    id="submitContact"
+                                    [attr.aria-label]="('CONTACT.btnSubmit' | translate) + (campoDeshabilitado ? ' - Deshabilitado' : '')"
+                                >
+                                    {{ 'CONTACT.btnSubmit' | translate }}
+                                </button>
                             </div>
 
                         </fieldset>

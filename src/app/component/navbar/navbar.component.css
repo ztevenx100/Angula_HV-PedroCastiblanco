@@ -244,33 +244,73 @@ ul{
   }
 }
 
+/* Overlay para cerrar navbar en móvil */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width:992px){
   .navbar{
-    left: -300px;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    left: 0;
   }
+  
   .navbar .nav-toggler{
     display: flex;
     left: 10px;
+    z-index: 11;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navbar.open{
-    left:0;
+    transform: translateX(0);
   }
 
   .navbar .nav-toggler.open{
     left: 310px;
   }
+  
   .navbar .user-content{
     position: relative;
     top: -10px;
   }
+  
   .navbar .user-img img{
     transform: scale(1);
   }
+  
   .navbar .user-content .user-social-media{
     font-size: 15px;
   }
   
+  /* Mejoras para touch targets */
+  .navbar .nav-page-links li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    touch-action: manipulation;
+  }
+  
+  .navbar .nav-toggler {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 @media (max-height:550px){
