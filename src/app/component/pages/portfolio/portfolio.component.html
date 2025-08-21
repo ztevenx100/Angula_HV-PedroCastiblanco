@@ -15,11 +15,109 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4 mt-3" role="rowgroup">
-            <div class="col sevices-item d-flex align-items-stretch mb-2" *ngFor="let project of projectItems; let index=index">
+        
+        <!-- Controles de filtro y vista -->
+        <div class="row mt-4" role="toolbar" aria-label="Controles de portafolio">
+            <div class="col-12">
+                <div class="portfolio-controls d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+                    
+                    <!-- Filtros por tecnología -->
+                    <div class="filter-section">
+                        <label class="filter-label me-3" for="technology-filter">
+                            {{ 'PORTFOLIO.FilterBy' | translate }}:
+                        </label>
+                        <div class="filter-buttons d-flex flex-wrap gap-2" role="group" aria-label="Filtros de tecnología">
+                            <button 
+                                class="btn filter-btn"
+                                [class.active]="selectedFilter === 'all'"
+                                (click)="filterByTechnology('all')"
+                                type="button"
+                                aria-label="Mostrar todos los proyectos"
+                            >
+                                {{ 'PORTFOLIO.All' | translate }} ({{ projectItems.length }})
+                            </button>
+                            <button 
+                                class="btn filter-btn"
+                                *ngFor="let tech of availableTechnologies"
+                                [class.active]="selectedFilter === tech"
+                                (click)="filterByTechnology(tech)"
+                                type="button"
+                                [attr.aria-label]="'Filtrar proyectos por ' + tech"
+                            >
+                                {{ tech }} ({{ getTechCount(tech) }})
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Selector de vista -->
+                    <div class="view-controls d-flex align-items-center gap-2">
+                        <span class="view-label">{{ 'PORTFOLIO.View' | translate }}:</span>
+                        <div class="btn-group view-toggle" role="group" aria-label="Modo de vista">
+                            <button 
+                                class="btn view-btn"
+                                [class.active]="viewMode === 'grid'"
+                                (click)="viewMode = 'grid'"
+                                type="button"
+                                aria-label="Vista en cuadrícula"
+                            >
+                                <i class="fas fa-th" aria-hidden="true"></i>
+                            </button>
+                            <button 
+                                class="btn view-btn"
+                                [class.active]="viewMode === 'list'"
+                                (click)="viewMode = 'list'"
+                                type="button"
+                                aria-label="Vista en lista"
+                            >
+                                <i class="fas fa-list" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <span class="project-count text-muted">
+                            {{ getFilteredProjectsCount() }} {{ 'PORTFOLIO.Projects' | translate }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Lista de proyectos con animación de filtrado -->
+        <div class="row mt-4" 
+             [class.filtering-active]="isFilteringActive"
+             [class.view-grid]="viewMode === 'grid'"
+             [class.view-list]="viewMode === 'list'"
+             role="rowgroup">
+            
+            <!-- Mensaje de carga durante filtrado -->
+            <div class="col-12 text-center" *ngIf="isFilteringActive">
+                <div class="filtering-loader">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Filtrando proyectos...</span>
+                    </div>
+                    <p class="mt-2">{{ 'PORTFOLIO.Filtering' | translate }}...</p>
+                </div>
+            </div>
+            
+            <!-- Proyectos filtrados -->
+            <div class="projects-container"
+                 [class.row-cols-1]="viewMode === 'list'"
+                 [class.row-cols-md-2]="viewMode === 'grid'"
+                 [class.row-cols-xxl-3]="viewMode === 'grid'"
+                 [class.g-4]="viewMode === 'grid'"
+                 [class.g-2]="viewMode === 'list'"
+                 [style.display]="isFilteringActive ? 'none' : 'flex'"
+                 style="flex-wrap: wrap;">
+                
+                <div class="project-item"
+                     [class.col]="viewMode === 'grid'"
+                     [class.col-12]="viewMode === 'list'"
+                     [class.list-item]="viewMode === 'list'"
+                     [class.grid-item]="viewMode === 'grid'"
+                     *ngFor="let project of filteredProjects; let index=index; trackBy: trackByProjectId"
+                     [@slideInAnimation]>
 
                 <article 
-                    class="card bg-card text-center"
+                    class="card bg-card text-center project-card"
+                    [class.list-card]="viewMode === 'list'"
+                    [class.grid-card]="viewMode === 'grid'"
                     role="article"
                     [attr.aria-labelledby]="'project-title-' + index"
                     [attr.aria-describedby]="'project-desc-' + index"
@@ -30,9 +128,18 @@
                     <p class="d-flex flex-wrap justify-content-center py-2 bg-important">
                         {{ project.getOwner | translate }}
                     </p>
-                    <div class="image-container" style="overflow: hidden; position: relative;">
+                    <div class="image-container" 
+                         style="overflow: hidden; position: relative; cursor: pointer;"
+                         (click)="dataModal(index)"
+                         (keydown.enter)="dataModal(index)"
+                         tabindex="0"
+                         [attr.aria-label]="'Ver detalles del proyecto ' + project.getTitle"
+                    >
                         <!-- Skeleton loader -->
-                        <div class="image-skeleton" [class.hidden]="imageStates[index].loaded"></div>
+                        <div class="image-skeleton" 
+                             [class.hidden]="imageStates[index].loaded"
+                             style="pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+                        </div>
                         
                         <!-- Imagen principal -->
                         <img 
@@ -44,12 +151,7 @@
                             [class.error]="imageStates[index].error"
                             (load)="onImageLoad(index)"
                             (error)="onImageError(index)"
-                            data-bs-toggle="modal" 
-                            data-bs-target="#myModal" 
-                            (click)="dataModal(index)"
-                            [attr.aria-label]="'Ver detalles del proyecto ' + project.getTitle"
-                            tabindex="0"
-                            (keydown.enter)="dataModal(index)"
+                            style="position: relative; z-index: 2; width: 100%; height: 100%; object-fit: cover;"
                         >
                         
                         <!-- Imagen de error fallback -->
@@ -57,6 +159,7 @@
                             class="error-placeholder" 
                             [class.show]="imageStates[index].error"
                             [attr.aria-label]="'Error al cargar imagen del proyecto ' + project.getTitle"
+                            style="pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3;"
                         >
                             <i class="fas fa-image" aria-hidden="true"></i>
                             <span>Error al cargar imagen</span>
@@ -77,8 +180,6 @@
                         <small>{{ project.getTranslateYearsExpirience | translate:project }}</small>
                         <button 
                             class="modalOpenButton btn-link" 
-                            data-bs-toggle="modal" 
-                            data-bs-target="#myModal" 
                             (click)="dataModal(index)"
                             [attr.aria-label]="'Ver detalles completos del proyecto ' + project.getTitle"
                             type="button"
@@ -89,6 +190,7 @@
                     </footer>
                 </article>
 
+                </div>
             </div>
         </div>
         <!-- == | Portfolio Section End ===== -->
@@ -103,9 +205,11 @@
     [attr.aria-labelledby]="'modal-title'"
     [attr.aria-describedby]="'modal-description'"
     tabindex="-1"
+    (click)="onModalBackdropClick($event)"
+    (keydown)="onKeyDown($event)"
 >
     <div class="modal-dialog modal-xl modal-dialog-centered">
-        <dialog class="modal-content bg-modal">
+        <dialog class="modal-content bg-modal" (click)="$event.stopPropagation()">
   
             <!-- Modal Header -->
             <div class="modal-header">
@@ -113,7 +217,7 @@
                 <button 
                     type="button" 
                     class="btn-close" 
-                    data-bs-dismiss="modal"
+                    (click)="closeModal()"
                     aria-label="Cerrar modal"
                 ></button>
             </div>

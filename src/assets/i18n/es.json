@@ -81,6 +81,11 @@
         , "WordAnd": "y "
         , "OwnerText": "Propietario "
         , "TechnologiesText": "Tecnologias "
+        , "FilterBy": "Filtrar por"
+        , "All": "Todos"
+        , "View": "Vista"
+        , "Projects": "proyectos"
+        , "Filtering": "Filtrando"
         , "Project":{
             "OwnProject": "Proyecto propio"
             , "Subtitle0": "Aplicación de los procesos contractuales megasoft"
