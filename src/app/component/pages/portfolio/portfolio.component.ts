@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CarouselConfig, CarouselModule } from 'ngx-bootstrap/carousel';
+import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 //Constants
 const PATH_PROJECT_IMAGE: string = "./assets/img/project/";
@@ -88,7 +89,27 @@ class ProjectItem {
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger('slideInAnimation', [
+      transition(':enter', [
+        style({ 
+          opacity: 0, 
+          transform: 'translateY(30px) scale(0.9)' 
+        }),
+        animate('400ms ease-out', style({ 
+          opacity: 1, 
+          transform: 'translateY(0) scale(1)' 
+        }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({ 
+          opacity: 0, 
+          transform: 'translateY(-20px) scale(0.95)' 
+        }))
+      ])
+    ])
+  ]
 })
 export class PortfolioComponent implements OnInit {
 
@@ -99,6 +120,15 @@ export class PortfolioComponent implements OnInit {
   
   // Estados de imagen para performance
   imageStates: { [key: number]: { loaded: boolean; error: boolean } } = {};
+  
+  // Sistema de filtros y vista
+  filteredProjects: Array<ProjectItem> = [];
+  selectedFilter: string = 'all';
+  availableTechnologies: string[] = [];
+  viewMode: 'grid' | 'list' = 'grid';
+  
+  // Estados de animación
+  isFilteringActive: boolean = false;
 
   constructor(){
 
@@ -302,13 +332,202 @@ export class PortfolioComponent implements OnInit {
       this.imageStates[index] = { loaded: false, error: false };
     });
     
+    // Inicializar sistema de filtros
+    this.initializeFilters();
+    
     // console.log(this.projectItems);
   }
 
+  // Métodos para el sistema de filtros
+  initializeFilters(): void {
+    // Extraer todas las tecnologías únicas
+    const allTech = this.projectItems.flatMap(project => project.getTechnologies);
+    this.availableTechnologies = [...new Set(allTech)].sort();
+    
+    // Inicializar proyectos filtrados
+    this.filteredProjects = [...this.projectItems];
+  }
+
+  filterByTechnology(technology: string): void {
+    this.isFilteringActive = true;
+    this.selectedFilter = technology;
+    
+    setTimeout(() => {
+      if (technology === 'all') {
+        this.filteredProjects = [...this.projectItems];
+      } else {
+        this.filteredProjects = this.projectItems.filter(project => 
+          project.getTechnologies.includes(technology)
+        );
+      }
+      
+      // Reinicializar estados de imagen para los proyectos filtrados
+      this.filteredProjects.forEach((_, index) => {
+        this.imageStates[index] = { loaded: false, error: false };
+      });
+      
+      this.isFilteringActive = false;
+    }, 300);
+  }
+
+  toggleViewMode(): void {
+    this.viewMode = this.viewMode === 'grid' ? 'list' : 'grid';
+  }
+
+  getFilteredProjectsCount(): number {
+    return this.filteredProjects.length;
+  }
+
+  // Método trackBy para optimizar rendimiento del ngFor
+  trackByProjectId(index: number, project: ProjectItem): number {
+    return project.getId;
+  }
+
+  // Contar proyectos por tecnología
+  getTechCount(technology: string): number {
+    return this.projectItems.filter(project => 
+      project.getTechnologies.includes(technology)
+    ).length;
+  }
+
   dataModal(id:number){
+    console.log('🔥 CLICK DETECTADO EN IMAGEN - ABRIENDO MODAL 🔥');
+    console.log('=== ABRIENDO MODAL ===');
+    console.log('ID del proyecto:', id);
+    console.log('Proyectos filtrados:', this.filteredProjects.length);
+    
     this.projecyModal = new ProjectItem();
-    this.projecyModal = this.projectItems[id];
-    console.log(this.projecyModal);
+    this.projecyModal = this.filteredProjects[id];
+    console.log('Datos del proyecto:', this.projecyModal.getTitle);
+    
+    // Esperar a que Angular termine de actualizar el DOM
+    setTimeout(() => {
+      const modalElement = document.getElementById('myModal');
+      console.log('Elemento modal encontrado:', !!modalElement);
+      console.log('Bootstrap disponible:', !!(window as any).bootstrap);
+      
+      if (modalElement) {
+        // Limpiar estado previo
+        modalElement.classList.remove('show');
+        modalElement.style.display = 'none';
+        
+        if ((window as any).bootstrap && (window as any).bootstrap.Modal) {
+          try {
+            // Destruir instancia existente si la hay
+            const existingModal = (window as any).bootstrap.Modal.getInstance(modalElement);
+            if (existingModal) {
+              existingModal.dispose();
+              console.log('Instancia anterior de Bootstrap modal destruida');
+            }
+            
+            // Crear nueva instancia de Bootstrap Modal
+            const modal = new (window as any).bootstrap.Modal(modalElement, {
+              backdrop: true,
+              keyboard: true,
+              focus: true
+            });
+            
+            modal.show();
+            console.log('✅ Modal abierto con Bootstrap 5');
+            
+            // Event listener para cuando se cierre el modal
+            modalElement.addEventListener('hidden.bs.modal', () => {
+              console.log('Modal cerrado por Bootstrap');
+            });
+            
+          } catch (error) {
+            console.error('❌ Error con Bootstrap modal:', error);
+            this.openModalManually(modalElement);
+          }
+        } else {
+          // Fallback: abrir modal manualmente
+          console.log('Bootstrap no disponible, usando fallback manual');
+          this.openModalManually(modalElement);
+        }
+      } else {
+        console.error('❌ Elemento modal no encontrado en el DOM');
+      }
+    }, 150);
+  }
+  
+  private openModalManually(modalElement: HTMLElement) {
+    console.log('🔧 Abriendo modal manualmente...');
+    
+    // Abrir modal manualmente
+    modalElement.classList.add('show');
+    modalElement.style.display = 'block';
+    modalElement.setAttribute('aria-modal', 'true');
+    modalElement.setAttribute('role', 'dialog');
+    
+    // Agregar backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'modal-backdrop fade show';
+    backdrop.id = 'modal-backdrop-custom';
+    backdrop.addEventListener('click', () => {
+      console.log('Clic en backdrop manual');
+      this.closeModal();
+    });
+    document.body.appendChild(backdrop);
+    
+    // Prevenir scroll del body
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+    
+    console.log('✅ Modal abierto manualmente');
+  }
+
+  closeModal() {
+    console.log('Closing modal...');
+    
+    const modalElement = document.getElementById('myModal');
+    
+    // Si existe una instancia de Bootstrap Modal, usarla
+    if ((window as any).bootstrap && modalElement) {
+      const existingModal = (window as any).bootstrap.Modal.getInstance(modalElement);
+      if (existingModal) {
+        existingModal.hide();
+        console.log('Modal closed with Bootstrap instance');
+        return;
+      }
+    }
+    
+    // Cerrar manualmente
+    if (modalElement) {
+      modalElement.classList.remove('show');
+      modalElement.style.display = 'none';
+      modalElement.removeAttribute('aria-modal');
+      modalElement.removeAttribute('role');
+    }
+    
+    // Remover todos los backdrops
+    const backdrops = document.querySelectorAll('.modal-backdrop');
+    backdrops.forEach(backdrop => backdrop.remove());
+    
+    // Limpiar clases del body
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    
+    console.log('Modal closed manually');
+  }
+
+  onModalBackdropClick(event: Event) {
+    // Solo cerrar si se hace clic en el backdrop (no en el contenido del modal)
+    const target = event.target as HTMLElement;
+    if (target && target.classList.contains('modal')) {
+      console.log('Backdrop clicked, closing modal');
+      this.closeModal();
+    }
+  }
+  
+  // Función para manejar la tecla Escape
+  onKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      const modalElement = document.getElementById('myModal');
+      if (modalElement && modalElement.classList.contains('show')) {
+        this.closeModal();
+      }
+    }
   }
 
 }

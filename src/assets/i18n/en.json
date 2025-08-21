@@ -81,6 +81,11 @@
         , "WordAnd": "and "
         , "OwnerText": "Owner "
         , "TechnologiesText": "Technologies "
+        , "FilterBy": "Filter by"
+        , "All": "All"
+        , "View": "View"
+        , "Projects": "projects"
+        , "Filtering": "Filtering"
         , "Project":{
             "OwnProject": "Own project"
             , "Subtitle0": "Application of megasoft contractual processes"
