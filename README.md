@@ -15,14 +15,12 @@ Portafolio personal profesional desarrollado en Angular que presenta mi experien
 - **Glassmorphism UI** con efectos de cristal esmerilado
 - **Modo dual**: Vista en cuadrícula y lista
 - **Tema adaptativos** compatible con modo claro/oscuro
-- **Micro-interacciones** y animaciones suaves
 - **Responsive Design** optimizado para todos los dispositivos
 
 ### 🔧 **Funcionalidades Avanzadas**
 - **Sistema de filtrado inteligente** por tecnologías
 - **Contador dinámico** de proyectos por categoría
 - **Modal interactivo** con galería de imágenes
-- **Skeleton loading** para mejor UX
 - **Búsqueda y navegación** optimizada
 - **Internacionalización** (Español/Inglés)
 
